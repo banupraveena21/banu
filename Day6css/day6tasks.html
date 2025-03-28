@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6Tasks</title>
+    <style>
+/*Task66: Create a div with box-sizing: content-box and add Padding and borders*/
+div.task{box-sizing: content-box; border: 3px solid red; width: 300px; padding: 10px;}
+
+/*Task67: Create a div with box-sizing:border box and compare its size*/
+div.task1{box-sizing: border-box; border: 3px solid red; width:300px; padding: 10px;}
+
+/*Task68: Center a <section> horizontally using margin:auto*/ 
+section.task2{margin: auto; border: 3px dotted red; width: 300px; text-align: center;}
+
+/*Task69: Use Padding to add space inside <button> without increasing its border-size*/
+ button:hover{background-color: blue; color: red; padding: 10px;}
+
+ /*Task70: Apply margin to create space between two <article> elements*/
+ article{border: 3px solid red; width: 300px; margin: 10px;}
+
+ /*Task71: Add border to <footer> and visualize how its interacts with padding and content*/
+ footer{border: 3px solid blue; width:500px; background-color:red; padding: 20px;}
+
+ /*Task72: Use box-sizing:border-box to fix spacing issues in layout with nested elements*/
+.fruit{border: 3px dotted black; width: 300px; box-sizing: border-box;}
+
+/*Task73: Add a background color to content area of <div> and use padding to add internal space*/
+    .task5{background-color: aqua; width: 300px; padding-top: 30px;}
+
+/*Task74: Create a responsive card with padding, border and margin*/
+.task6{border: 4px solid purple; margin: 10px; width: 700px; padding: 10px;}
+
+/*Task75: Use border to highlight an active <section> layout*/
+    .task7{border:15px ridge red; width: 300px;}
+
+/*Task76: Apply Box-sizing to make two <div> tag with same width appear identical even with different paddings*/
+   div.box{width: 500px; box-sizing: border-box; display: inline-block;}
+
+/*Task77: Use Box-shadow & margin together make visually separated card layout*/
+    div.product{border: 10px inset yellow; width: 400px; box-shadow: 50px 10px darkgoldenrod; margin: 50px;}
+
+/*Task78: Center a <header> both Horizontally & Vertically Using Flexbox*/
+    header h1{border: 5px outset purple; width: 200px; display: flexbox; }
+    
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        </header><br>
+    <main>
+    <div class="task">
+    <p>This is </p>
+    <p>content-box</p>
+    </div><br>
+    <div class="task1">
+    <p>This is</p>
+    <p>border-box</p>
+    </div>
+    <br>
+    <section class="task2">
+    <p>This is Section Paragraph</p>
+    </section>
+    <br>
+    <button type="submit">HELLO!</button>
+    <br><br>
+    <article class="task3">
+        <h1>Hi !!!!!</h1>
+    </article><br>
+    <article class="task4">
+        <h1>Hello !!!!</h1>
+    </article>
+    <br>
+    <ul class="fruit"><b>Fruits</b>
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Mango</li>
+    <li>Banana</li>
+    <li>Kiwi</li>
+    </ul><br>
+    <div class="task5">
+    <p>This is </p>
+    <p>content-box</p>
+    </div><br>
+    </main>
+    <br>
+    <div class="task6">
+        <p>This is </p>
+        <p>content-box</p>
+        </div><br>
+        <section class="task7">
+    <p>This is Section Paragraph</p>
+    </section>
+    <br>
+    <h2>MAKE Identical Boxing </h2>
+    <div class="box">
+    <div style="background-color: rgb(224, 224, 79); padding: 5px;" >
+        <p>India is my country</p>
+    </div>
+<br>
+    <div style="background-color: rgb(212, 68, 92); padding: 4px;" >
+        <p>Iam Proud to be an indian</p>
+    </div>
+    </div><br><br><br>
+ <div class="product">
+    <p>Hello!!!!!</p>
+ </div>
+    <br>
+    <hr>
+    <footer>
+        <p>All Rights Reserved</p>
+    </footer>
+</body>
+</html>
