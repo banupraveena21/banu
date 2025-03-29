@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5Tasks</title>
+    <style>
+/* Task53: Using Border tag with width 3px solid blue in <section> Tag*/
+ section.about{border: 3px solid blue;}
+
+ /* Task54: Style a button Using Border-radius: 15px */
+    section.about button{background-color: rgb(228, 53, 190); border-radius: 15px;}
+
+/* Task55: Create box-shadow for <div> Tag */
+  div.shadow{border: 5px solid red; background-color:rgb(224, 133, 14); width: 400px; box-shadow: 30px 30px 15px rgb(201, 243, 12);}
+
+  /*Task56: Add Text-Shadow to H1 Tag*/
+  header h1{text-shadow: 40px 20px 2px blueviolet;}
+
+  /*Task57: Apply Background-color Yellow to <header> tag*/
+    header h1{background-color: rgb(247, 247, 122);}
+
+ /*Task58: Create Scrollabe content box with overflow-y:auto and customed styled scrollbars*/
+   div.over{background-color: lightgreen; height: 150px; width: 600px; overflow-y: scroll;}
+
+/*Task59: Prevent background image repeating using bacground-repeat:no-repeat*/
+/*Task60: Using background size: cover to fill the image*/
+    header{background: url(images/flower.jpg); background-size: cover; background-repeat: no-repeat;}
+
+/*Task61: Apply Background image to <footer> using Background-attachment*/
+  footer{ background-image: url(images/bird.jpg); background-attachment: fixed;}
+
+/*Task62: Use border-image to <div> tag*/
+    div.over1{background-image: url(images/flower.jpg); width: 700px; height: 150px; color:rgb(143, 18, 18); background-size:cover;}
+
+/*Task63: Combine Box-shadow and Border-radius to Create card Design*/
+    div.over1{border-radius: 40px; box-shadow: 90px 10px 20px 5px rgb(173, 134, 212);}
+
+/*Task64: Create Button with Hover effect that changes its box-shadow*/
+ section.about button:hover{background-color: yellow; color: red; box-shadow: 60px 10px green;}
+ 
+ /*Task65: Design a container with overflow:hidden and Clipped content*/
+    div.over2{background-color: bisque; width: 450px; height: 100px; overflow: hidden;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vetri Technology Solutions</h1>
+        <p>--Future | Positive--</p>
+    </header>
+<main>
+    <section class="about">
+        <h2>About Python</h2>
+        <p>Python is a versatile, high-level, general-purpose programming language known for its readability and ease of use, widely used in web development, data science, and automation.</p>
+        <button type="submit">Click Here for More!</button><br><br>
+    </section>
+    <br>
+    <div class="shadow">
+        <ul>Key Characteristics:</ul>
+        <li>Readability</li>
+        <li>Versatility</li>
+        <li>Beginner Friendly</li>
+        <li>Dynamic Typing</li>
+    </div>
+    <br>
+    <div class="over">
+        <h3>Readability</h3>
+        <p>Python emphasizes code readability with its clear Syntax, using indentation to define code blocks.</p>
+        <h3>Versatility</h3>
+        <p>It's used in various domains, including web development (using frameworks like Flask and Django), data analysis (with libraries like NumPy and Pandas), machine learning, and scripting/automation. </p>
+    </div>
+    <br>
+    <div class="over1">
+        <h3>Beginner-Friendly</h3>
+        <p>Python's simple syntax makes it a popular choice for those new to programming. </p>
+        <h3>Dynamic-Typing</h3>
+        <p>Python is dynamically typed, meaning you don't need to declare the type of a variable explicitly.</p>
+    </div>
+    <br>
+    <div class="over2">
+        <h3>Beginner-Friendly</h3>
+        <p>Python's simple syntax makes it a popular choice for those new to programming. </p>
+        <h3>Dynamic-Typing</h3>
+        <p>Python is dynamically typed, meaning you don't need to declare the type of a variable explicitly.</p>
+    </div>
+
+    <footer>
+        <p>&copy;2025 All Rights Reserved:</p>
+    </footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResponsiveFeatureSection</title>
+    <style>
+
+/*Use border-radius and box-shadow for feature cards & Apply Backdround-image to section & Add hover Effects*/
+section {border :5px solid blue; border-radius: 20px; height: 450px; 
+    width: 900px; background-image: url(images/bird.jpg); background-repeat: no-repeat; 
+    background-size:cover; color:white;}
+    section:hover{background-image: url(images/flower.jpg); background-size: cover; color: brown;} 
+    </style>
+</head>
+<body>
+<header>
+    <h1>Flexible Grid System</h1>
+</header>
+<main>
+    <section class="grid">
+    <h3>Flexible Grid System</h3>
+    <p><b>Fluid Layouts:</b> Instead of fixed widths, use percentage or em units for elements widths and margins to allow them to resize proportionally with the screen.</p>
+    <p><b>Benefits:</b> Ensures that the layout adapots smoothly to different screen sizes, maintaing readability and structure.</p>
+<br>
+<h3>Media Queries</h3>
+<p>Media queries allow you to apply different CSS styles based on the screen size or device characteristics.</p>
+<p>You can use media queries to change the layout of a feature section from a two-column layout on larger screens to a single-column layout on smaller screens.</p>
+<br>
+<h3>Flexible Media</h3>
+<p>Images: Use max-width: 100% and height: auto for images to ensure they don't overflow their containers and maintain their aspect ratio.</p>
+<p><b>Benefits:</b> Ensures that all content scales appropriately and remains readable on different devices.</p>
+</section>
+</main>
+</body>
+</html>

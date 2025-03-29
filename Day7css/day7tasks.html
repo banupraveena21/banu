@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7CSS</title>
+<style>
+
+/*Task79: Create a container and apply display: flex to arrange child elements horizontally*/
+/*Task83: Use justify content:space between to evenly space out child elements*/
+.container{border: 2px solid red; width: 80%;}
+.grow{border: 1px dotted black; width: 200px;}
+.row{display: flex; padding: 10px;justify-content:space-between;}
+
+/*Task80: Change direction of the flex items to column using flex direction*/
+.items{border: 3px ridge black; width: 70%;}
+.column{display: flex; flex-direction: column;}
+
+/*Task81: Center align flex items along main using justify-content: center*/
+.center{width: 100%;}
+.align{display: flex; justify-content: center; text-align: center;}
+.content{border: 5px inset purple; width: 300px;}
+
+/*Task82: Align flex items at the end of container using justify content end*/
+.end{border: 3px dotted rgb(80, 80, 5); width: 80%;}
+.end1{display: flex; justify-content: end;}
+.end2{border: 2px outset green; width: 200px;}
+
+/*Task84: Create vertical sidebar using flex direction- column & align items:flex start*/
+.vertical{width: 5%; border: 3px solid blue; height: 150px;}
+.vertical2{display: flex; flex-direction: column; align-items: flex-start;text-decoration: none;}
+/*Task85:Add navigation bar with horizontally spaced links using justify content:space around*/
+.bar{border: 3px solid green; width: 100%;}
+.bar2{display: flex; justify-content: space-around;}
+
+/*Task86: Center align all child elements along the cross axis using align items: center*/
+.cross{border: 2px solid red; width: 90%;}
+.cross1{display: flex;flex-direction:column;align-items: center;}
+.cross2{border: 1px solid blue; border-radius: 5px;width: 200px;}
+
+/*Task87: Wrap items in flex container and align the rows using align content*/
+.wrap{border: 3px dotted purple; width: 80%;}
+.wrap1{display: flex; flex-wrap: wrap;align-content: end; flex-direction: column;}
+.wrap2{border:4px solid yellowgreen;width: 100px;}
+
+/*Task88: Combine justify-content & align items to center card both horizontally & vertically*/
+.task88{border: 2px groove aqua; width: 60%;}
+.task881{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.task882{border: 1px solid rebeccapurple; width: 100px;}
+
+/*Task89: Use gap to add spacing between flex items in a container*/
+.task89{border: 5px dotted yellowgreen; width: 70%;}
+.task891{display: flex; gap: 35px;}
+
+/*Task90: Create flex container that automatically wraps items when the container size is reduced*/
+.task90{border: 2px solid red; width: 50%;}
+.task901{display: flex;gap: 5px;flex-wrap: wrap;}
+
+/*Task91: Build responsive footer with links aligned at center using display flex*/
+.task911{display: flex; justify-content: center;gap: 25px;}
+
+</style>
+</head>
+<body>
+    <h3>Task 79, Task83</h3>
+<div class="container">
+    <div class="row">
+        <div class="grow">
+            <p>BLOCK1</p>
+        </div>
+        <div class="grow">
+            <p>BLOCK1</p>
+        </div>
+        <div class="grow">
+            <p>BLOCK1</p>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Task 80</h3>
+<div class="items">
+    <div class="column">
+        <div class="direction">
+            <p>BLOCK1</p>
+        </div>
+        <div class="direction">
+            <p>BLOCK1</p>
+        </div>
+        <div class="direction">
+            <p>BLOCK1</p>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Task 81</h3>
+<div class="center">
+    <div class="align">
+        <div class="content">
+            <p>HIII</p>
+        </div>
+        <div class="content">
+            <p>HELLOOO</p>
+        </div>
+        <div class="content">
+            <p>WELCOME</p>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Task 82</h3>
+<div class="end">
+    <div class="end1">
+        <div class="end2">
+            <p>HIII</p>
+        </div>
+        <div class="end2">
+            <p>HELLOOO</p>
+        </div>
+        <div class="end2">
+            <p>WELCOME</p>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Task 84</h3>
+<div class="vertical">
+    <h4 class="vertical2"> Menu</h4>
+      <a href="#" class="vertical2">Link1</a>
+        <a href="#" class="vertical2">Link2</a> 
+        <a href="#" class="vertical2">Link3</a>
+</div>
+<br>
+<h3>Task 85</h3>
+ <nav class="bar">
+    <nav class="bar2">
+ <a href="#" class="bar1">Home</a>
+ <a href="#" class="bar1">About Us</a> 
+ <a href="#" class="bar1">Courses</a>
+ <a href="#" class="bar1">Contact Us</a>
+ </nav>
+ </nav>
+ <h3>Task 86</h3>
+<div class="cross">
+    <div class="cross1">
+        <div class="cross2">
+            <p>HIII</p>
+        </div>
+        <div class="cross2">
+            <p>HELLOOO</p>
+        </div>
+        <div class="cross2">
+            <p>WELCOME</p>
+        </div>
+        <div class="cross2">
+            <p>Good Morning!!!</p>
+        </div>
+    </div>
+</div>
+<h3>Task 87</h3>
+<div class="wrap">
+    <div class="wrap1">
+        <div class="wrap2">
+            <p>HIII</p>
+        </div>
+        <div class="wrap2">
+            <p>HELLOOO</p>
+        </div>
+        <div class="wrap2">
+            <p>WELCOME</p>
+        </div>
+        <div class="wrap2">
+            <p>Good Morning!!!</p>
+        </div>
+    </div>
+</div>
+<h3>Task 88</h3>
+<div class="task88">
+    <div class="task881">
+        <div class="task882">
+            <p>HIII</p>
+        </div>
+        <div class="task882">
+            <p>HELLOOO</p>
+        </div>
+        <div class="task882">
+            <p>WELCOME</p>
+        </div>
+        </div>
+</div>
+<h3>Task 89</h3>
+<div class="task89">
+    <div class="task891">
+        <div class="task892">
+            <p>HIII</p>
+        </div>
+        <div class="task892">
+            <p>HELLOOO</p>
+        </div>
+        <div class="task892">
+            <p>WELCOME</p>
+        </div>
+        </div>
+</div>
+<h3>Task 90</h3>
+<div class="task90">
+    <div class="task901">
+        <div class="task902">
+            <p>HIII</p>
+        </div>
+        <div class="task902">
+            <p>HELLOOO</p>
+        </div>
+        <div class="task902">
+            <p>WELCOME</p>
+        </div>
+        </div>
+</div><br>
+<footer>
+    <nav class="task91">
+        <nav class="task911">
+     <a href="#" class="task912">Home</a>
+     <a href="#" class="task912">About Us</a> 
+     <a href="#" class="task912">Courses</a>
+     <a href="#" class="task912">Contact Us</a>
+     </nav>
+     </nav>
+</footer>
+</body>
+</html>
