@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Layout4</title>
+    <style>
+    *{margin: 0%; padding: 0%; box-sizing: border-box;}
+
+    .container{ margin: auto; border: 5px dotted rgb(245, 29, 65); width: 60%; border-radius: 10px;
+    background:lightpink;}
+
+    .row{display: flex; justify-content: space-between;}
+
+    .col1{width: 24%; border: 2px solid pink; border-radius: 10px;}
+    
+    .col2{width: 38%; border: 2px solid pink;border-radius: 10px;}
+
+    .col3{width: 38%; border: 2px solid pink;border-radius: 10px;}
+    .girl{border-radius: 30px;width: 190px; height: 220px;}
+    .girl1{height: 410px; width: 190px; border-radius: 30px;}
+    .girl2{width: 190px;border-radius: 30px; height: 200px;}
+    .girl3{width:100%; height: 415px;border-radius: 30px;}
+    .girl4{width: 100%; height: 415px;border-radius: 30px;}
+    .girl5{width: 305px;height: 200px;border-radius: 30px;}
+    .girl6{width: 302px;height: 330px;border-radius: 30px;}
+    .girl7{width:300px;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col1">
+    <div class="col1child1">
+        <img src="images/girl.jpg" alt="girl" class="girl">
+    </div>
+    <div class="col1child2">
+        <img src="images/girl1.jpg" alt="girl1" class="girl1">
+    </div>
+    <div class="col1child3">
+        <img src="images/girl2.jpg" alt="girl2" class="girl2">
+    </div>
+</div>
+<div class="col2">
+    <div class="col2child1">
+        <img src="images/girl3.jpg" alt="girl3" class="girl3">
+    </div>
+    <div class="col2child2">
+        <img src="images/girl4.jpg" alt="girl4" class="girl4">
+    </div>
+</div>
+<div class="col3">
+    <div class="col3child1">
+        <img src="images/girl5.jpg" alt="girl5" class="girl5">
+    </div>
+    <div class="col3child2">
+        <img src="images/girl6.jpg" alt="girl6" class="girl6">
+    </div>
+    <div class="col3child3">
+        <img src="images/girl7.jpg" alt="girl7" class="girl7">
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

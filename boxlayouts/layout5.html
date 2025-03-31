@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Layout5</title>
+    <style>
+*{margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+}
+.container{border: 2px groove rgb(129, 129, 12); width: 60%; margin: auto;border-radius: 10px;
+    background: linear-gradient(to bottom right, rgb(231, 231, 214), pink);}
+.row{display: flex;justify-content: space-between;}
+
+.col1child1{border: 2px solid brown; width:100%; border-radius: 25px;}
+.col1child2{border: 2px solid brown; width:100%; border-radius: 25px;}
+.animal{border-radius: 25px;}
+.animal1{width: 380px;border-radius: 25px;}
+.animal2{height: 310px;border-radius: 25px;}
+.animal3{border-radius: 25px;}
+.animal4{height: 310px; width: 435px;border-radius: 25px;}
+.animal5{height: 300px;width: 265px;border-radius: 25px;}
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col1">
+        <div class="col1child1" style="display: flex;">
+            <img src="images/animal.jpg" alt="animal" class="animal">
+            <div class="col1child11">
+                <img src="images/animal2.jpg" alt="animal2" class="animal2">
+            </div>
+            <div class="col1child12">
+                <img src="images/animal4.jpg" alt="animal4" class="animal4">
+            </div>
+        </div>
+        <div class="col1child2" style="display: flex;">
+            <img src="images/animal1.jpg" alt="animal1" class="animal1">
+            <div class="colchild21">
+                <img src="images/animal3.jpg" alt="animal3" class="animal3">
+            </div>
+            <div class="col1child22">
+                <img src="images/animal5.jpg" alt="animal5" class="animal5">
+            </div>
+        </div>   
+    </div>
+   </div>
+</div>
+</body>
+</html>
