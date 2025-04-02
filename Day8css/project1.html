@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout Project1</title>
+    <style>
+*{margin: 0%;
+padding: 0%;
+box-sizing: border-box;}
+.container{border: 5px ridge lightgreen;margin: auto; border-radius: 20px;width:70%;}
+.row{display: flex;flex-wrap: wrap;flex-basis:auto;flex-direction: column;}
+.phone{height: 400px;width: 100%;}
+.col2{align-self:flex-start;font-size: large;}
+.col4{align-self: center;}
+button:hover{color: red;font-size: large;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col1">
+            <img src="images/phone.jpg" alt="phone" class="phone">
+        </div>
+        <div class="col2"><b>OnePlus 13 | Smarter with OnePlus AI (12GB RAM, 256GB Storage Midnight Ocean)</b>
+        </div>
+        <div class="col3"> ₹69,998
+            Inclusive of all taxes
+            EMI starts at ₹3,394. No Cost EMI available </div><br>
+        <div class="col4"><button type="submit">Buy Now</button></div>
+    </div>
+</div>
+</body>
+</html>

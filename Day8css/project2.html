@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2</title>
+<style>
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+.container{border:1px solid black; background-color: rgb(241, 239, 239); width: 90%; margin: auto;height: 400px;}
+.row{display: flex; flex-wrap: wrap; gap:5px;justify-content:space-around;}
+h1{text-align: center;}
+.row1, .row2, .row3{width:30%;border: 1px solid white; border-radius:20px;background-color: white;}
+.row1{flex-grow:1;text-align: center;}
+.row2{text-align: center;}
+.row3{text-align: center;}
+.col24,.col14,.col34{color: red;}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Our Products</h1>
+<div class="row">
+<div class="row1">
+    <div class="col11">
+        <img src="images/headphone.jpg" alt="headphone" class="headphone">
+    </div>
+    <div class="col12"><strong>Featured Headphones</strong></div>
+    <div class="col3">High-Quality sound with noise cancellation.</div>
+    <div class="col14">&#8377;199</div>
+</div>
+<div class="row2">
+    <div class="col21">
+        <img src="images/ear.jpg" alt="ear" class="ear">
+    </div>
+    <div class="col22"><strong>Wireless Earbuds</strong></div>
+    <div class="col23">Compact and Powerful sound.</div>
+    <div class="col24">&#8377;799</div>
+</div>
+<div class="row3">
+    <div class="col31">
+        <img src="images/smart.jpg" alt="smart" class="smart">
+    </div>
+    <div class="col32"><strong>Smart Watch</strong></div>
+    <div class="col33">Track Fitness and notifications.</div>
+    <div class="col34">&#8377;1999</div>
+</div>
+</div>
+</div>
+</body>
+</html>

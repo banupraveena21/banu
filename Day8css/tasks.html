@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8CSS Tasks</title>
+<style>
+*{margin: 0%;
+padding: 0%;
+box-sizing: border-box;}
+
+/*Task92: Create flex container with items that grow differently using flex-grow*/
+.container1{width: 80%; border: 2px solid pink; margin: auto; background: radial-gradient(lightyellow,lightgreen, pink);
+display: flex;}
+.row1,.row11,.row111{border: 1px solid palevioletred; width: 20%;margin: auto; text-align: center;}
+.row1{flex-grow:3;}
+.row11{flex-grow:5;}
+.row111{flex-grow: 1;}
+
+/*Task93: Use flex-shrink to prevent certain items from shrinking in a responsive layout*/
+.container2{width: 80%; border: 2px solid pink; margin: auto; background: radial-gradient(rgb(243, 153, 153), rgb(186, 186, 253));
+display: flex;}
+.row2,.row22,.row222{border: 1px solid rgb(151, 5, 54); width:200px;margin: auto; text-align: center;}
+.row2{flex-shrink:4;}
+.row22{flex-shrink: 3;}
+.row222{flex-shrink:5;}
+
+/*Task94: Set a default width for a flex item using flex-basis.*/
+.container3{width: 90%; border: 2px solid pink; margin: auto; background-color:aqua;display: flex;}
+.row3,.row33,.row333{border: 1px solid rgb(151, 5, 54); width:200px;margin: auto; text-align: center;}
+.row3{flex-basis: 10%;}
+.row33{flex-basis: 350px;}
+.row333{flex-basis: 20%;}
+
+/*Task95: Reorder flex items using the order property.*/
+.container4{width: 100%; border: 2px solid pink; margin: auto; background-color:rgb(66, 238, 172);display: flex;}
+.row4,.row44,.row444{border: 1px solid rgb(151, 5, 54); width:30%;margin: auto; text-align: center;}
+.row4{order: 3;}
+.row44{order:2;}
+
+/*Task96: Align a single flex item to the center using align-self.*/
+.container5{width: 60%; border: 2px solid pink; margin: auto; background-color:rgb(180, 145, 245);display: flex; height: 250px;}
+.row5,.row55,.row555{border: 1px solid rgb(73, 3, 26); width:30%;}
+.row5{align-self:center;}
+.row55{align-self:flex-end;}
+.row555{align-self: flex-start;}
+
+/*Task97: Create nested flexbox layout where the outer container is horizontal and the inner container is vertical.*/ 
+.container6{width: 80%; border: 2px solid pink; margin: auto; background-color:rgb(238, 127, 145);}
+.row6666{display: flex; flex-direction: column;}
+.row6,.row66,.row666{border: 1px solid rgb(73, 3, 26); width:20%;}
+
+/*Task98: Build a responsive navigation bar where one item takes up more space using flex-grow. */
+.container7{border: 2px solid red;width: 60%; margin: auto;}
+.list{display: flex;}
+.row7,.row77,.row777,.row7777{border: 1px solid black; text-decoration: none;}
+.row7{flex-grow:1;}
+
+/*Task99: Create a three-column layout where one column is twice the size of the others using flex-grow. */
+.container8{border:3px solid purple;background-color:plum;width: 90%;}
+.col8{display: flex;}
+.col81,.col82,.col83{border: 2px groove rgb(12, 12, 12);width: 25%;}
+.col82{flex-grow:1;}
+
+/*Task100: Apply flex-basis to create a grid of items with consistent starting sizes.*/
+.container9{border:3px solid purple;background-color:plum;width: 90%;}
+.col9{display: flex;}
+.col91,.col92,.col93{border: 2px groove rgb(12, 12, 12);width: 30%; flex-basis:auto;}
+
+/*Task101:  Use align-self to align specific items differently in a flex container.*/
+.container10{border:3px solid gold;background-color:rgb(171, 245, 250);width:70%;height: 150px;display: flex;}
+.col101,.col102,.col103{border: 2px groove rgb(190, 22, 22);width: 30%;}
+.col101{align-self: center;}
+.col102{align-self: flex-end;}
+.col103{align-self:last baseline;}
+
+/*Task102: Combine flex-grow, flex-shrink, and flex-basis in a single flex shorthand property.*/
+.container11{border: 2px ridge red; width: 70%; margin: auto;display: flex;}
+.col111,.col112,.col113{width: 20%; border: 3px solid rgb(15, 2, 97);}
+.col111{flex-grow: 2;}
+.col112{flex-basis: 200px;}
+.col113{flex-direction:2;}
+
+/*Task103:Create a card layout with an image, content, and footer using nested flex containers. */
+.container12{border: 3px inset palevioletred; width: 50%;margin: auto;background-color: blanchedalmond;}
+.row12{display: flex;flex-direction: column;align-items: center;}
+.food{height: 250px;width: 100%;}
+
+/*Task103: Design a responsive gallery where items wrap to new rows using flex-wrap.*/
+.container13{border:3px outset red; width: 50%; margin: auto;}
+.row13{display: flex;flex-wrap: wrap; justify-content: space-evenly;}
+h2{text-align: center;}
+.image, .image1, .image2, .image3{border-radius: 10px;} 
+
+</style>
+</head>
+<body>
+    <header>
+    <p><b>Flex Grow Task</b></p>
+<div class="container1">
+        <div class="row1">
+            <p>IT Training Institute</p>
+        </div>
+        <div class="row11">
+            <p><strong>Vetri Technology Solutions</strong><p>
+        </div>
+        <div class="row111">
+            <p>Hosur</p>
+        </div>
+    </div>
+    </header><br>
+<main>
+<p><b>Flex Shrink Task</b></p>
+    <div class="container2">
+        <div class="row2">
+            <p>Python</p>
+        </div>
+        <div class="row22">
+            <p>Java<p>
+        </div>
+        <div class="row222">
+            <p>UI/UX</p>
+        </div>
+    </div>
+    <br>
+<p><b>Flex Basis Task</b></p>
+<div class="container3">
+    <div class="row3">
+            <p>Home</p>
+        </div>
+        <div class="row33">
+            <p>About Us<p>
+        </div>
+        <div class="row333">
+            <p>Contact Us</p>
+        </div>
+    </div><br><br>
+<p><b>Order Task</b></p>
+<p>Correct Order is</p>
+<p>Name:</p>
+<p>Email:</p>
+<p>Contact Number:</p>
+<div class="container4">
+<p></p>
+<div class="row4"><p>Name:</p></div>
+<div class="row44"><p>Email:</p></div>
+<div class="row444"><p>Contact Number:</p></div>
+</div><br>
+<br>
+<p><b>Align Self Task</b></p>
+<div class="container5">
+    <div class="row5"><p>Name:</p></div>
+    <div class="row55"><p>Email:</p></div>
+    <div class="row555"><p>Contact Number:</p></div>
+    </div>
+<br>
+<div class="container6">
+<div class="row6666">
+    <div class="row6"><p>List1</p>
+    <div class="row61">hi</div>
+<div class="row62">Hello</div>
+</div>
+    <div class="row66"><p>List2</p>
+<div class="row661">hi</div>    
+<div class="row662">Hello</div>
+    </div>
+    <div class="row666"><p>List3</p>
+<div class="row6661">Hi</div>    
+<div class="row6662">Hello</div>
+    </div>
+</div>
+</div>
+<br>
+<div class="container7">
+<nav class="list">
+    <a href="#" class="row7">Home</a>
+    <a href="#" class="row77">Contact Us</a>
+    <a href="#" class="row777">Courses</a>
+    <a href="#" class="row7777">About Us</a>
+</nav>
+</div>
+<br>
+<div class="container8">
+<div class="col8">
+<div class="col81">Block1</div>
+<div class="col82">Block2</div>
+<div class="col83">Block3</div>
+</div>
+</div>
+<br>
+<p><b>Using Flex Basis</b></p>
+<div class="container9">
+    <div class="col9">
+    <div class="col91">Block1</div>
+    <div class="col92">Block2</div>
+    <div class="col93">Block3</div>
+    </div>
+    </div>
+<p><b>Using Align Items</b></p>
+<br>
+<div class="container10">
+    <div class="col101">Block1</div>
+    <div class="col102">Block2</div>
+    <div class="col103">Block3</div>
+    </div>
+    <br>
+    <p><b>Using Align Items</b></p>
+    <br>
+    <div class="container11">
+        <div class="col111">Block1</div>
+        <div class="col112">Block2</div>
+        <div class="col113">Block3</div>
+        </div>
+<br>
+<div class="container12">
+<div class="row12">
+    <div class="row121">
+        <img src="images/food.jpg" alt="food" class="food">
+    </div>
+    <div class="row122"><b>Fudge Brownie Cake Half KG</b></div>
+    <footer>
+        <div class="row123">Order Here: www.xyz.com</div>
+    </footer>
+</div>
+</div>
+<br>
+<div class="container13">
+    <h2>Image Gallery</h2><br>
+    <div class="row13">
+        <div class="row131">
+            <img src="images/image.jpg" alt="image" class="image">
+        </div>
+        <div class="row132">
+        <img src="images/image1.jpg" alt="image1" class="image1">
+        </div>
+        <div class="row133">
+        <img src="images/image2.jpg" alt="image2" class="image2">
+        </div>
+        <div class="row134">
+            <img src="images/image3.jpg" alt="image3" class="image3">
+        </div>
+    </div>
+    </div>
+</main>
+</body>
+</html>
