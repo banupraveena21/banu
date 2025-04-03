@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9 CSS Tasks</title>
+<style>
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+/*Task105: Create a grid-container with display:grid */
+h2{text-align: center;}
+.container1{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:300px 200px 100px; }
+.container1 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container1 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task106: Define three equal-width columns using grid-template columns: repeat(3, 1fr). */
+.container2{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:repeat(3,1fr); }
+.container2 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container2 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task107: Create a grid with fixed row heights using grid-template-rows:100px 200px auto. */
+.container3{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-rows:100px 200px auto; }
+.container3 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container3 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task108: Add spacing between grid items using gap: 10px. */
+.container4{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:300px 300px; gap: 10px;}
+.container4 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container4 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task109:Use grid-template-columns to create a layout with one wide column and two narrow columns (2fr 1fr 1fr).*/
+.container5{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:2fr 1fr 1fr;}
+.container5 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container5 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task110: Add a responsive layout using media queries to adjust the number of columns. */
+.container6{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:minmax(50px,100px) minmax(200px,300px);}
+.container6 div:nth-child(odd){background-color: rgb(240, 84, 84); min}
+.container6 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task111: Build a grid of six cards with a uniform layout.*/
+.container7{border: 4px groove plum; width:40%;margin: auto;display: grid; grid-template-columns:100px;}
+.container7 div:nth-child(odd){background-color: rgb(170, 223, 26);border: 1px solid black;}
+.container7 div:nth-child(even){background-color: rgb(204, 153, 11);border: 1px solid black;}
+
+/*Task112:  Create a photo gallery using grid-template-rows and grid template-columns. */
+.container8{border: 4px groove plum; width:70%;margin: auto;display: grid; 
+grid-template-columns:300px 300px 300px;
+grid-template-rows:200px 200px; gap:10px;}
+.container8 div:nth-child(odd){background-color: rgb(187, 238, 46);border: 1px solid black;}
+.container8 div:nth-child(even){background-color: rgb(243, 77, 160);border: 1px solid black;}
+
+/*Task113: Adjust grid column sizes dynamically using fr units. */
+.container9{border: 4px groove plum; width:60%;margin: auto;display: grid; grid-template-columns:2fr 3fr 1fr;}
+.container9 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container9 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task114: Apply different row heights for header, content, and footer using grid-template-rows.*/
+.container10{border: 4px groove plum; width:60%;margin: auto;display: grid; grid-template-rows:3fr 5fr 1fr;}
+.container10 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container10 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task115:Add a hover effect to grid items in a gallery. */
+.container11{border: 4px groove plum; width:70%;margin: auto;display: grid; 
+grid-template-columns:300px 300px 300px;
+grid-template-rows:200px 200px; gap:10px;}
+.container11 div:nth-child(odd){background-color: rgb(187, 238, 46);border: 1px solid black;}
+.container11 div:nth-child(even){background-color: rgb(243, 77, 160);border: 1px solid black;}
+.container11 div:hover{filter:hue-rotate(90deg); width:400px;}
+
+/*Task116:Use media queries to adjust a grid layout for mobile, tablet, and desktop views.*/
+.container12{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:minmax(10px,300px) minmax(200px,500px);}
+.container12 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container12 div:nth-child(even){background-color: rgb(186, 119, 250);}
+
+/*Task117: Combine gap and border for visually separated grid items. */
+.container13{border: 4px groove plum; width:50%;margin: auto;display: grid; grid-template-columns:100px 200px 300px;
+row-gap: 10px; column-gap: 10px;}
+.container13 div:nth-child(odd){background-color: rgb(240, 84, 84);}
+.container13 div:nth-child(even){background-color: rgb(186, 119, 250);}
+.container13 div{border: 1px solid black;}
+
+</style>
+</head>
+<body>
+<h2>Using Display grid</h2>
+<div class="container1">
+<div class="col11">Apple</div>
+<div class="col12">Orange</div>
+<div class="col13">Mango</div>
+<div class="col14">Kiwi</div>
+<div class="col15">Stawberry</div>
+<div class="col16">Banana</div>
+<div class="col17">Grapes</div>
+</div><br>
+<h2>Using grid template columns</h2>
+<div class="container2">
+<div class="col21">Apple</div>
+<div class="col22">Orange</div>
+<div class="col23">Mango</div>
+<div class="col24">Kiwi</div>
+<div class="col25">Stawberry</div>
+<div class="col26">Banana</div>
+</div>
+<h2>Using grid template rows</h2>
+<div class="container3">
+<div class="col31">Apple</div>
+<div class="col32">Orange</div>
+<div class="col33">Mango</div>
+<div class="col34">Kiwi</div>
+<div class="col35">Stawberry</div>
+<div class="col36">Banana</div>
+</div><br>
+<h2>Using gap</h2>
+<div class="container4">
+<div class="col41">Apple</div>
+<div class="col42">Orange</div>
+<div class="col43">Mango</div>
+<div class="col44">Kiwi</div>
+<div class="col45">Stawberry</div>
+<div class="col46">Banana</div>
+</div><br>
+<h2>Using grid-template-columns</h2>
+<div class="container5">
+<div class="col51">Apple</div>
+<div class="col52">Orange</div>
+<div class="col53">Mango</div>
+<div class="col54">Kiwi</div>
+<div class="col55">Stawberry</div>
+<div class="col56">Banana</div>
+<div class="col57">Watermelon</div>
+<div class="col58">Pineapple</div>
+<div class="col59">Lemon</div>
+</div>
+<br>
+<h2>Using min width & max width</h2>
+<div class="container6">
+<div class="col61">Apple</div>
+<div class="col62">Orange</div>
+<div class="col63">Mango</div>
+<div class="col64">Kiwi</div>
+<div class="col65">Stawberry</div>
+<div class="col66">Banana</div>
+</div><br>
+<h2>With Uniform Layout</h2>
+<div class="container7">
+<div class="col71">Apple</div>
+<div class="col72">Orange</div>
+<div class="col73">Mango</div>
+<div class="col74">Kiwi</div>
+<div class="col75">Stawberry</div>
+<div class="col76">Banana</div>
+</div><br>
+<h2>Using grid template row & grid template column  </h2>
+<div class="container8">
+<div class="col81">
+    <img src="images/image.jpg" alt="image" class="image">
+</div>
+<div class="col82">
+    <img src="images/image1.jpg" alt="image1" class="image1">
+</div>
+<div class="col83">
+    <img src="images/image2.jpg" alt="image2" class="image2">
+</div>
+<div class="col84">
+    <img src="images/image3.jpg" alt="image3" class="image3">
+</div>
+<div class="col85">
+    <img src="images/image4.jpg" alt="image4" class="image4">
+</div>
+<div class="col86">
+    <img src="images/image5.jpg" alt="image5" class="image5">
+</div>
+</div><br>
+<h2>With grid column</h2>
+<div class="container9">
+<div class="col91">Apple</div>
+<div class="col92">Orange</div>
+<div class="col93">Mango</div>
+<div class="col94">Kiwi</div>
+<div class="col95">Stawberry</div>
+<div class="col96">Banana</div>
+</div><br>
+<h2>Giving Different heights for row</h2>
+<div class="container10">
+<div class="col101">
+<header><p>ABC Technology Solutions</p></header>
+</div>
+<div class="col102">
+    <main>
+        <p>Giving Various IT Courses and Plcements</p>
+    </main>
+</div>
+<div class="col103">
+    <footer><p>&copy;2025 All Rights Reserved.</p></footer>
+</div>
+</div><br>
+<h2>Using Hover </h2>
+<div class="container11">
+<div class="col111">
+    <img src="images/image.jpg" alt="image" class="image">
+</div>
+<div class="col112">
+    <img src="images/image1.jpg" alt="image1" class="image1">
+</div>
+<div class="col113">
+    <img src="images/image2.jpg" alt="image2" class="image2">
+</div>
+<div class="col114">
+    <img src="images/image3.jpg" alt="image3" class="image3">
+</div>
+<div class="col115">
+    <img src="images/image4.jpg" alt="image4" class="image4">
+</div>
+<div class="col116">
+    <img src="images/image5.jpg" alt="image5" class="image5">
+</div>
+</div><br>
+<h2>Using Minmax()</h2>
+<div class="container12">
+<div class="col121">Apple</div>
+<div class="col122">Orange</div>
+<div class="col123">Mango</div>
+<div class="col124">Kiwi</div>
+<div class="col125">Stawberry</div>
+<div class="col126">Banana</div>
+</div><br>
+<h2>Using Gap</h2>
+<div class="container13">
+<div class="col131">Apple</div>
+<div class="col32">Orange</div>
+<div class="col133">Mango</div>
+<div class="col134">Kiwi</div>
+<div class="col135">Stawberry</div>
+<div class="col136">Banana</div>
+</div><br>
+</body>
+</html>

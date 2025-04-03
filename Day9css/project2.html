@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Project2</title>
+<style>
+    .container{
+        border: 2px solid black; display: grid; width: 80%; margin: auto;
+        grid-template-columns:auto; grid-template-rows:auto 500px;
+    }
+.row1{background-color: black; color: white;}
+.col1{display: grid; grid-template-columns: 250px 828px; border:1px solid rgb(245, 235, 235);}
+.row2,.row3{
+    border: 1px solid rgb(24, 22, 22);
+}
+.row2{background-color: black; color: white;font-size: large;}
+.col2{ display: grid; grid-template-columns: 250px 250px 250px; justify-content:space-evenly; grid-template-rows: 30px;}
+.row311,.row312,.row313{border:1px solid rgb(245, 239, 239);text-align: center; background-color: rgb(218, 216, 216); border-radius: 10px;}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row1"><h1>Dashboard</h2></div>
+<div class="col1">
+    <div class="row2">
+    <div class="row21"><img src="images/home.png" style="width: 20px;">Home</div>
+    <div class="row22"><img src="images/analytics.png" style="width: 20px;"> Analytics</div>
+    <div class="row23"><img src="images/settings.png" style="width: 20px;"> Settings</div>
+    <div class="row24"><img src="images/logout.png" style="width: 20px;"> Logout</div>
+    </div>
+    <div class="row3">
+        <div class="row31"><h2><strong>Welcome to the Dashboard</strong></h2></div>
+        <div class="row32">This is a responsive dashboard layout using CSS Grid.</div><br>
+    <div class="col2">
+        <div class="row311"><img src="images/sales.png" width="20px"> Sales Report</div>
+        <div class="row312"><img src="images/user.png" width="20px"> User Statistics</div>
+        <div class="row313"><img src="images/renenue.png" width="20px"> Revenue</div>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
