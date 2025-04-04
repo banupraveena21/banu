@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 Project1</title>
+<style>
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+    .container{
+        display: grid; margin: auto; width: 70%; 
+        border: 5px outset palevioletred;
+        grid-template-columns: 300px 300px 300px;
+        justify-content: space-evenly;background-color: rgb(248, 210, 228);
+    }
+    .col1,.col2,.col3,.col4,.col5,.col6{border: 1px solid purple; border-radius: 10px;}
+    .col1:hover{grid-row: 1 / span 2;}
+    .cartoon:hover{width:100%;}
+
+    .col2:hover{grid-column: 2 / span 2;}
+    .cartoon1:hover{width:100%}
+
+    .col3:hover{grid-column: 3 / span 2;}
+    .cartoon2:hover{width:100%}
+
+    .col4:hover{grid-column: 1 / span 1;}
+    .cartoon3:hover{width:100%}
+    .col5:hover{grid-column: 2 / span 2;}
+    .cartoon4:hover{width:100%}
+    .cartoon5:hover{width:100%}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="col1">
+        <img src="images/cartoon.jpg" alt="cartoon" class="cartoon">
+    </div>
+    <div class="col2">
+        <img src="images/cartoon1.jpg" alt="cartoon1" class="cartoon1">
+    </div>
+    <div class="col3">
+        <img src="images/cartoon2.jpg" alt="cartoon2" class="cartoon2">
+    </div>
+    <div class="col4">
+        <img src="images/cartoon3.jpg" alt="cartoon3" class="cartoon3">
+    </div>
+    <div class="col5">
+        <img src="images/cartoon4.jpg" alt="cartoon4" class="cartoon4">
+    </div>
+    <div class="col6">
+        <img src="images/cartoon5.jpg" alt="cartoon5" class="cartoon5">
+    </div>
+</div>
+</body>
+</html>

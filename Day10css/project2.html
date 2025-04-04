@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 Project2</title>
+    <style>
+    .container{border: 1px solid black; display: grid;grid-template-columns: auto;width: 80%;margin: auto; }
+    .col1{display: grid; grid-template-columns: 200px 880px;grid-template-rows: 450px;}
+    .row1{background-color: rgb(24, 24, 24);color: white;text-align: center;}
+    .row2{border: 1px solid black;background-color: black; color: white;display: flex;flex-direction: column;
+    gap: 20px;}
+    .row21,.row22,.row23{background-color: rgb(48, 47, 47);text-align: center;border-radius: 5px;font-size: large;}
+    .row3{border: 1px solid black;}
+    .col2{display: grid; grid-template-columns: 200px 200px 200px; justify-content: space-evenly;}
+    .row311,.row312,.row313{background-color: rgb(206, 204, 204);text-align: center;}
+    .row311{grid-column: 1 / span 1;}
+    .row4{background-color: rgb(8, 8, 8);color: white; text-align: center;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row1"><h2>Dashboard</h2></div>
+
+    <div class="col1">
+    <div class="row2">
+        <div class="row21">Home</div>
+        <div class="row22">Report</div>
+        <div class="row23">Settings</div>
+    </div>
+    <div class="row3">
+    <div class="row31"><b>Main Content</b></div><br><br>
+    <div class="col2">
+    <div class="row311">Card1</div>
+    <div class="row312">Card2</div>
+    <div class="row313">Card3</div>
+</div>
+</div>
+    </div>
+    <div class="row4">
+        <footer>
+            <p>&copy;2025 Dashboard Inc. </p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

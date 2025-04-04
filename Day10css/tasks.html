@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 CSS Tasks</title>
+<style>
+*{margin: 0%; padding: 0%; box-sizing: border-box;}
+
+/*Task118: Create a grid layout with 3 rows and 3 columns using grid template-rows and grid-template-columns. */
+.container1{display: grid; width: 50%; border:3px solid salmon; margin: auto;
+grid-template-columns:1fr 1fr 1fr; grid-template-rows:30px 50px 70px;}
+.container1 div{border:1px solid palevioletred;}
+
+/*Task119: Make one item span 2 columns using grid-column. */
+.container2{display: grid; width: 50%; border:3px solid salmon; margin: auto;}
+.container2 div{border:1px solid palevioletred;}
+.col21{grid-column: 1 / span 2;}
+
+/*Task120: Create a grid where one item spans 2 rows using grid-row. */
+.container3{display: grid; width: 50%; border:3px solid salmon; margin: auto; grid-template-columns: 300px 300px;}
+.container3 div{border:1px solid palevioletred;}
+.col31{grid-row: 1 / span 2;}
+
+/*Task121: Use grid-area to position a header across the top of a grid layout. */
+.container4{display: grid; width: 50%; border:3px solid salmon; margin: auto; grid-template-columns: 300px 300px;}
+.container4 div{border:1px solid palevioletred;}
+.col41{grid-area: 2 / 1 / span 4;}
+
+/*Task122: Build a basic layout with a sidebar, main content, and footer using grid-column and grid-row. */
+.container5{display: grid; width: 50%; border:3px solid salmon; margin: auto; grid-template-columns: 200px 470px; 
+grid-template-rows:200px;}
+.row51{grid-row:1/4; border: 1px solid black;}
+main{border: 1px solid black; grid-column: 2 / span 2;}
+
+/*Task123: Add a gap between grid items using the gap property. */
+.container6{display: grid; width: 50%; border:3px solid salmon; margin: auto;grid-template-columns: 100px 100px 100px; 
+gap: 20px;}
+.container6 div{border:1px solid palevioletred;}
+
+/*Task124: Create a nested grid inside a grid item for a card layout. */
+.container7{display: grid; width: 50%; border:3px solid salmon; margin: auto;
+grid-template-columns: 300px 300px;justify-content: space-evenly;}
+.row71,.row72{border: 1px solid black;}
+.row71{display: grid; grid-template-columns: 100px 100px;}
+.row72{display: grid; grid-template-columns: 100px 100px 100px;}
+
+/*Task125: Combine Grid and Flexbox by aligning text in a grid item using Flexbox. */
+.container8{display: grid; width: 40%;
+border: 2px groove plum; margin: auto;grid-template-columns: 100px 100px 100px;} 
+.col81{display: flex; justify-content:center; border: 1px solid black;}
+
+/*Task126:Create responsive grid layout for a gallery with items spanning different columns based on screen size.*/
+.container9{display: grid; width: 70%; margin: auto; border:3px inset indigo;
+grid-template-columns: auto auto auto;}
+.col91,.col92,.col93{border: 1px solid palevioletred; grid-column:auto;}
+.col94,.col95,.col96{border: 1px solid palevioletred; grid-column:auto;}
+
+/*Task127:  Build a two-column dashboard layout with a header, sidebar,and footer. */
+.container10{display: grid; width: 50%;
+    border: 5px groove rgb(184, 91, 184); margin: auto;grid-template-columns: 100px 100px;} 
+header, article, footer{border: 1px solid black;}
+article{grid-column: 2 / span 2;}
+footer{grid-column: 1 / span 3;}
+
+/*Task128:  Use grid-template-columns: repeat() for a responsive layout. */
+.container11{display: grid; width: 50%; border:3px solid salmon; margin: auto; grid-template-columns:repeat(2,100px 2fr);}
+.container11 div{border:1px solid palevioletred;}
+
+/*Task129: Create a feature grid where one feature spans multiple rows and columns. */
+.container12{display: grid; width: 60%; border:3px solid salmon; margin: auto; grid-template-columns:200px 200px 200px;}
+.container12 div{border:1px solid blue;}
+.col126{grid-column: 1 / span 2; grid-row: 1 / span 3;}
+.col121{grid-column: 3 / span 4;}
+
+</style>
+</head>
+<body>
+    <h2 style="text-align: center;">Using Grid Template Column & Grid Template Row</h2>
+<div class="container1">
+<div class="col11">Block1</div>
+<div class="col12">Block2</div>
+<div class="col13">Block3</div>
+<div class="col14">Block4</div>
+<div class="col15">Block5</div>
+<div class="col16">Block6</div>
+<div class="col17">Block7</div>
+<div class="col18">Block8</div>
+<div class="col19">Block9</div>
+</div>
+<br>
+<h2 style="text-align: center;">Using Grid column</h2>
+<div class="container2">
+<div class="col21">Block1</div>
+<div class="col22">Block2</div>
+<div class="col23">Block3</div>
+<div class="col24">Block4</div>
+<div class="col25">Block5</div>
+<div class="col26">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;">Using Grid Row</h2>
+<div class="container3">
+<div class="col31">Block1</div>
+<div class="col32">Block2</div>
+<div class="col33">Block3</div>
+<div class="col34">Block4</div>
+<div class="col35">Block5</div>
+<div class="col36">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;">Using Grid Area</h2>
+<div class="container4">
+<div class="col41">Block1</div>
+<div class="col42">Block2</div>
+<div class="col43">Block3</div>
+<div class="col44">Block4</div>
+<div class="col45">Block5</div>
+<div class="col46">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;"> Using Grid column & grid row</h2>
+<div class="container5">
+<div class="row51">
+    <div class="col51">Home</div>
+    <div class="col52">About Us</div>
+    <div class="col53">Courses</div>
+    <div class="col54">Contact Us</div>
+</div>
+<main>
+<div class="row52">
+<div class="col55"><b>Grid Column</b></div>
+<div class="col56">It Specifies a grid item's size and location in a grid layout.</div>
+</div>
+</main>
+<footer>
+<div class="row53">
+    <div class="col57">&copy;2025 All Rights Reserved.</div>
+</div>
+</footer>
+</div><br>
+<h2 style="text-align: center;">Using Gap</h2>
+<div class="container6">
+<div class="col61">Block1</div>
+<div class="col62">Block2</div>
+<div class="col63">Block3</div>
+<div class="col64">Block4</div>
+<div class="col65">Block5</div>
+<div class="col66">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;">Create Grid inside Grid item</h2>
+<div class="container7">
+<p>Two Rows</p><br>
+<div class="row71">
+    <div class="col71">Block1</div>
+    <div class="col72">Block2</div>
+    <div class="col73">Block3</div>
+    <div class="col74">Block4</div>
+</div>
+<div class="row72">
+    <div class="col75">Block5</div>
+    <div class="col76">Block6</div>
+    <div class="col77">Block7</div>
+    <div class="col78">Block8</div>
+    <div class="col79">Block9</div>
+</div>
+</div><br>
+<h2 style="text-align: center;">Combine Grid & Flex</h2>
+<div class="container8">
+<div class="col81">Block1</div>
+<div class="col81">Block2</div>
+<div class="col81">Block3</div>
+<div class="col81">Block4</div>
+<div class="col81">Block5</div>
+<div class="col81">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;">Spanning different columns</h2>
+<div class="container9">
+    <div class="col91">
+        <img src="images/cartoon.jpg" alt="cartoon" class="cartoon">
+    </div>
+    <div class="col92">
+        <img src="images/cartoon1.jpg" alt="cartoon1" class="cartoon1">
+    </div>
+    <div class="col93">
+        <img src="images/cartoon2.jpg" alt="cartoon2" class="cartoon2">
+    </div>
+    <div class="col94">
+        <img src="images/cartoon3.jpg" alt="cartoon3" class="cartoon3">
+    </div>
+    <div class="col95">
+        <img src="images/cartoon4.jpg" alt="cartoon4" class="cartoon4">
+    </div>
+    <div class="col96">
+        <img src="images/cartoon5.jpg" alt="cartoon5" class="cartoon5">
+    </div>
+</div>
+<br>
+<h2 style="text-align: center;">Two Column dashboard</h2>
+<div class="container10">
+<header>
+<div class="col101"><strong>About Python</strong> </div>
+</header>
+<article>
+<div class="col102"><p>Python is a versatile, high-level, general-purpose programming language known for its readability and simplicity, 
+        making it popular for various applications like web development, data science, and machine learning. </p>
+</div>  
+</article>
+<footer>
+<div class="col103">&copy;2025 All Rights Reserved.</div>
+</footer>
+</div><br>
+<h2 style="text-align: center;">Using Grid Template Column</h2>
+<div class="container11">
+<div class="col111">Block1</div>
+<div class="col112">Block2</div>
+<div class="col113">Block3</div>
+<div class="col114">Block4</div>
+<div class="col115">Block5</div>
+<div class="col116">Block6</div>
+</div>
+<br>
+<h2 style="text-align: center;">Using Span multiple Row & Column</h2>
+<div class="container12">
+<div class="col121">Block1</div>
+<div class="col122">Block2</div>
+<div class="col123">Block3</div>
+<div class="col124">Block4</div>
+<div class="col125">Block5</div>
+<div class="col126">Block6</div>
+</div>
+<br>
+</body>
+</html>
