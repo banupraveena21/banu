@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11 CSS Tasks</title>
+<style>
+/*Task131: Create static element & observe how it behaves in the normal document flow. */ 
+.container{border:6px solid palegreen; width:60%; margin: auto;}
+.row{border: 1px solid blue; text-align: center;position: sticky;}
+
+/*Task132: Create a relative element and offset it using top and left. */
+.container1{border:3px solid palegreen; width:30%; margin: auto;height: 100px;}
+.row1{background-color: blue; width: 150px; height: 50px;
+position: relative; top: 10px; left: 50px;text-align: center;}
+
+/*Task133: Add an absolute element inside a relative parent and position it in the bottom-right corner.*/
+.container2{border:3px solid palegreen; width:30%; margin: auto;height: 100px;position: relative;}
+.row2{background-color: pink; width: 150px; height: 50px;
+position: absolute; top: 50px; left: 255px;text-align: center;}
+
+/*Task134: Create a fixed navigation bar that stays visible when scrolling. */
+.container3{border:3px solid palegreen; width:30%; margin: auto;height: 100px;}
+.row31{background-color: pink; width: 150px; height: 50px;top: 50px; left: 255px;text-align: center;}
+.row32{background-color:yellow; width: 150px; height: 50px;top: 50px; left: 255px;text-align: center;position: fixed;top: 70%;left:35%;}
+.row33{background-color: red; width: 150px; height: 50px;top: 50px; left: 255px;text-align: center;}
+.row34{background-color:blue; width: 150px; height: 50px;top: 50px; left: 255px;text-align: center;}
+
+/*Task135:Add a sticky header that sticks to the top of the viewport when scrolling.*/
+.container4{background-color: plum;width: 30%;height: 300px;border: 1px solid black;}
+.row4{position: sticky; border: 1px solid blue;top: 0;}
+
+/*Task136: Use z-index to position overlapping elements (e.g., a model above a background). */
+.container5{border: 2px solid purple; width: 50%;height: 300px;}
+.row50{position: absolute;z-index:-1;}
+
+/*Task137:Create highlighted text that reveals additional info on hover using ::after pseudo-element */
+.container6 div::after{content: url(images/smilie.png);}
+.container6 p{color: rgb(168, 168, 8);}
+
+/*Task138: Build model window with absolute positioning and center it using transform.*/
+.container7{border:4px solid blue;width:40%;margin: auto;height: 100px;position: relative;}
+.container7 p{position: absolute; background-color: red;transform:translate(250%,150%)}
+
+/*Task140:  Create a dropdown menu using absolute positioning. */
+.container8{border: 2px inset sandybrown; position: relative;width: 30%;height: 50px;}
+.row8{position: absolute;top: 20px;right: 100px;}
+
+/*Task141:  Add a sticky sidebar that remains visible while scrolling through content.*/
+.container9{border: 1px solid black;width: 70%;height: 700px;}
+.row91{position:sticky;color: brown;top: 0;background-color: aquamarine;}
+
+/*Task142:Build a full-screen overlay using fixed positioning.*/
+.container10{border: 2px inset sandybrown; position: relative;width: 100%;height: 50px;}
+.row101{position: fixed;top:95%;}
+
+/*Task143: Combine relative, absolute, and z-index to create layered content.*/
+.container11{border: 2px inset sandybrown; position: relative;width: 80%;margin: auto;height: 300px;}
+.row111,.row112,.row113{border: 1px solid red;border-radius: 30px;width: 50%;}
+.row113{position: absolute;z-index: 2;right: 50px;}
+.row112{position: absolute;}
+/*Task139:  Position a footer at the bottom of the viewport using fixed. */
+footer p{position: fixed; bottom: 0%;right: 60%;}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row"><h1>Welcome to New World</h1></div>
+</div>
+<br>
+<h2>Using Position relative</h2>
+<div class="container1">
+    <div class="row1">Bluebox</div>
+</div>
+<br>
+<h2>Using Position absolute</h2>
+<div class="container2">
+    <div class="row2">pinkbox</div>
+</div>
+<br>
+<h2>Using Position fixed</h2>
+<div class="container3">
+    <div class="row31">PinkBox</div>
+    <div class="row32">YellowBox</div>
+    <div class="row33">RedBox</div>
+    <div class="row34">BlueBox</div>
+    <div class="row31">PinkBox</div>
+    <div class="row32">YellowBox</div>
+</div>
+<br>
+<h2>Using position sticky</h2>
+<div class="container4">
+<div class="row4"><h2>Hello ! Hi !</h2></div>
+</div>
+<br>
+<h2>Using Z-index</h2>
+<div class="container5">
+    <div class="row50"><img src="images/back.jpg"></div>
+    <div class="row51">This is one of a Beautiful image which is colourful</div>
+</div>
+<br>
+<h2>Using ::after Pseudo element</h2>
+<div class="container6">
+    <div class="row61"><p>Hi</p></div>
+    <div class="row62"><p>Hello</p></div>
+    <div class="row63"><p>Welcome</p></div>
+</div><br><br>
+<h2>Using Absolute & Transform</h2>
+<div class="container7"><p>Iam Centered</p></div>
+<br>
+<h2>Using Absolute Position</h2>
+<div class="container8">
+    <select class="row8">
+        <option id="fruit">Select Fruit</option>
+        <option id="fruit">Apple</option>
+        <option id="fruit">Orange</option>
+        <option id="fruit">Pineapple</option>
+    </select>
+</div>
+<br>
+<h2>Using Sticky</h2>
+<div class="container9">
+    <div class="row91"><h3>About Python</h3></div><br>
+    <div class="row92"><p>Python is a versatile, high-level, general-purpose programming language known for its readability and simplicity,</p>
+       <p>making it popular for various applications like web development, data science, and machine learning. </p>
+      <p> Here's a more detailed overview:</p>
+    <p>   Key Characteristics and Features:</p>
+      <h4>Interpreted:</h4>
+    <p>   Python code is executed line by line, making it easy to debug and prototype. </p>
+     <h4> High-Level:</h4>
+        Python handles many low-level details, allowing developers to focus on the logic of their programs. 
+     <p>  Object-Oriented:</p>
+      <p> Python supports object-oriented programming, which allows developers to organize code into reusable modules. </p></div>
+</div>
+<br>
+<h2>Using position fixed</h2>
+<div class="container10">
+    <button class="row101">Turn on overlay Effect</button>
+</div>
+<br>
+<h2>Using position relative, absolute, Z-index</h2>
+<div class="container11">
+    <div class="row111"><p>Interpreted:
+        Python code is executed line by line, making it easy to debug and prototype. </p></div>
+    <div class="row112"><p>High-Level:
+        Python handles many low-level details, allowing developers to focus on the logic of their programs. </p></div>
+    <div class="row113"><p>Dynamic Typing:
+        Python's dynamic typing means that you don't need to declare the type of a variable before using it, making it easy to experiment and learn. </p></div>
+</div>
+<footer><p style="text-align:center;">&copy;2025 All Rights reserved.</p></footer>
+</body>
+</html>
