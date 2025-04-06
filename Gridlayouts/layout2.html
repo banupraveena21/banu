@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+<style>
+    *{margin: 0%;padding: 0%;box-sizing: border-box;}
+    body{background-image: url(images/background.jpg);background-repeat: no-repeat;background-size: cover;}
+    .container{border: 2px solid blue;grid-template-columns:30% auto auto;display: grid;width:40%;margin: auto;}
+    .col1{display: grid;grid-template-rows: 300px 300px;border: 3px solid purple;}
+    .col3{display: grid;grid-template-rows: 300px 300px;border: 3px solid purple;}
+    .cartoon2{height:600px;object-fit:fill;width: 100%;}
+    .cartoon{width: 100%;object-fit:fill;height:300px;}
+    .cartoon1{width: 100%;object-fit:fill;height: 300px;}
+    .cartoon3{width: 100%;object-fit:fill;height: 300px;}
+    .cartoon4{width: 100%;object-fit:fill;height: 300px;}
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">Layout2</h2>
+<div class="container">
+    <div class="col1">
+        <div class="row11"><img src="images/cartoon.jpg" alt="cartoon" class="cartoon"></div>
+        <div class="row12"><img src="images/cartoon1.jpg" alt="cartoon1" class="cartoon1"></div>
+    </div>
+    <div class="col2">
+        <div class="row21"><img src="images/cartoon2.jpg" alt="cartoon2" class="cartoon2"></div>
+    </div>
+    <div class="col3">
+        <div class="row31"><img src="images/cartoon3.jpg" alt="cartoon3" class="cartoon3"></div>
+        <div class="row32"><img src="images/cartoon4.jpg" alt="cartoon4" class="cartoon4"></div>
+    </div>
+</div>
+</body>
+</html>

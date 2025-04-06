@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout5</title>
+<style>
+    body{background-image:url(images/back4.jpg);background-size: cover;}
+    .container{display: grid; grid-template-rows:45% 45%;width:40%;margin: auto;border: 5px inset lightgreen; border-radius: 20px;}
+    .col1{display: grid;grid-template-columns: 20% 30% 50%;}
+    .col2{display: grid; grid-template-columns: 50% 20% 30%;}
+    .grid1,.grid2,.grid3,.grid4,.grid5,.grid6{border: 1px solid plum;border-radius: 20px;}
+    .animal{width: 100%;height:100%;object-fit: cover;border-radius: 20px;}
+    .animal:hover{width: 110%;}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="col1">
+        <div class="grid1">
+            <img src="images/animal.jpg" class="animal">
+        </div>
+        <div class="grid2">
+            <img src="images/animal1.jpg" class="animal">
+        </div>
+        <div class="grid3">
+            <img src="images/animal2.jpg" class="animal">
+        </div>
+    </div>
+    <div class="col2">
+        <div class="grid4">
+            <img src="images/animal3.jpg" class="animal">
+        </div>
+        <div class="grid5">
+            <img src="images/animal4.jpg" class="animal">
+        </div>
+        <div class="grid6">
+            <img src="images/animal5.jpg" class="animal">
+        </div>
+    </div>
+</div>
+</body>
+</html>
