@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2</title>
+<style>
+h2{background:linear-gradient(pink,plum);color: rgb(70, 2, 2);}
+.container{background-image: url(images/back2.jpg);width:90%;height:400px;
+background-repeat: no-repeat;
+background-size: cover;margin: auto;}
+.row{display: flex;justify-content: space-evenly;padding:35px;}
+img{border: 10px outset plum;}
+.cartoon:hover{filter: brightness(20%);transform: scale(1.2);transition-duration: 5s;}
+.cartoon1:hover{filter:grayscale(50%);transform: rotateX(360deg);transition-duration: 3s;}
+.cartoon2:hover{filter: hue-rotate(90deg);transform: skewX(90deg);transition-duration:4s;}
+.cartoon3:hover{filter: invert(90%);animation-name:move;animation-duration:5s;animation-timing-function:ease-in;transition-duration:2s;}
+@keyframes move {from{transform: translateX(0%);}
+to{transform: translateX(-50%);}
+    
+}
+</style>
+</head>
+<body>
+<h2 style="text-align: center;font-size:40px;">Welcome To Cartoon World</h2>
+<div class="container">
+    <div class="row">
+    <img src="images/cartoon.jpg" class="cartoon">
+    <img src="images/cartoon1.jpg" class="cartoon1">
+    <img src="images/cartoon2.jpg" class="cartoon2">
+    <img src="images/cartoon3.jpg" class="cartoon3">
+    </div>
+</div>
+</body>
+</html>

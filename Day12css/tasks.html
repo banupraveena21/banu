@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day12css Tasks</title>
+<style>
+body{background-image: url(images/back.jpg);background-repeat: no-repeat;background-size: cover;}
+
+/*Task144: Create a fading text with Opacity*/
+h1{text-align: center;opacity:0.5;}
+h1:hover{opacity:1;}
+
+/*Task145: Animate a button to grow in size using transform:scale()*/
+button:hover{background-color: plum; transform: scale(1.5);}
+
+/*Task146: Apply a grayscale filter to an image on hover.*/
+.gray{width:30%;height:200px;border:5px groove palevioletred;}
+.gray1{width: 100%;height:100%;}
+.gray1:hover{filter: grayscale(90%);transition-duration: 2s;}
+
+/*Task147: Create a navigation bar with a hover blur effect.*/
+.bar  a{color: black; text-decoration: none;}
+.bar:hover{filter: blur(10px);}
+.bar{background-color:rgb(181, 201, 224);height: 50px;text-align: center;}
+
+/*Task148: Fade out an element when clicked using opacity.*/
+.fade{width:20%; height:200px;border:10px inset pink;margin: auto;}
+.fade1{width: 100%;height: 100%;}
+.fade1:hover{opacity: 0.5;}
+
+/*Task149: Design a flipping card with smooth transition.*/
+.smooth{width: 20%; height:200px;border: 15px outset pink;}
+.smooth1{width: 100%; height: 100%;}
+.smooth:hover{width:40%; transition:linear;transition-duration:3s;}
+
+/*Task150: Add a brightness filter to images on hover.*/
+.bright{border:10px ridge purple; width: 30%; height: 200px;}
+.bright1{width:100%; height: 100%;}
+.bright1:hover{filter: brightness(20%);transition-duration:1s;}
+
+
+/*Task151: Use @keyframes to rotate an icon continuously. */
+.icon{width:30%;height: 200px;border:3px solid blue;border-radius:100%; margin: auto;}
+.icon1{width: 100%;height: 100%;}
+.icon:hover{animation: infinite;animation-name: spin;animation-duration:2s;width: 40%;animation-timing-function:linear;}
+@keyframes spin {from{transform: rotate(0deg);}
+to{transform: rotate(360deg);}    
+}
+
+/*Task152:  Implement smooth fading text for a carousel.*/
+.text{font-size: 60px;color: rgb(2, 102, 2);opacity: 0.5;font-family: Verdana, Geneva, Tahoma, sans-serif;}
+.text:hover{opacity: 1;transition-duration:5s;}
+
+/*Task153: Create a hover effect where text slides in with opacity.*/
+h2{color: rgb(83, 4, 4);opacity: 0.5;}
+h2:hover{transform: translateX(300px);transition-duration:8s;opacity: 1;}
+
+/*Task154: Apply a sepia filter to a button when hovered.*/
+.sepia{background: linear-gradient(lightgreen,lightblue,red);width:300px;height:50px;
+border:2px groove blue;color:black;font-size: 20px;}
+.sepia:hover{filter: sepia(80%);transition-duration: 1s;}
+
+/*Task155:  Use opacity to create a hidden image that fades in on hover.*/
+.hidden{width: 50%;height:200px; border: 10px ridge white;margin: auto;}
+.hidden1{width: 100%;height: 100%;opacity: 0.5;}
+.hidden1:hover{opacity:2;transition-duration: 2s;}
+
+/*Task156: Add a shadow filter to cards for a 3D effect.*/
+.shadow{width:40%;height:300px;border:5px solid black;box-shadow:60px 15px purple;}
+.shadow1{width: 100%; height: 100%;}
+.shadow:hover{filter: drop-shadow(30px 10px 4px white);}
+</style>
+</head>
+<body>
+<h1>Create a fading text with Opacity</h1>
+<br>
+<nav class="bar">
+    <a href="#">Home</a>&nbsp;&nbsp;
+    <a href="#">About Us</a>&nbsp;&nbsp;
+    <a href="#">Blogs</a>&nbsp;&nbsp;
+    <a href="#">Contact Us</a>
+</nav><br> 
+<p><b>Task145: Animate a button</b></p>
+<input type="text" placeholder="Enter Your Name">
+<input type="password" placeholder="Enter Your password">
+<button type="submit">Submit</button>
+<p><b>Using Grayscale filter</b></p>
+<div class="gray">
+<img src="images/cartoon1.jpg" class="gray1">
+</div><br>
+<p style="text-align: center;"><b>Fade out an element using Opacity</b></p>
+<div class="fade">
+<img src="images/cartoon2.jpg" class="fade1">
+</div><br>
+<p><b>Using Transtition:smooth</b></p>
+<div class="smooth">
+    <img src="images/cartoon3.jpg" class="smooth1">
+</div><br>
+<p><b>Using Filter:brightness</b></p>
+<div class="bright">
+    <img src="images/cartoon4.jpg" class="bright1">
+</div><br>
+<p style="text-align: center;"><b>Using @keyframes Rotate a icon</b></p>
+<div class="icon">
+    <img src="images/bear.png" class="icon1">
+</div><br>
+<p><b>Implement smooth fading text</b></p>
+<p class="text">What a Beautiful Day</p>
+<p><b>Create hover effect using opacity</b></p>
+<h2>Iam Going To Here & There.....</h2>
+<button type="submit" class="sepia">Click Me To Know More...</button><br><br>
+<p style="text-align: center;"><b>Use Opacity to hidden image</b></p>
+<div class="hidden">
+    <img src="images/cartoon5.jpg" class="hidden1">
+</div><br>
+<p><b>Add a shadow filter for a 3d effect</b></p>
+<div class="shadow">
+    <img src="images/cartoon.jpg" class="shadow1">
+</div><br><br>
+</body>
+</html>
