@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day13css Tasks</title>
+<style>
+body{background-color: bisque;}
+.row31{display: flex;justify-content:space-evenly;flex-direction:row;flex-wrap: wrap;
+border: 1px solid black;width: 80%;margin: auto;gap:15px;padding: 10px;}
+.col31{border: 5px groove red;border-radius: 10px;}
+.plan{width: 100%;height: 100%;border-radius: 10px;}
+.container5{display: flex;justify-content: space-evenly;flex-direction:row;}
+.row41{display: flex;flex-direction: row;gap: 10px;}
+@media (max-width:600px){
+    body{background-color: plum; font-family: 'Times New Roman', Times, serif;}
+    h1{font-size: 20px;}
+    .links{display: flex;flex-direction:column;gap:15px;}
+    p{font-size: 14px;}
+    .trip{width: 100%;}
+    .col31{width: 100%;}
+    .meet{padding:5px;}
+    .button1{display: none;}
+    .container5{flex-direction: column;}
+    .row41{flex-direction: column;}
+}
+@media (min-width: 601px and max-width: 1024px){
+    body{background-color: pink;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+    h1{font-size: 30px;}
+    p{font-size:18px;}
+   .trip{width: 50%;}
+   .col31{width:50%;}
+   .meet{padding: 15px;}
+   .container5{flex-direction: row;}
+}
+@media  (min-width: 1025px){
+body{background-color: lightgreen;font-family: cursive;}
+h1{font-size: 40px;}
+p{font-size: 22px;}
+.trip{width:25%;}
+.col31{width: 25%;}
+.meet{padding: 20px;}
+.meet:hover{transform: translateX(100px);transition-duration: 2s;background-color: brown;}
+.plan:hover{width: 110%;}
+
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">FIVE PATHWAYS FINANCIAL </h1>
+<div class="row11">
+    <nav class="links">
+        <a href="#">My Guide</a>
+        <a href="#">Services</a>
+        <a href="#">Products</a>
+        <a href="#">Education</a>
+        <a href="#">About</a>
+        <button type="submit" class="button1" style="background-color: rgb(243, 149, 149);border-radius: 10px;width: 15%;
+        ">Schedule a Meeting</button>
+    </nav>
+    </div><br>
+<p style="text-align: center;">A Retirement roadmap<br> for everyone.</p>
+<p style="text-align: center;">Retirement is a Journey. Take it with Confidence.</p><br><br>
+<div class="container2" style="display: flex;justify-content: space-around;border:2px ridge purple;width:60%;margin: auto;
+align-items: center;flex-direction: column;">
+    <div class="row21">
+    <p style="text-align: center;">Your Journey through retirement is unique. Each part of your<br>
+    financial life is just one of many pathways on your personal<br>
+    retirment roadmap. But that roadmap can get a little<br>
+    complicated. It's ok to stop and ask for directions. Of course,<br>
+    if you ask three people for directions, you'll probably get three<br>
+    different answers. We're here to help you make sense of it all.<br>
+    We recognize that the route to retirement is not a single road.<br>
+    It is a Journey to the place where all roads converge. We're<br>
+    here to make sure you reach your destination with confidence.</p>
+    </div>
+    <div class="row22" style="text-align: center;">
+        <img src="images/trip.jpg" class="trip">
+    </div>
+    </div><br><br>
+<p style="text-align: center;"><b>Five Pathways is here to simplify<br>your retirement Planning:</b></p><br>
+<div class="container3">
+<div class="row31">
+<div class="col31">    
+<div class="text">
+<div class="image3">
+<img src="images/rip.jpg" class="plan">
+</div>
+<p><b>Retirement Income Planning</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+    <img src="images/tp.jpg" class="plan">
+</div>
+<p><b>Tax Planning</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/ip.jpg" class="plan">
+</div>
+<p><b>Investment Planning</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/ltc.jpg" class="plan">
+</div>
+<p><b>Medicare/LTC Planning</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/ep.jpg" class="plan">
+</div>
+<p><b>Legacy/Estate Planning</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/np.png" class="plan">
+</div>
+<p><b>National Pension System</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/epf.jpg" class="plan">
+</div>
+<p><b>Employees Provident Fund</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/ppf.jpg" class="plan">
+</div>
+<p><b>Public Provident Fund</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/ulip.jpg" class="plan">
+</div>
+<p><b>Unit-Linked Investment Plans</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/dap.jpg" class="plan">
+</div>
+<p><b>Deferred Annuity Plans</b></p>
+</div>
+</div>
+<div class="col31">
+<div class="text">
+<div class="image31">
+<img src="images/iap.jpg" class="plan">
+</div>
+<p><b>Immediate Annuity Plans</b></p>
+</div>
+</div>
+</div>
+</div><br><br>
+<button type="submit" class="meet" style="font-family: 'Times New Roman', Times, serif;
+font-size: 20px;background-color: burlywood;border: 5px ridge saddlebrown;">Schedule a Meeting</button>
+<br><br><p><b>Have Any Questions? Ask Us</b></p>
+<div class="container4">
+    <div class="row41">
+        <input type="text" placeholder="Enter Your name" style="width:300px;height:30px;"><br><br>
+        <input type="number" placeholder="Enter Your Phone Number" style="width: 300px;height: 30px;"><br><br>
+        <input type="text" placeholder="Enter Your Query" style="width: 300px;height:70px;"><br><br>
+        <button type="submit">Submit</button>
+    </div>
+</div>
+<footer>
+<div class="container5">
+    <div class="row51">
+        <p>&copy;2025 All Rights Reserved.</p>
+    </div>
+    <div class="row52">
+    <p>Visit Us: www.abcd.com</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>
