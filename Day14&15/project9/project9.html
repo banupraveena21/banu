@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project9</title>
+<style>
+h1{background:linear-gradient(to bottom right,coral, pink);
+text-align: center;font-size: 50px;
+}
+.container{display: flex;
+width: 90%;margin: auto;justify-content: space-evenly;
+}
+.row1,.row2,.row3{border: 1px solid purple;text-align: center;
+border-radius: 20px;background-color: bisque;
+}
+.row1{width: 25%;
+}
+.row2{width: 25%;border:5px solid purple;
+}
+.row3{
+    width: 25%;
+}
+button{border-radius: 20px;}
+button:hover{background-color: brown;color: white;transform: scale(1.2);}
+.row2:hover{transform: scale(1.1);}
+.row1:hover{transform: scale(1.1);}
+.row3:hover{transform: scale(1.1);}
+
+@media(max-width:680px){
+    h1{font-size: 30px;}
+    .container{flex-direction: column;}
+    .row1{width: 90%;}
+    .row2{width: 90%;}
+    .row3{width: 90%;}
+}
+</style>
+</head>
+<body>
+<h1>Pricing Section</h1>
+<div class="container">
+<div class="row1">
+    <p style="font-size: 20px;"><b>Basic</b></p>
+    <p style="font-size: 30px;"><b>&#8377;499</b></p>
+    <p>per month</p>
+    <p>50GB Storage</p>
+    <p>Bandwidth 10GB</p>
+    <p>Up to 3 Databases</p>
+    <p>E-mail accounts: YES</p>
+    <p>Up to 10 free SMS</p>
+    <button type="submit">SELECT PLAN</button>
+</div>
+<div class="row2">
+    <p style="font-size: 20px;"><b>STARTUP</b></p>
+    <p style="font-size: 30px;"><b>&#8377;1599</b></p>
+    <p>per month</p>
+    <p>500GB Storage</p>
+    <p>Bandwidth 45GB</p>
+    <p>Up to 15 Databases</p>
+    <p>E-mail accounts: YES</p>
+    <p>Up to 150 free SMS</p>
+    <button type="submit">SELECT PLAN</button>
+</div>
+<div class="row3">
+    <p style="font-size: 20px;"><b>ENTERPRISE</b></p>
+    <p style="font-size: 30px;"><b>&#8377;2599</b></p>
+    <p>per month</p>
+    <p>Unlimited Storage</p>
+    <p>Unlimited Bandwidth</p>
+    <p>Up to 90 Databases</p>
+    <p>E-mail accounts: YES</p>
+    <p>Up to 500 free SMS</p>
+    <button type="submit">SELECT PLAN</button>
+</div>
+</div> 
+</body>
+</html>

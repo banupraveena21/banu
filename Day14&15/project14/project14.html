@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project14</title>
+<style>
+    .container{
+        height:100px;
+        width: 100%;
+        background-color:pink;
+        animation-name: back;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        display: flex;
+    }
+    @keyframes back {
+        from{background-color:pink;}
+        to{background-color: plum;}
+        
+    }
+    .row{width: 40%;margin-left: 20px;}
+    .rowrow{width:60%;display: flex;justify-content: space-evenly;margin-top: 40px;}
+    .container h1{font-size:40px;}
+    .rowrow a{font-size: larger;text-decoration: none;color: black;}
+    .container1{margin-top: 550px;display: flex;width: 80%;margin: auto;border: 2px solid pink;}
+    .row1{width:60%;text-align: center;}
+    .row1 input{width: 400px;height: 50px;}
+    .row1 button{width:100px;background-color: palegreen;height: 30px;border-radius: 10px;}
+    .row11{width: 40%;padding:100px;}
+    .row11 img{width: 100%;}
+    .container2{display: flex;width: 90%;margin: auto;border: 1px solid black;justify-content: space-evenly;}
+    .row21,.row22{border: 1px solid salmon;text-align: center;}
+    .row21 p,.row22 p{font-size: 20px;background-color:rgb(186, 245, 245);border-radius: 20px;}
+    .row21{width: 50%;}
+    .row22{width: 50%;}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Anytime Fitness</h1>
+    </div>
+    <div class="rowrow">
+        <a href="#">Find a GYM</a>
+        <a href="#">Why Join</a>
+        <a href="#">Training</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <button type="submit" style="width: 100px;height:30px;
+        background-color: blue;position: fixed;left:500px;">Sign Up</button>
+    </div>
+</div>
+<img src="images/fit.jpg" width="100%"><br><br>
+<div class="container1">
+    <div class="row1">
+        <h2>Let's Start your Journey Here!</h2>
+        <p><b>Register Here</b></p>
+        <p>Already have an account? Sign in</p>
+        <input type="text" placeholder="Full Name"><br><br>
+        <input type="email" placeholder="Email Address"><br><br>
+        <input type="number" placeholder="Mobile Number"><br><br>
+        <input type="password" placeholder="Password"><br><br>
+        <input type="checkbox" style="width: 20px;"> I have read and agree to Us <br>
+        Terms of Use and Privacy Policy <br><br>
+        <button type="submit">Sign Up</button>
+    </div>
+    <div class="row11">
+        <img src="images/fit1.jpg">
+    </div>
+</div>
+<h2>Estimated Average Monthly Online Fitness Coaching Prices</h2>
+<div class="container2">
+    <div class="row21">
+        <h1>Pricing Model</h1>
+        <p>One to One Coaching</p>
+        <p>Subscription-Based Services</p>
+        <p>Hybrid Pricing Models</p>
+        <p>Package Deals</p>
+        <p>Pay-Per Session</p>
+        <p>Course or Program-Based</p>
+    </div>
+    <div class="row22">
+        <h1>Estimated Average Monthly Price(rupee's)</h1>
+        <p>4000 - 5000</p>
+        <p>1000 - 2000</p>
+        <p>500 - 1000</p>
+        <p>1500 - 2500 (for 4-12 week Program)</p>
+        <p>750 - 1750</p>
+        <p>500 - 1500 (for a complete program)</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project15</title>
+<style>
+.hours{animation-name: timer;animation-duration:10s;animation-iteration-count: infinite;animation-timing-function: linear;}
+@keyframes timer {from{
+transform:scalex(1.1)
+}
+to{
+    transform:scalex(0.5)
+}    
+}
+.container1{width: 80%;border: 2px solid tan;}
+.row1 p{font-size: 25px;}
+.container2{text-align: center;}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2 style="font-size:40px;text-align: center;">Clock is Ticking!!! Enroll Your Seats Now !</h2>
+    <div class="hours"><p style="font-size:40px;color: red;">10:25:58</p></div>
+</div>
+<img src="images/e1.webp" width="90%;" style="object-fit: fill;">
+<h2 style="font-size: 40px;">Event Registration Form</h2>
+<div class="container1">
+<div class="row1">
+    <p><b>Attendee Information</b></p>
+    <p>Please Fill name and contact Information of Attendees</p>
+</div>
+<div class="row2">
+    <label id="name">Your Name:</label><br><br>
+    <select id="mr">
+        <option id="mr">Mr</option>
+        <option id="mr">Mrs</option>
+        <option id="mr">Miss</option>
+        <option id="mr">kid</option>
+    </select>
+    <input type="text" placeholder="Enter Your Full name" style="width: 250px;height: 30px;"> <br><br>
+    <label id="email">Enter your Email:</label><br><br>
+    <input type="email" placeholder="Email" style="width: 250px;height: 30px;"><br><br>
+    <label id="number">Contact Number</label><br><br>
+    <input type="number" placeholder="Phone number" style="width: 250px;height: 30px;"><br><br>
+    <p>Will you have a guest with You?</p>
+    <input type="radio">Yes
+    <input type="radio">No <br><br>
+    <p>Would you like to be updated about the Upcoming Events?</p>
+    <input type="radio">Yes
+    <input type="radio">No <br><br>
+    <button type="submit" style="background-color: palegreen;font-size: 20px;margin-left: 10px;border-radius: 10px;">Submit</button>
+</div>
+</div><br><br>
+<div class="container2">
+    <div class="row2">
+        <div class="col">
+            <img src="images/s1.jpg" style="border-radius: 20px;">
+        </div>
+        <h1 style="font-size: 30px;">Mary Jane</h1>
+        <p>Speaker of the Event</p>
+    </div>
+</div>
+<footer>
+    <p>&copy;2025 All Rights Reserved.</p>
+</footer>
+</body>
+</html>
