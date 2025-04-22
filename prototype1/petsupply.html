@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Supply Website</title>
+    <link href='https://fonts.googleapis.com/css?family=Reem Kufi' rel='stylesheet'>
+<style>
+*{margin: 0%;padding: 0%;box-sizing: border-box;}
+body{font-family:"Reem Kufi", sans-serif;}
+.logo{width:20%;}
+.container{display: flex;background-color: #eec14c;}
+.container a {text-decoration: none;color: white;}
+.container h1{color: white;font-size:3em;}
+.row{text-align: center;}
+li{list-style: none; color: white;}
+.col2{display: flex;}
+.navlinks{display: flex;align-items: center;}
+.nlinks{display: flex;margin-left: 30px;margin-top: 20px;gap:30px;font-size: 25px;}
+.nlinks>li:hover .menu{display:block;}
+.menu{position: absolute;display: none;padding: 10px;}
+.menu li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.storelinks{display: flex;}
+.nlinks>li:hover .menu1{display: block;}
+.menu1{position: absolute;display: none;left:550px;padding: 10px;}
+.menu1 li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.nlinks>li:hover .menu2{display: block;}
+.menu2{position: absolute;display: none;left:700px;padding: 10px;}
+.menu2 li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.nlinks>li:hover .menu3{display: block;}
+.menu3{position: absolute;display: none;left:700px;padding: 10px;}
+.menu3 li{background-color: white;color: #eec14c;width: 200px;}
+.pin{margin-top: 20px;margin-left:50px;width:4%;}
+.pin2{width: 4%;margin-left: 20px;}
+.pin1{background-color: #eec14c;border: 2px solid white;height:30px;width:240px;border-radius:5px;margin-left: 20px;}
+::placeholder{color: white;padding: 10px;}
+.search{width:800px;height: 45px;border-radius: 15px;background-image: url(Photos/search.png);background-repeat: no-repeat;
+background-size:3%;background-position:10px;margin-left:30px;margin-top:15px;border:3px solid white;background-color: #eec14c;}
+.submit{margin-left:100px;background-color: #ff7a51;border: #ff7a51;height: 35px;width:80px;
+font-size:larger;color: #eec14c;border-radius: 5px;}
+.signup{margin-left:10px;background-color:#eec14c;border:3px solid #ff7a51;height: 35px;width:80px;
+font-size:larger;color:#ff7a51;border-radius: 5px;}
+.row{width: 25%;}
+.col1{width: 75%;}
+.variant4{width: 100%;height: 100%;object-fit: cover;}
+.explore{font-size:35px;text-align: center;}
+.container3{width: 60%;margin: auto;}
+.col3{display: flex;justify-content: space-evenly;}
+.row3{background-color: #eec14c;border:6px solid #eec14c;}
+.col3 p{font-size: 25px;color: white;text-align: center;}
+.image3{width: 100%;}
+.shop{text-align: center;}
+.container4{width: 80%;margin: auto;}
+.col4{display: flex;flex-wrap: wrap;justify-content: space-evenly;gap:20px;}
+.row4{background-color: #eec14c;border: 6px solid #eec14c;}
+.col4 p{font-size: 25px;color: white;text-align: center;padding: 10px;}
+.i4{width: 100%;height: 100%;}
+.breed{text-align: center;}
+.container5{display: flex;width: 90%;margin: auto;justify-content: space-evenly;position: relative;}
+.image5{border-radius:50%;border: 10px solid transparent;background:linear-gradient(to bottom, #eec14c,white);}
+.i5{width: 100%;}
+.text5 p{font-size: 25px;text-align: center;background-color: #eec14c;color: white;border-radius: 15px;padding: 10px;
+position: absolute;width:12%;top:160px;z-index: -1;
+}
+.container6{display: flex;width: 90%;border: 3px solid #eec14c;margin: auto;border-radius: 10px;}
+.row61{width:45%;}
+.row61 p{font-size: 35px;padding:30px; margin-top: 20px;margin-left: 30px;}
+.consult{width:450px;margin-left:60px;font-size: 25px;height: 100px;background-color: #ff7a51;border: none;border-radius: 10px;
+font-weight: bold;}
+.i6{width: 100%; margin-top: 20px;margin-left:70px;}
+.container7{display: flex;width: 90%;border: 3px solid #eec14c;margin: auto;border-radius: 10px;}
+.row71{width:45%;}
+.row71 p{font-size: 35px;padding:30px; margin-top: 20px;margin-left: 30px;}
+.chat{width:450px;margin-left:60px;font-size: 25px;height: 100px;background-color: #ff7a51;border: none;border-radius: 10px;
+font-weight: bold;}
+.i7{width: 100%; margin-top: 20px;margin-left:70px;}
+.container8{display: flex;background-color: #ff7a51;justify-content: space-evenly;}
+.container8 p{font-size: 25px;}
+.row92,.row93,.row94{margin-top: 60px;}
+.container9{display: flex;background-color: #eec14c;justify-content: space-evenly;height:500px;}
+.logo1{width:30%;}
+.container9 h1,.container9 p{color: white;}
+.row91{margin-top: 100px;text-align: center;}
+.row91 h1{font-size: 40px;}
+.container9 a{text-decoration: none;color: white;font-size: 25px;line-height: 60px;}
+.insta{width:10%;}
+.email1{width: 10%;}
+
+@media (max-width:680px){
+    .container h1{font-size: 2em;}
+    .container input{display: none;}
+    .container li{font-size: 15px;}
+    .pin,.pin2{display: none;}
+    .col3{flex-direction: column;text-align: center;}
+    .container5{flex-direction: column;justify-content: space-evenly;text-align: center;gap:50px;}
+    .image5{background:none}
+    .i5{width: 50%;}
+    .text5 p{font-size:20px;top:20px;position: relative;width:35%;text-align: center;left: 10px;margin: auto;}
+    .container6{flex-direction: column;width: 100%;}
+    .row61 p{font-size: 20px;}
+    .consult{width: 200px;font-size:20px;height: 30px;}
+    .i6{width: 70%;}
+    .container7{flex-direction: column;width: 100%;}
+    .row71 p{font-size: 20px;}
+    .chat{width: 200px;font-size: 20px;height: 30px;}
+    .i7{width: 70%;}
+    .container8{flex-direction: column;gap: 20px;}
+    .container9{flex-direction: column;height:100%;width: 100%;text-align: center;}
+    .container9 a,.container9 h1{font-size: 20px;}
+}
+@media (max-width:1024px){
+    .container h1{font-size: 2em;}
+    .container input{width: 300px;}
+    .container li{font-size: 15px;}
+    .pin,.pin2{display: none;}
+    .col3{flex-direction: column;text-align: center;gap: 10px;}
+    .text5 p{font-size: 15px;}
+    .container6{flex-direction: column;}
+    .i6{width: 70%;}
+    .container7{flex-direction: column;}
+    .i7{width:70%;}
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+    <div class="row">
+        <img src="Photos/logo.png" alt="logo" class="logo">
+        <h1><a href="petsupply.html">PET STORE</a></h1>
+    </div>
+    <div class="col1">
+    <div class="row1">
+        <input type="search" class="search">
+        <button type="submit" class="submit">Login</button>
+        <button type="submit" class="signup">Sign up</button>
+    </div>
+    <div class="col2">
+    <nav class="navmenu">
+        <div class="navlinks">
+            <ul class="nlinks">
+            <li>Shop by Pets
+                <div class="menu">
+                    <ul class="menulinks">
+                        <li>Dog</li>
+                        <li>Cat</li>
+                        <li>Fish</li>
+                        <li>Bird</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Shop by store
+                <div class="storelinks">
+                <div class="menu1">
+                    <ul class="menulinks1">
+                        <li>Dog Food</li>
+                        <li>Treats</li>
+                        <li>Pharmacy</li>
+                        <li>Cat Litter</li>
+                        <li>Toys</li>
+                        <li>Grooming</li>
+                    </ul>
+                </div>
+                <div class="menu2">
+                    <ul class="menulinks2">
+                        <li>Cat Food</li>
+                        <li>Bowls</li>
+                        <li>Walk essential</li>
+                        <li>Beds & Mats</li>
+                        <li>Fashion</li>
+                    </ul>
+                </div>
+                </div>
+            </li>
+            <li>Shop by Breed
+                <div class="menu3">
+                    <ul class="menulinks3">
+                        <li>Pug</li>
+                        <li>Doberman</li>
+                        <li>Husky</li>
+                        <li>Labrador</li>
+                        <li>German Shephard</li>
+                        <li>Boxer</li>
+                        <li>golden retriever</li>
+                        <li>Beagle</li>
+                        <li>Rottweiler</li>
+                    </ul>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="pinmap">
+        <img src="Photos/pinmap.png" alt="pin" class="pin">
+        <input type="search" placeholder="Enter pin to check Delivery Date" class="pin1">
+        <img src="Photos/cart.png" alt="cart" class="pin2">
+    </div>
+    </div>
+    </div>
+    </div>
+</header><br>
+<img src="Photos/Variant4.png" alt="image" class="variant4"><br>
+<h2 class="explore">Explore by pets</h2><br>
+<div class="container3">
+    <div class="col3">
+<div class="row3">
+    <div class="text3">
+        <div class="image3">
+            <a href="dogpage.html"><img src="Photos/Rectangle 8.png"></a>
+        </div>
+        <p>Dog</p>
+    </div>
+</div>
+<div class="row3">
+    <div class="text3">
+        <div class="image3">
+            <a href="catpage.html"><img src="Photos/Rectangle 19.png"></a>
+        </div>
+        <p>Cat</p>
+    </div>
+</div>
+<div class="row3">
+    <div class="text3">
+        <div class="image3">
+            <a href="fishpage.html"><img src="Photos/Rectangle 12.png"></a>
+        </div>
+        <p>Fish</p>
+    </div>
+</div>
+<div class="row3">
+    <div class="text3">
+        <div class="image3">
+            <a href="birdpage.html"><img src="Photos/Rectangle 14.png"></a>
+        </div>
+        <p>Bird</p>
+    </div>
+</div>
+    </div>
+</div><br><br>
+<h1 class="shop">Shop by store</h1>
+<div class="container4">
+    <div class="col4">
+        <div class="row4">
+            <div class="text4">
+                <p>Dog Food</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 31.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Treats</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 32.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Cat Litter</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 34.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Toys</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 35.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Grooming</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 36.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Cat Food</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 41.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Bowls</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 40.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Walk essential</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 39.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Bed & Mats</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 38.png" class="i4">
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="text4">
+                <p>Fashion</p>
+                <div class="image4">
+                    <img src="Photos/Rectangle 37.png" class="i4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+<h1 class="breed">Shop by Breed</h1><br>
+<div class="container5">
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+            <a href="#"><img src="Photos/Ellipse 17.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Husky</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+           <a href="#"> <img src="Photos/Ellipse 7.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Pug</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+            <a href="#"><img src="Photos/Ellipse 14.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Manx</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+            <a href="#"> <img src="Photos/Ellipse 15.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Chartreux</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+            <a href="#"><img src="Photos/Ellipse 8.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Boxer</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+           <a href="#"><img src="Photos/Ellipse 9.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Doberman</p>
+        </div>
+    </div>
+    <div class="row5">
+        <div class="text5">
+            <div class="image5">
+           <a href="#" ><img src="Photos/Ellipse 16.png" alt="image5" class="i5"></a>
+            </div>
+            <p>Rottweiler</p>
+        </div>
+    </div>
+</div><br><br><br><br>
+<div class="container6">
+    <div class="row61">
+            <p><b>Speak to a behaviour <br> expert online</b></p>
+            <br>
+            <p>Your first general behaviour <br>consult is on us.</p>
+            <br><br>
+            <button type="submit" class="consult"><b>Consult Now</b></button>
+    </div>
+    <div class="row62">
+        <img src="Photos/Screenshot (18) 1.png" class="i6">
+    </div>
+</div><br><br><br>
+<div class="container7">
+    <div class="row71">
+            <p><b>Get instant advise<br>From our highly <br>qualified vets</b></p>
+            <br>
+            <p>Save time, chat with a vet.</p>
+            <br><br>
+            <button type="submit" class="chat"><b>Chat with a vet</b></button>
+    </div>
+    <div class="row72">
+        <img src="Photos/Group_3566_1 1.png" class="i7">
+    </div>
+</div><br><br>
+<div class="container8">
+    <div class="row81">
+        <p>24hr Delivery</p>
+        <p>In 24 cities</p>
+    </div>
+    <div class="row82">
+        <p>1,50,000+</p>
+        <p>Happy pet Parents</p>
+    </div>
+    <div class="row83">
+        <p>Complimentary vet consult</p>
+        <p>For every new member</p>
+    </div>
+    <div class="row84">
+        <p>Pet Pharmacy</p>
+        <p>Exclusive</p>
+    </div>
+</div><br><br>
+<footer>
+    <div class="container9">
+        <div class="row91">
+            <img src="Photos/logo.png" alt="logo" class="logo1">
+            <h1>PET STORE</h1>
+        </div>
+        <div class="row92">
+            <h1>ONLINE SHOPPING</h1>
+            <a href="dogpage.html">Dogs</a><br>
+            <a href="catpage.html">Cats</a><br>
+            <a href="fishpage.html">Fish</a><br>
+            <a href="birdpage.html">Bird</a><br>
+        </div>
+        <div class="row93">
+            <h1>QUICK LINKS</h1>
+            <a href="#">Consult Now</a><br>
+            <a href="#">Chat with a vet</a><br>
+            <a href="aboutus.html">About Us</a><br>
+            <a href="contactus.html">Contact Us</a><br>
+        </div>
+        <div class="row94">
+            <h1>FOLLOW US</h1><br>
+            <img src="Photos/insta.png" class="insta">
+            <img src="Photos/facebook.png" class="insta">
+            <img src="Photos/twitter.png" class="insta">
+            
+            <br><br><br><br><br>
+            <h1>GET IN TOUCH</h1>
+            <p><img src="Photos/contact.png" class="email1"> 1800-1234-5678</p>
+            <p><img src="Photos/email.png" class="email1"> petstore@gmail.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

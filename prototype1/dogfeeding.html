@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Feeding Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Reem Kufi' rel='stylesheet'>
+<style>
+*{margin: 0%;padding: 0%;box-sizing: border-box;}
+body{font-family:"Reem Kufi", sans-serif;}
+.logo{width:20%;}
+.container{display: flex;background-color: #eec14c;}
+.container h1{color: white;font-size:3em;}
+.container a{text-decoration: none;color: white;}
+.row{text-align: center;}
+li{list-style: none; color: white;}
+.col2{display: flex;}
+.navlinks{display: flex;align-items: center;}
+.nlinks{display: flex;margin-left: 30px;margin-top: 20px;gap:30px;font-size: 25px;}
+.nlinks>li:hover .menu{display:block;}
+.menu{position: absolute;display: none;padding: 10px;}
+.menu li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.storelinks{display: flex;}
+.nlinks>li:hover .menu1{display: block;}
+.menu1{position: absolute;display: none;left:550px;padding: 10px;}
+.menu1 li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.nlinks>li:hover .menu2{display: block;}
+.menu2{position: absolute;display: none;left:700px;padding: 10px;}
+.menu2 li{background-color: white;color: #eec14c;width: 150px;text-align: center;}
+.nlinks>li:hover .menu3{display: block;}
+.menu3{position: absolute;display: none;left:700px;padding: 10px;}
+.menu3 li{background-color: white;color: #eec14c;width: 200px;}
+.pin{margin-top: 20px;margin-left:40px;width:4%;}
+.pin2{width: 4%;margin-left: 20px;}
+.pin1{background-color: #eec14c;border: 2px solid white;height:30px;width:230px;border-radius:5px;margin-left: 20px;}
+::placeholder{color: white;padding: 10px;}
+.search{width:800px;height: 45px;border-radius: 15px;background-image: url(Photos/search.png);background-repeat: no-repeat;
+background-size:3%;background-position:10px;margin-left:30px;margin-top:15px;border:3px solid white;background-color: #eec14c;}
+.submit{margin-left:100px;background-color: #ff7a51;border: #ff7a51;height: 35px;width:80px;
+font-size:larger;color: #eec14c;border-radius: 5px;}
+.signup{margin-left:10px;background-color:#eec14c;border:3px solid #ff7a51;height: 35px;width:80px;
+font-size:larger;color:#ff7a51;border-radius: 5px;}
+.row{width: 25%;}
+.col1{width: 75%;}
+.doggy{width: 100%;}
+.container11{width: 100%;display: flex;justify-content: space-evenly;}
+.i11{border-radius: 50%;border: 5px solid #eec14c;}
+.container11 h2{text-align: center;font-size: 30px;}
+.container11 a{text-decoration: none;color: black;}
+.wish{width: 8%;margin-left: 60px;}
+.container2{display: flex;flex-wrap: wrap;justify-content: space-evenly;gap: 50px;}
+.row21{width: 22%;background-color: #eec14c;text-align: center;height: 520px;padding: 10px;}
+.row21 p{color: white;font-size: 25px;text-align: left;}
+.add{background-color: #ff7a51;border: none;border-radius: 5px;font-size: 22px;padding: 15px;width: 200px;}
+.i2{width: 100%;}
+.container8{display: flex;background-color: #ff7a51;justify-content: space-evenly;}
+.container8 p{font-size: 25px;}
+.row92,.row93,.row94{margin-top: 60px;}
+.container9{display: flex;background-color: #eec14c;justify-content: space-evenly;height:500px;}
+.logo1{width:30%;}
+.container9 h1,.container9 p{color: white;}
+.row91{margin-top: 100px;text-align: center;}
+.row91 h1{font-size: 40px;}
+.container9 a{text-decoration: none;color: white;font-size: 25px;line-height: 60px;}
+.insta{width:10%;}
+.email1{width: 10%;}
+
+@media (max-width:680px){
+    .container h1{font-size: 2em;}
+    .container input{display: none;}
+    .container li{font-size: 15px;}
+    .pin,.pin2{display: none;}
+    .container11{flex-direction: column;}
+    .add{width: 100%;font-size: 15px;}
+    .row21{width: 90%;}
+    .container8{flex-direction: column;gap: 20px;}
+    .container9{flex-direction: column;height:100%;width: 100%;text-align: center;}
+    .container9 a,.container9 h1{font-size: 20px;}
+
+}
+
+@media (max-width:1024px){
+    .container h1{font-size: 1.5em;}
+    .container input{width: 200px;}
+    .submit,.signup{font-size: 10px;}
+    .pin1{display: none;}
+    .container li{font-size: 15px;}
+    .pin,.pin2{display: none;}
+    .container11{flex-direction: column;}
+    .row11{width:30%;}
+    .i11{width:50%;}
+    .row11 h2{font-size: small;}
+    .add{width: 100px;font-size: 10px;}
+    .row21{width:30%;}
+    .row21 p{font-size:15px;}
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="row">
+            <img src="Photos/logo.png" alt="logo" class="logo">
+            <h1><a href="petsupply.html">PET STORE</a></h1>
+        </div>
+        <div class="col1">
+        <div class="row1">
+            <input type="search" class="search">
+            <button type="submit" class="submit">Login</button>
+            <button type="submit" class="signup">Sign up</button>
+        </div>
+        <div class="col2">
+        <nav class="navmenu">
+            <div class="navlinks">
+                <ul class="nlinks">
+                <li>Shop by Pets
+                    <div class="menu">
+                        <ul class="menulinks">
+                            <li>Dog</li>
+                            <li>Cat</li>
+                            <li>Fish</li>
+                            <li>Bird</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Shop by store
+                    <div class="storelinks">
+                    <div class="menu1">
+                        <ul class="menulinks1">
+                            <li>Dog Food</li>
+                            <li>Treats</li>
+                            <li>Pharmacy</li>
+                            <li>Cat Litter</li>
+                            <li>Toys</li>
+                            <li>Grooming</li>
+                        </ul>
+                    </div>
+                    <div class="menu2">
+                        <ul class="menulinks2">
+                            <li>Cat Food</li>
+                            <li>Bowls</li>
+                            <li>Walk essential</li>
+                            <li>Beds & Mats</li>
+                            <li>Fashion</li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+                <li>Shop by Breed
+                    <div class="menu3">
+                        <ul class="menulinks3">
+                            <li>Pug</li>
+                            <li>Doberman</li>
+                            <li>Husky</li>
+                            <li>Labrador</li>
+                            <li>German Shephard</li>
+                            <li>Boxer</li>
+                            <li>golden retriever</li>
+                            <li>Beagle</li>
+                            <li>Rottweiler</li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="pinmap">
+            <img src="Photos/pinmap.png" alt="pin" class="pin">
+            <input type="search" placeholder="Enter pin to check Delivery Date" class="pin1">
+            <img src="Photos/cart.png" alt="cart" class="pin2">
+        </div>
+        </div>
+        </div>
+        </div>
+    </header><br>
+<img src="Photos/Variant4.png" class="doggy">
+<main>
+<div class="container11">
+    <div class="row11">
+        <div class="text11">
+            <div class="image11">
+            <a href="dogpage.html"><img src="Photos/Rectangle 44-6.png" alt="image" class="i11"></a>
+            </div>
+            <h2>Preventive Care</h2>
+        </div>
+    </div>
+    <div class="row11">
+        <div class="text11">
+            <div class="image11">
+             <a href="doghealth.html"> <img src="Photos/Rectangle 44-6.png" alt="image" class="i11"></a>
+            </div>
+            <h2>Health Care</h2>
+        </div>
+    </div>
+    <div class="row11">
+        <div class="text11">
+            <div class="image11">
+               <a href="dogfeeding.html"><img src="Photos/Rectangle 44-53.png" alt="image" class="i11"></a>
+            </div>
+            <h2>Feeding <br>
+                Essentials</h2>
+        </div>
+    </div>
+    <div class="row11">
+        <div class="text11">
+            <div class="image11">
+            <a href="dogeveryday.html"><img src="Photos/Rectangle 44-6.png" alt="image" class="i11"></a>
+            </div>
+            <h2>Everyday <br>
+                Essentials</h2>
+        </div>
+    </div>
+</div><br><br>
+<div class="container2">
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+            <a href="#"> <img src="Photos/Rectangle 44-53.png" class="i2"></a>
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-48.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-49.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-50.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-52.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-51.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-54.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row21">
+        <div class="text21">
+            <div class="image21">
+                <img src="Photos/Rectangle 44-55.png" class="i2">
+            </div>
+            <p>Feeding Essential <img src="Photos/wishlist.png" class="wish"></p>
+            <p>Rs.860</p><br>
+            <button type="submit" class="add">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br>
+<div class="container8">
+    <div class="row81">
+        <p>24hr Delivery</p>
+        <p>In 24 cities</p>
+    </div>
+    <div class="row82">
+        <p>1,50,000+</p>
+        <p>Happy pet Parents</p>
+    </div>
+    <div class="row83">
+        <p>Complimentary vet consult</p>
+        <p>For every new member</p>
+    </div>
+    <div class="row84">
+        <p>Pet Pharmacy</p>
+        <p>Exclusive</p>
+    </div>
+</div><br><br>
+</main>
+<footer>
+    <div class="container9">
+        <div class="row91">
+            <img src="Photos/logo.png" alt="logo" class="logo1">
+            <h1>PET STORE</h1>
+        </div>
+        <div class="row92">
+            <h1>ONLINE SHOPPING</h1>
+            <a href="dogpage.html">Dogs</a><br>
+            <a href="catpage.html">Cats</a><br>
+            <a href="fishpage.html">Fish</a><br>
+            <a href="birdpage.html">Bird</a><br>
+        </div>
+        <div class="row93">
+            <h1>QUICK LINKS</h1>
+            <a href="#">Consult Now</a><br>
+            <a href="#">Chat with a vet</a><br>
+            <a href="aboutus.html">About Us</a><br>
+            <a href="contactus.html">Contact Us</a><br>
+        </div>
+        <div class="row94">
+            <h1>FOLLOW US</h1><br>
+            <img src="Photos/insta.png" class="insta">
+            <img src="Photos/facebook.png" class="insta">
+            <img src="Photos/twitter.png" class="insta">
+            
+            <br><br><br><br><br>
+            <h1>GET IN TOUCH</h1>
+            <p><img src="Photos/contact.png" class="email1"> 1800-1234-5678</p>
+            <p><img src="Photos/email.png" class="email1"> petstore@gmail.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
