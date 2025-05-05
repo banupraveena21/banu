@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<style>
+     body{font-family:"inter",sans-serif}
+    *{margin: 0%;padding: 0%;box-sizing: border-box;}
+    .container{width: 80%;display: flex;margin: auto;}
+    .col1{width: 50%;text-align: center;margin-top: 100px;}
+    .col1 p{font-size: 20px;}
+    .col2{width: 50%;}
+.image1{width:80%;margin-top: 100px;}
+input{width: 400px;height: 50px;}
+button{width: 200px;height: 40px;background-color: rgb(59, 32, 32);color: white;}
+
+@media (max-width:680px) {
+    .container{flex-direction: column;width: 80%;margin: auto;}
+    .col1{text-align: center;margin-top: 50px;margin-left: 50px;}
+    .col1 h1,.col1 p{text-align: center;}
+    input{width: 200px;height: 30px;}
+    .col1 p{font-size: 15px;}
+    button{width: 150px;height: 20px;}
+    .col2{width: 100%;}
+    .image1{width: 100%;margin-top:20px;}
+}
+@media (min-width:681px) and (max-width:1024px) {
+    .container{width: 90%;}
+    input{width: 250px;}
+    .col1{width: 40%;}
+    .col2{width: 60%;margin-left:50px;margin-top:40px;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="col1">
+        <h1>Mal <br>Mathi</h1>
+        <p style="color: red;"><b>Resort</b></p><br>
+        <p><b>Register</b></p>
+        <p>Please fill in the fields below:</p> <br>
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <input type="password" id="pass" placeholder="Password"><br><br>
+        <button type="submit">CREATE ACCOUNT</button>
+        <p style="font-size: 15px;">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <div class="col2">
+        <img src="figmaproject/Rectangle 27.png" class="image1">
+    </div>
+</div>
+</body>
+</html>

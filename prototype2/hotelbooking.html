@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel/Resort Booking Website</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<style>
+    body{font-family:"inter",sans-serif}
+    .container{display: flex;background-color: #c12c2c;}
+    .col{display: flex;margin-left: 30px;}
+    .rowrow{display: flex;}
+    .col{width: 30%;}
+    .colcol{width: 70%;display: flex; justify-content: space-around;margin-top: 30px;}
+    .colcol a{text-decoration: none;color: black;}
+    .row h1{font-size: 25px;}
+    .rowrow h2{font-size: 25px;margin-top: 40px;margin-left: 10px;}
+    .vl{border: 3px solid black;height: 50px;margin-left: 30px;margin-top: 20px;}
+    .rowrow p{font-size: 11px;margin-left: 20px;margin-top: 20px;}
+    .container1{position: relative;}
+    .row12{width: 50%;margin: auto;background-color: white;position: absolute;border-radius: 10px;
+    top:10px;left: 400px;}
+    .row12 input{margin-left: 50px;width: 650px;height: 50px;}
+    .row12 button{background-color: #f03939;margin-left: 300px;width:200px;height:30px;border: none;border-radius: 5px;}
+    .row12 a{text-decoration: none;color:white;}
+    .row12 p{border: 1px solid black;width:150px;text-align: center;border-radius: 20px;margin-left:30px;padding: 10px;}
+    .container2{display:grid;grid-template-columns: auto auto auto;gap:30px;margin-left: 10px;}
+    .row2 p{text-align: center;}
+    .image2{width: 100%;border-radius: 10px;}
+.container3{display: flex;}
+.col31{width: 25%;text-align: center;}
+details{border: 1px solid black;padding: 20px;font-size: 25px;}
+.col32{width: 75%;margin-left: 20px;display: grid;grid-template-columns: auto auto;gap: 20px;}
+.fit{width: 5%;}
+.container3 h3{text-decoration:underline;font-size: 25px;}
+.image3{width: 90%;}
+.comfort{list-style:none;font-size: 25px;display:grid;grid-template-columns: auto auto auto;gap:50px;margin-left: 20px;}
+.flower{width:3%;}
+.container4{width: 100%;background-color: #c12c2c;display: flex;}
+.row41{width:30%;display: flex;flex-direction: column;justify-content: center;text-align: center;gap: 10px;}
+.row41 a{text-decoration: none;color: white;}
+.row41 h4{font-size: 20px;color: white;}
+.row42{width: 30%; text-align: center;}
+.row42 input{width:200px;height: 30px;}
+.row42 p{font-size: 25px;}
+.row43{width: 40%;text-align: center;color: white;}
+.twitter{width:5%;}
+
+    @media (max-width:680px) {
+        .container{flex-direction: column;}
+        .colcol a{font-size:10px;}
+        .rowrow p{font-size:9px;}
+        .colcol{gap: 12px;margin-left: 5px;}
+        .row12 input{width:200px;height:20px;}
+        .row12{top: 10px;left:30px;width:80%;}
+        .row12 p{width: 100px;font-size:10px;}
+        .row12 button{width: 100px;margin-left:100px;}
+        .container2{grid-template-columns: auto;margin-top: 150px;}
+        .image2{width: 98%;}
+        .container3{flex-direction: column;width:90%;margin: auto;}
+       .container3 h3{font-size: 15px;justify-content: center;}
+        .col31{width:95%;text-align: center;}
+        details{font-size: 15px;margin-left: 10px;}
+        .col32{grid-template-columns: auto;margin-top: 10px;}
+        .image3{width: 100%;margin-left: 20px;}
+        .comfort{grid-template-columns: auto; font-size: 20px;}
+        .container4{flex-direction: column;justify-content: center;align-items:center;}
+        .row42 input{height: 20px;width: 100px;}
+    }
+
+    @media (min-width:681px) and (max-width:1024px) {
+        .container{flex-direction: column;}
+        .row h1{font-size: 20px;}
+        .rowrow h2{font-size: 20px;}
+        .rowrow p{font-size: 9px;}
+        .colcol a{font-size:10px;}
+        .row12{top: 10px;left:80px;width: 80%;}
+        .row12 input{width:500px;height: 20px;}
+        .row12 button{margin-left:50px;}
+        .container2{margin-top: 40px;}
+        .container3{width: 95%;margin: auto;}
+        .container3 h3{font-size: 15px;}
+        details{font-size: 15px;}
+        .image3{width: 100%;}
+        .comfort{grid-template-columns: auto auto;}
+        .row41 h4{font-size: 15px;}
+        .row43 p{font-size: 15px;}
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="col">
+    <div class="row">
+        <h1>Mal <br> Mathi</h1>
+    </div>
+    <div class="rowrow">
+        <h2>Resort</h2><br>
+        <div class="vl"></div>
+        <p>Charming Desert Guest <br> House for a Peaceful <br>Getaway</p>
+    </div>
+    </div>
+    <div class="colcol">
+        <a href="hotel.html">HOTEL</a>
+        <a href="hotelbooking.html">HOME</a>
+        <a href="allroom.html">ROOM</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="blog.html">PAGE</a>
+        <a href="login.html" style="background-color: #f9f974;height: 20px;">Login</a>
+        <a href="signup.html" style="background-color: #f9f974;height: 20px;">Sign up</a>
+    </div>
+</div>
+<div class="container1">
+    <div class="row1">
+    <img src="figmaproject/image.png" style="width: 100%;">
+    </div>
+    <div class="row12">
+        <p>Overnight stay</p><br>
+        <input type="text" class="search" placeholder="Enter a destination or property"><br><br>
+        <input type="date" class="date" ><br><br>
+        <input type="number" class="adult" placeholder="1Adult 1Room"><br><br>
+        <button type="submit" class="submit"><a href="login.html">Search</a></button><br><br>
+    </div>
+</div><br><br>
+<div class="container2">
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 57 (5).png" class="image2">
+            </div>
+            <p><b>Luxury Hotels</b></p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 57 (4).png" class="image2">
+            </div>
+            <p><b>Luxury Living Room</b></p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 57 (6).png" class="image2">
+            </div>
+            <p><b>Luxury Bedroom</b></p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 57 (1).png" class="image2">
+            </div>
+            <p><b>Bangalore</b></p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 57 (5).png" class="image2">
+            </div>
+            <p><b>New Dehli</b></p>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="text2">
+            <div class="image2">
+                <img src="figmaproject/Rectangle 43.png" class="image2">
+            </div>
+            <p><b>Goa</b></p>
+        </div>
+    </div>
+</div><br><br><br>
+<div class="container3">
+    <div class="col31">
+        <h3>Welcome to our <br>accommodations <br>overview!</h3>
+        <details>
+            <summary><img src="figmaproject/wifi.png" class="fit"><b>Free Wifi</b> </summary>
+            <p>A unique and rustic living space built into the <br>trees,
+             offering a one-of-a-kind experience with <br>stunning views of the forest canopy.</p>
+        </details><br>
+        <details>
+            <summary><img src="figmaproject/fitness.png" class="fit"><b>Fitness Centre</b></summary>
+            <p>Speedily say has suitable disposal add boy. On <br>fourth doubt miles of child. Exercise joy man <br>
+            childern rejoiced. Yet uncommonly his ten who <br>
+        diminution astonished.</p>
+        </details><br>
+        <details>
+            <summary><img src="figmaproject/resturant.png" class="fit"><b>Restaurants</b></summary>
+            <p>Demesne's new manners savings <br>staying had. Under folly balls, death <br>
+            own point now men. Match way these <br>she avoids seeing death.</p>
+        </details><br>
+        <details>
+            <summary><img src="figmaproject/spa.png" class="fit"><b>Spa And Massage</b></summary>
+            <p>Son agreed to others period myself few yet nature. <br>Mention manners opinion if 
+            garrets enabled. To <br>occasional dissimilar impossible sentiments.</p>
+        </details>
+    </div>
+    <div class="col32">
+        <img src="figmaproject/Rectangle 57 (1).png" class="image3">
+        <img src="figmaproject/Rectangle 57.png" class="image3">
+        <img src="figmaproject/Rectangle 57 (2).png" class="image3">
+        <img src="figmaproject/Rectangle 57 (3).png" class="image3">
+    </div>
+</div>
+    <ul class="comfort">
+        <li><img src="figmaproject/flower.png" class="flower"><b>Comfortable Bedding</b></li>
+        <li><img src="figmaproject/flower.png" class="flower"><b>Scenic Views</b></li>
+        <li><img src="figmaproject/flower.png" class="flower"><b>Spacious Bathroom</b></li>
+        <li><img src="figmaproject/flower.png" class="flower"><b>In-Room Dining</b></li>
+        <li><img src="figmaproject/flower.png" class="flower"><b>Comfortable Pillows</b></li>
+        <li><img src="figmaproject/flower.png" class="flower"><b>Luxurious Bathtubs</b></li>
+    </ul><br><br><br>
+    <div class="container4">
+        <div class="row41">
+            <h4>USEFUL LINKS</h4>
+            <a href="about.html">About</a>
+            <a href="reviewroom.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="faq.html">FAQS</a>
+            <a href="blog.html">Blogs</a>
+        </div>
+        <div class="row42">
+            <h1>Mal <br>Mathi</h1>
+            <p><b>Resort</b></p>
+            <input type="email" placeholder="EMAIL"><p style="color: white;font-size:15px;">SUBSCRIBE</p>
+        </div>
+        <div class="row43">
+            <p>JOIN RESORT BOOKING</p>
+            <p>Gala no.123, 1st Floor,</p>
+            <p>Building B1,Print World Industrial <br>complex, Vehale village, Bhiwandi 421302</p>
+            <p>Maharastra, India</p>
+            <p>Email: info@malmathiresort.com</p>
+            <p>Contact: 9876543210</p>
+            <img src="figmaproject/twitter.png" class="twitter">
+            <img src="figmaproject/facebook.png" class="twitter">
+            <img src="figmaproject/insta.png" class="twitter">
+        </div>
+    </div>
+</body>
+</html>

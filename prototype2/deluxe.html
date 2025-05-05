@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deluxe</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<style>
+body{font-family:"inter",sans-serif}
+    .container{display: flex;background-color: #c12c2c;}
+    .col{display: flex;margin-left: 30px;}
+    .rowrow{display: flex;}
+    .col{width: 30%;}
+    .colcol{width: 70%;display: flex; justify-content: space-around;margin-top: 30px;}
+    .colcol a{text-decoration: none;color: black;}
+    .row h1{font-size: 25px;}
+    .rowrow h2{font-size: 25px;margin-top: 40px;margin-left: 10px;}
+    .vl{border: 3px solid black;height: 50px;margin-left: 30px;margin-top: 20px;}
+    .rowrow p{font-size: 11px;margin-left: 20px;margin-top: 20px;}
+    .container1{position: relative;}
+    .image1{width: 100%;}
+    .row12 p{position: absolute;top:50px;left: 650px;color: white;font-size: 40px;}
+    .col12{display: flex;gap:150px;position: absolute;left:450px;top: 200px;}
+    .row12 a{text-decoration: none; color: black;background-color: white;padding: 15px;}
+.col12 a:hover{background-color: rgb(31, 31, 90);}
+.container2{display: grid;grid-template-columns: auto auto auto;width: 100%;gap: 20px;}
+.row21 p{text-align: center;}
+.row21{width:95%;}
+.book{background-color: #f9f974;border: none;margin-left:180px;padding: 10px;border-radius: 20px;}
+.image2{width: 100%;}
+.container4{width: 100%;background-color: #c12c2c;display: flex;}
+.row41{width:30%;display: flex;flex-direction: column;justify-content: center;text-align: center;gap: 10px;}
+.row41 a{text-decoration: none;color: white;}
+.row41 h4{font-size: 20px;color: white;}
+.row42{width: 30%; text-align: center;}
+.row42 input{width:200px;height: 30px;}
+.row42 p{font-size: 25px;}
+.row43{width: 40%;text-align: center;color: white;}
+.twitter{width:5%;}
+
+    @media (max-width:680px) {
+        .container{flex-direction: column;}
+        .colcol a{font-size:10px;}
+        .rowrow p{font-size:9px;}
+        .colcol{gap: 12px;margin-left: 5px;}
+        .container1{width:100%;}
+        .row12 p{left:150px;top:0px;font-size: 20px;}
+        .col12{left:30px;top:50px;gap: 50px;}
+        .row12 a{padding:2px;}
+        .container2{grid-template-columns: auto;}
+        .book{margin-left: 120px;}
+        .container4{flex-direction: column;justify-content: center;align-items:center;}
+        .row42 input{height: 20px;width: 100px;}
+    }
+
+    @media (min-width:681px) and (max-width:1024px) {
+        .container{flex-direction: column;}
+        .row h1{font-size: 20px;}
+        .rowrow h2{font-size: 20px;}
+        .rowrow p{font-size: 9px;}
+        .colcol a{font-size:10px;}
+        .row12 p{left:300px;top:10px;}
+        .col12{left: 100px;top: 130px;}
+        .row12 a{padding: 10px;}
+        .book{margin-left: 65px;}
+        .row41 h4{font-size: 15px;}
+        .row43 p{font-size: 15px;}
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+        <div class="row">
+            <h1>Mal <br> Mathi</h1>
+        </div>
+        <div class="rowrow">
+            <h2>Resort</h2><br>
+            <div class="vl"></div>
+            <p>Charming Desert Guest <br> House for a Peaceful <br>Getaway</p>
+        </div>
+        </div>
+        <div class="colcol">
+            <a href="hotel.html">HOTEL</a>
+            <a href="hotelbooking.html">HOME</a>
+            <a href="allroom.html">ROOM</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="blog.html">PAGE</a>
+            <a href="login.html" style="background-color: #f9f974;height: 20px;">Login</a>
+            <a href="signup.html" style="background-color: #f9f974;height: 20px;">Sign up</a>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="row11">
+            <img src="figmaproject/image (11).png" class="image1">
+        </div>
+        <div class="row12">
+            <p><b>ROOMS</b></p>
+            <div class="col12">
+                <a href="allroom.html">All Rooms</a>
+                <a href="minimalist.html">Minimalist</a>
+                <a href="deluxe.html">Deluxe</a>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="container2">
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (3).png" class="image2">
+                </div>
+                <p><b>Wolf den retreat</b></p>
+                <p>$ 225.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (4).png" class="image2"">
+                </div>
+                <p><b>Gully</b></p>
+                <p>$ 300.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/image (8).png" class="image2">
+                </div>
+                <p><b>Treehouse Loft</b></p>
+                <p>$ 350.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 43 (2).png" class="image2">
+                </div>
+                <p><b>Birchwood Bungalow</b></p>
+                <p>$ 350.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 43 (5).png" class="image2">
+                </div>
+                <p><b>Mossay Oak Suit</b></p>
+                <p>$ 400.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 43 (6).png" class="image2">
+                </div>
+                <p><b>Mossay Oak Suit</b></p>
+                <p>$ 400.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (2).png" class="image2">
+                </div>
+                <p><b>Leafy Retreat</b></p>
+                <p>$ 450.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (3).png" class="image2">
+                </div>
+                <p><b>Aspen Hideway</b></p>
+                <p>$ 500.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (4).png" class="image2">
+                </div>
+                <p><b>Pinecone Cottage</b></p>
+                <p>$ 500.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (2).png" class="image2">
+                </div>
+                <p><b>Redwood Reetreat</b></p>
+                <p>$ 450.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (3).png" class="image2">
+                </div>
+                <p><b>Forest View Deluxe</b></p>
+                <p>$ 450.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+        <div class="row21">
+            <div class="text21">
+                <div class="image21">
+                    <img src="figmaproject/Rectangle 57 (4).png" class="image2">
+                </div>
+                <p><b>Cedar grove suite</b></p>
+                <p>$ 450.00 USD</p>
+                <button type="submit" class="book">BOOK NOW</button>
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <footer>
+        <div class="container4">
+            <div class="row41">
+                <h4>USEFUL LINKS</h4>
+                <a href="about.html">About</a>
+                <a href="reviewroom.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="faq.html">FAQS</a>
+                <a href="blog.html">Blogs</a>
+            </div>
+            <div class="row42">
+                <h1>Mal <br>Mathi</h1>
+                <p><b>Resort</b></p>
+                <input type="email" placeholder="EMAIL"><p style="color: white;font-size:15px;">SUBSCRIBE</p>
+            </div>
+            <div class="row43">
+                <p>JOIN RESORT BOOKING</p>
+                <p>Gala no.123, 1st Floor,</p>
+                <p>Building B1,Print World Industrial <br>complex, Vehale village, Bhiwandi 421302</p>
+                <p>Maharastra, India</p>
+                <p>Email: info@malmathiresort.com</p>
+                <p>Contact: 9876543210</p>
+                <img src="figmaproject/twitter.png" class="twitter">
+                <img src="figmaproject/facebook.png" class="twitter">
+                <img src="figmaproject/insta.png" class="twitter">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<style>
+     body{font-family:"inter",sans-serif}
+     *{margin: 0%;padding: 0%;box-sizing: border-box;}
+     .container{position: relative;}
+     .rowrow{position: absolute;top:150px;left: 550px;}
+    .rowrow h1{color: rgb(179, 26, 26);font-size: 40px;}
+    .image{width: 100%;}
+    .container1{width: 70%;margin: auto;display: flex;flex-direction: column;gap: 20px;}
+    .row1{display: flex;justify-content: space-around;}
+    .col11{width: 40%;}
+    .col12{width: 60%;text-align: center;margin-top: 100px;}
+    .image1{width: 100%;}
+    .star{width:10%;}
+    .book{background-color: #f9f974;border: none;width: 100px;height: 30px;border-radius: 20px;}
+    .col12 a{text-decoration:none;color: black;}
+    .container4{width: 100%;background-color: #c12c2c;display: flex;}
+.row41{width:30%;display: flex;flex-direction: column;justify-content: center;text-align: center;gap: 10px;}
+.row41 a{text-decoration: none;color: white;}
+.row41 h4{font-size: 20px;color: white;}
+.row42{width: 30%; text-align: center;}
+.row42 input{width:200px;height: 30px;}
+.row42 p{font-size: 25px;}
+.row43{width: 40%;text-align: center;color: white;}
+.twitter{width:5%;}
+
+    @media (max-width:680px) {
+        .rowrow h1{font-size: 20px;}
+        .rowrow{left:110px;top: 30px;}
+        .row1{flex-direction: column;}
+        .col11{width: 100%;}
+        .col12{width:100%; margin-top: 10px;}
+        .container4{flex-direction: column;justify-content: center;align-items:center;}
+        .row42 input{height: 20px;width: 100px;}
+    }
+
+    @media (min-width:681px) and (max-width:1024px) {
+        .rowrow h1{font-size: 25px;}
+        .rowrow{left: 300px;top:80px;}
+        .col12{margin-top: 50px;}
+        .row41 h4{font-size: 15px;}
+        .row43 p{font-size: 15px;}
+    }
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <img src="figmaproject/image (11).png" class="image">
+    </div>
+    <div class="rowrow">
+        <h1>LUXURY HOTELS</h1>
+    </div>
+</div>
+<br><br><br>
+<div class="container1">
+<div class="row1">
+    <div class="col11">
+        <img src="figmaproject/image (4).png" class="image1">
+    </div>
+    <div class="col12">
+        <h2><b>Velvet Dream</b></h2>
+        <p><b>$350.00 USD</b></p>
+        <p>5.0 <img src="figmaproject/star.png" class="star"></p><br>
+        <button type="submit" class="book"><a href="hotelbooknow.html">Book Now</a></button>
+    </div>
+</div>
+<div class="row1">
+    <div class="col11">
+        <img src="figmaproject/image (3).png" class="image1">
+    </div>
+    <div class="col12">
+        <h2><b>Golden Horizon</b></h2>
+        <p><b>$350.00 USD</b></p>
+        <p>5.0 <img src="figmaproject/star.png" class="star"></p><br>
+        <button type="submit" class="book"><a href="hotelbooknow.html">Book Now</a></button>
+    </div>
+</div>
+<div class="row1">
+    <div class="col11">
+        <img src="figmaproject/image (1).png" class="image1">
+    </div>
+    <div class="col12">
+        <h2><b>Crystal Suite</b></h2>
+        <p><b>$350.00 USD</b></p>
+        <p>5.0 <img src="figmaproject/star.png" class="star"></p><br>
+        <button type="submit" class="book"><a href="hotelbooknow.html">Book Now</a></button>
+    </div>
+</div>
+</div><br><br><br>
+<footer>
+    <div class="container4">
+        <div class="row41">
+            <h4>USEFUL LINKS</h4>
+            <a href="about.html">About</a>
+            <a href="reviewroom.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="faq.html">FAQS</a>
+            <a href="blog.html">Blogs</a>
+        </div>
+        <div class="row42">
+            <h1>Mal <br>Mathi</h1>
+            <p><b>Resort</b></p>
+            <input type="email" placeholder="EMAIL"><p style="color: white;font-size:15px;">SUBSCRIBE</p>
+        </div>
+        <div class="row43">
+            <p>JOIN RESORT BOOKING</p>
+            <p>Gala no.123, 1st Floor,</p>
+            <p>Building B1,Print World Industrial <br>complex, Vehale village, Bhiwandi 421302</p>
+            <p>Maharastra, India</p>
+            <p>Email: info@malmathiresort.com</p>
+            <p>Contact: 9876543210</p>
+            <img src="figmaproject/twitter.png" class="twitter">
+            <img src="figmaproject/facebook.png" class="twitter">
+            <img src="figmaproject/insta.png" class="twitter">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
