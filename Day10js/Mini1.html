@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter App</title>
+    <style>
+        /* Basic Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background:linear-gradient(135deg,pink,plum);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin: 0;
+            color: #333;
+        }
+
+
+        .counter-container {
+            background:linear-gradient(135deg,rgb(231, 240, 109),rgba(0, 255, 157, 0.295));
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .counter-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:red;
+        }
+
+        /* Counter Display Style */
+        .counter {
+            font-size: 80px;
+            color:black;
+            font-weight: bold;
+            margin: 30px 0;
+            transition: color 0.3s ease;
+        }
+
+        .counter.changed {
+            color: #ff5722; /* Color change when button is clicked */
+        }
+
+        /* Button Styles */
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            margin: 10px;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            background-color: #388e3c;
+            transform: translateY(1px);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Click Counter</h1>
+        <div class="counter" id="counter">0</div>
+        <button id="incrementButton">Click Me!</button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+    <script>
+        // Get the buttons and counter display
+        const incrementButton = document.getElementById("incrementButton");
+        const resetButton = document.getElementById("resetButton");
+        const counterDisplay = document.getElementById("counter");
+
+        // Initialize the counter
+        let counter = 0;
+
+        // Increment counter when the button is clicked
+        incrementButton.addEventListener("click", function() {
+            counter++;
+            counterDisplay.textContent = counter;
+
+            // Add a class to animate the counter color change
+            counterDisplay.classList.add("changed");
+
+            // Remove the animation class after 0.3 seconds
+            setTimeout(function() {
+                counterDisplay.classList.remove("changed");
+            }, 300);
+        });
+
+        // Reset the counter when the reset button is clicked
+        resetButton.addEventListener("click", function() {
+            counter = 0;
+            counterDisplay.textContent = counter;
+        });
+    </script>
+</body>
+</html>

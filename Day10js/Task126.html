@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Button Click Counter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 50vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .counter-container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      background:plum;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .count {
+      font-size: 2rem;
+      margin-top: 20px;
+      color: #333;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="counter-container">
+    <h2>Click the Button</h2>
+    <button id="clickBtn">Click Me</button>
+    <div class="count" id="clickCount">0</div>
+  </div>
+
+  <script>
+    // Get the button and count display element
+    const clickBtn = document.getElementById('clickBtn');
+    const clickCount = document.getElementById('clickCount');
+
+    // Initialize click counter
+    let count = 0;
+
+    // Add click event listener to the button
+    clickBtn.addEventListener('click', () => {
+      count++;  // Increase the count
+      clickCount.textContent = count;  // Update the count on the page
+    });
+  </script>
+
+</body>
+</html>

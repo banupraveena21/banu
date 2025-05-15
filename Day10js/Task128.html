@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toggle Element Visibility</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(160, 114, 114, 0.9); /* Slight transparency */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    button {
+      padding: 18px 36px;
+      font-size: 20px;
+      background: linear-gradient(45deg, #a30667, #3a2f2d); /* Gradient background for button */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #ff9a8b, #ff6ec7); /* Reverse gradient effect on hover */
+      transform: scale(1.05); /* Slight scaling effect */
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:active {
+      transform: scale(0.98); /* Button shrink effect when clicked */
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #toggleContent {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      display: none; /* Initially hidden */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Click the Button to Toggle Visibility</h1>
+    <button id="toggleBtn">Show/Hide Content</button>
+    
+    <div id="toggleContent">
+      <h2>Here's the hidden content!</h2>
+     
+    </div>
+  </div>
+
+  <script>
+    // Get the button and the content element
+    const toggleBtn = document.getElementById('toggleBtn');
+    const content = document.getElementById('toggleContent');
+
+    // Add click event listener to the button
+    toggleBtn.addEventListener('click', () => {
+      // Toggle the visibility of the content
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
+
+</body>
+</html>

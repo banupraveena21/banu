@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toggle Toys</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, #8b1d0d, #ece6ea); /* Ice cream-themed gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.85); /* Light background with transparency */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      width: 80%;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 550px;
+      margin: 20px auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: linear-gradient(45deg, plum,red); /* Ice cream colors */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #f7c1bb, #f2a1c1); /* Reverse gradient on hover */
+      transform: scale(1.05);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:active {
+      transform: scale(0.98);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #toggleContent {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      display: none; /* Initially hidden */
+    }
+
+    #toggleContent img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Toggle Toys</h1>
+    <p>Click the button below</p>
+    <button id="toggleBtn">Display Toys</button>
+    
+    <div id="toggleContent">
+      <h2>Cute Toys</h2>
+      
+      <img src="images/best seller 3.png" alt="best" />
+    </div>
+  </div>
+
+  <script>
+    // Get the button and the content element
+    const toggleBtn = document.getElementById('toggleBtn');
+    const content = document.getElementById('toggleContent');
+
+    // Add click event listener to the button
+    toggleBtn.addEventListener('click', () => {
+      // Toggle the visibility of the content
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      toggleBtn.innerHTML = content.style.display === 'none' ? 'Display Toys' : 'Hide Toys';
+    });
+  </script>
+
+</body>
+</html>

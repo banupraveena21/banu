@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Image Preview</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 50px;
+    }
+    img {
+      width: 200px;
+      margin-top: 20px;
+      display: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Select an image to preview</h2>
+  <input type="file" id="fileInput">
+  <br>
+  <img id="preview">
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const preview = document.getElementById('preview');
+
+    fileInput.onchange = () => {
+      const file = fileInput.files[0];
+      if (file && file.type.startsWith('image')) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = 'block';
+      } else {
+        alert('Please select an image file.');
+        preview.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>

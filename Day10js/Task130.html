@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Sound on Click</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #e75480;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: linear-gradient(to right, #ff6a88, #ff99ac);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Click to Play</h1>
+    <button onclick="playSound()">Play Sound</button>
+    <audio id="iceSound" src="./Assets/audio/Vazhithunaiye.mp3"></audio>
+  </div>
+
+  <script>
+    function playSound() {
+      const sound = document.getElementById("iceSound");
+      sound.play();
+    }
+  </script>
+</body>
+</html>

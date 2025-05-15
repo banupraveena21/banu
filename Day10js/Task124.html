@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mouse Pointer Coordinates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .coordinates {
+      font-size: 1.5rem;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .message {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1>JS124</h1>
+  <div class="message">Move your mouse around the page to see the coordinates!</div>
+  <div class="coordinates" id="coords">x: 0, y: 0</div>
+
+  <script>
+    const coordsElement = document.getElementById('coords');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX;  // X coordinate
+      const y = event.clientY;  // Y coordinate
+
+      coordsElement.textContent = `x: ${x}, y: ${y}`;
+    });
+  </script>
+
+</body>
+</html>

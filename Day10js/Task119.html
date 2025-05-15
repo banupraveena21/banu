@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS119-day10</title>
+  <style>
+    body {
+     
+      text-align: center;
+     
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      transition: all 0.4s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background-color: pink;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: palevioletred;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <h1>JS119 - Click the Button</h1>
+  <button id="changeTextBtn">Click Me!</button>
+  <br>
+  
+
+  
+  <script>
+    const btn = document.getElementById("changeTextBtn");
+
+    btn.addEventListener("click", () => {
+      if (btn.textContent === "Click Me!") {
+        btn.textContent = "Thanks for Clicking!";
+      } else {
+        btn.textContent = "Click Me!";
+      }
+    });
+  </script>
+</body>
+</html>
