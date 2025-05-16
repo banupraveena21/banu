@@ -1,0 +1,19 @@
+const productsJSON = `
+    [
+        {
+            "name": "Laptop",
+            "price": 1200,
+            "category": "Electronics"
+        },
+        {
+            "name": "T-shirt",
+            "price": 25,
+            "category": "Clothing"
+        },
+        {
+            "name": "Book",
+            "price": 15,
+            "category": "Books"
+        }
+    ]
+    `;

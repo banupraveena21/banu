@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11Tasks</title>
+<style>
+    .dark{
+        background:radial-gradient(circle,pink,plum);
+        color:black;border-radius: 20px;
+    }
+    .darkmode{
+        background-color: gray;
+        color: white;
+    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .product { margin-bottom: 10px; }
+    .cart { margin-top: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .remove-btn { color: red; cursor: pointer; }
+
+</style>
+</head>
+<body>
+    <h1>Day11 JS Tasks</h1><br>
+<button id="themeToggle" class="dark">Change to Dark Mode</button><br><br>
+<h2>Shopping Cart</h2>
+<h1>Products</h1>
+<div id="product-list">
+    <!-- Products will be dynamically inserted here -->
+  </div>
+<div class="cart">
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+  </div>
+<form id="myform">
+    <label id="fullname">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <label id="emai">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <button type="submit">Submit</button>
+</form><br><br>
+<p>Clicked: <span id="clickcount">0</span> Times </p>
+<button id="click">Click Me!!!</button><br><br>
+<h2>Survey Form</h2>
+<form id="survey">
+    <label for="name">Name:</label><br>
+    <input type="text" id="full" name="name"><br><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="aging" name="age"><br><br>
+    <button type="submit">Submit</button>
+</form><br><br>
+
+<h2>StopWatch</h2>
+<p>Time: <span id="time">00:00:00</span> </p>
+<button type="submit" id="startstop">Start/Stop</button>
+<button type="submit" id="reset">Reset</button><br><br>
+<h1>Notes</h1>
+<textarea id="note-input" placeholder="Enter your note"></textarea>
+<button id="save-button">Save Note</button>
+<ul id="notes-list"></ul>
+
+
+    <script src="js11.js"></script>
+
+</body>
+</html>
