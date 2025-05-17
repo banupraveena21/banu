@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14 MiniProjects</title>
+</head>
+<body>
+    <h1>Typing Speed Test</h1>
+    <p>Type the following:</p>
+    <p id="quote"></p>
+    <textarea id="input" rows="4" cols="50"></textarea>
+    <button id="start">Start</button>
+    <p>Time: <span id="time">0</span> seconds</p>
+    <p>WPM: <span id="wpm">0</span></p>
+
+    <script>
+        const quoteDisplay = document.getElementById('quote');
+        const inputField = document.getElementById('input');
+        const startButton = document.getElementById('start');
+        const timeDisplay = document.getElementById('time');
+        const wpmDisplay = document.getElementById('wpm');
+    
+        let startTime;
+        let timerInterval;
+        let quoteText = "";
+    
+        async function getQuote() {
+            const response = await fetch('https://api.quotable.io/random');
+            const data = await response.json();
+            return data.content;
+        }
+    
+        async function newTest() {
+          quoteText = await getQuote();
+          quoteDisplay.textContent = quoteText;
+          inputField.value = '';
+          timeDisplay.textContent = '0';
+          wpmDisplay.textContent = '0';
+        }
+        
+        function updateTimer() {
+            const currentTime = Math.floor((new Date() - startTime) / 1000);
+            timeDisplay.textContent = currentTime;
+        }
+    
+        function calculateWPM() {
+            const words = inputField.value.trim().split(' ').length;
+            const timeElapsed = parseInt(timeDisplay.textContent);
+            const wpm = timeElapsed > 0 ? Math.round((words / timeElapsed) * 60) : 0;
+            wpmDisplay.textContent = wpm;
+        }
+    
+        function startTest() {
+            newTest();
+            startTime = new Date();
+            timerInterval = setInterval(() => {
+                updateTimer();
+                calculateWPM();
+            }, 1000);
+            inputField.addEventListener('input', checkInput);
+            startButton.removeEventListener('click', startTest);
+            startButton.textContent = 'Reset';
+            startButton.addEventListener('click', resetTest);
+        }
+    
+        function checkInput() {
+          if (inputField.value === quoteText) {
+              endTest();
+          }
+        }
+    
+        function endTest() {
+            clearInterval(timerInterval);
+            inputField.removeEventListener('input', checkInput);
+        }
+    
+        function resetTest() {
+            endTest();
+            newTest();
+            timeDisplay.textContent = '0';
+            wpmDisplay.textContent = '0';
+            startButton.removeEventListener('click', resetTest);
+            startButton.textContent = 'Start';
+            startButton.addEventListener('click', startTest);
+        }
+    
+        startButton.addEventListener('click', startTest);
+        newTest();
+        </script>
+        <script src="js14mini.js"></script>
+</body>
+</html>
