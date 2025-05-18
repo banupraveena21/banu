@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PortFolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            scroll-behavior: smooth;
+            background-color:rgb(248, 233, 213);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .container h2{color:black;}
+
+        .col {
+            width: 50%;
+            padding: 50px;
+            background-color: rgb(253, 70, 103);
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .container h1 {
+            position: absolute;
+            top: 300px;
+            margin-left: 100px;
+            font-size: 90px;
+            color: rgb(46, 45, 45);
+        }
+
+        .links li {
+            list-style: none;
+            font-size: 15px;
+        }
+
+        .row {
+            width: 50%;
+        }
+
+        .image {
+            width: 98%;
+        }
+
+        .col11 {
+            display: flex;
+            gap: 250px;
+        }
+        .container1{line-height: 25px;}
+        .container1 h3{font-size: 25px;}
+        .container1 p{font-size: 20px;}
+
+        #hidden-social-container {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            top: 600px;
+            left: 40px;
+            z-index: 0;
+
+
+        }
+
+        #hidden-social {
+            width: 900px;
+            height: 500px;
+            animation: 1s slide-right;
+            background:linear-gradient(160deg,antiquewhite,bisque);
+            color:rgb(87, 1, 1);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .bio {
+            margin-left: 600px;
+            border: none;
+            background:radial-gradient(circle,pink,rgb(126, 13, 126));
+            width: 300px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        section{
+            background:linear-gradient(to bottom left,rgb(212, 153, 153),rgb(165, 190, 236));
+            text-align:center;
+            width:80%;
+            margin: auto;
+            border-radius: 30px;
+            padding: 20px;
+            line-height:40px;
+        }
+        section h2{font-size: 40px;
+        color: rgb(136, 7, 7);
+        }
+        section p{
+            font-size: 25px;
+        }
+        section h3{font-size: 25px;
+        color: brown;
+        }
+        section li{
+            list-style: none;
+            font-size: 25px;
+        }
+        
+        #contact{text-align: center;
+        background-color: rgb(247, 193, 128);
+        }
+        #contact h2{
+            color: #410427;
+        }
+        #contact p{font-size: 20px;
+        color: #570433;}
+        #contact a{text-decoration: none;
+        color: brown;} 
+input{border: 2px solid black;height: 30px;}
+#submit{border: none;font-size: 20px;background-color:#f581c5;padding: 10px;}
+
+        #loginPopup {
+            width: 60%;
+  position:relative;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgb(218, 213, 213); /* semi-transparent background */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  display: none;
+}
+#click{
+    border: none;
+    background-color: rgb(247, 193, 128);
+    color: #570433;
+}
+
+        @keyframes slide-right {
+            from {
+                margin-left: -100%;
+            }
+
+            to {
+                margin-left: 0%;
+            }
+        }
+
+    @media (max-width:680px) {
+        .row{display: none;}
+        .container{width: 100%;}
+        .col{width: 100%;text-align: center;}
+        .links{justify-content:space-around;}
+        .container h1{font-size:45px;margin-left:20px;top:180px;}
+        .bio{display: none;}
+        .container1{line-height:normal;}
+        .col11{flex-direction: column;gap:25px;}
+        .container1{display: none;}
+        .container1 h3{font-size:15px;}
+        .container1 p{font-size: 15px;}
+        #about{margin-top: 160px;}
+        section{width: 95%;}
+        #hidden-social{
+            width:250px;height: 450px;}
+        #loginPopup textarea{width:150px;}
+        
+        #hidden-social-container{
+            top:480px;
+            left: 10px;
+        }
+    }
+
+    @media (min-width:681px) and (max-width:1024px){
+    .container h1{margin-left:10px;font-size:45px;top:200px;}
+    .container{width:100%;}
+    .row{width:50%;}
+    .image{width:90%;}
+    .bio{margin-left: 220px;}
+    #hidden-social-container{left:10px;top:140px;}
+    .container1 h3{font-size: 20px;}
+    .container1 p{font-size: 20px;}
+    .col11{gap:100px;}
+    #hidden-social{width:400px;height:400px;}
+    .container1{line-height: normal;}
+    .container1 h3{font-size: 20px;}
+    .container1 p{font-size: 15px;}
+    section{width: 95%;}
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col">
+            <h2>Banu Praveena</h2><br>
+            <ul class="links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <h1 id="myText">Hey, I'm <br>BANU <br>PRAVEENA</h1>
+        </div>
+        <div class="row">
+            <img src="images/Reception_158.jpg" alt="image" class="image">
+        </div>
+    </div> <br><br>
+    <button onclick="myFunction()" class="bio">View Full Resume <br>CLICK HERE</button>
+    <div class="container1" id="hidden-social-container">
+        <div class="colrow1" id="hidden-social" style="display: none;">
+            <div class="col11">
+                <div class="row11">
+                    <h3>Resume</h3><br>
+                    <p>DOB:Dec'21,1990</p>
+                    <p>Educational Qualification: MCA</p>
+                    <p>Address: Hosur</p>
+                    <p>Languages Known: Tamil, English</p>
+                </div>
+                <div class="row12">
+                    <h3>Hobbies</h3><br>
+                    <p>Drawing</p>
+                    <p>Reading Books</p>
+                    <p>Solving Puzzles</p>
+                </div>
+            </div><br><br>
+            <hr><br><br>
+            <div class="col12">
+                <div class="row13">
+                    <h3>Personal Qualities</h3><br>
+                    <p>Adaptability</p>
+                    <p>Knowledgable</p>
+                    <p>Smart Worker</p>
+                    <p>Keep Calm in Pressure Situation</p>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <section id="about">
+        <h2>About</h2><br>
+        <p>"Enthusiastic and outgoing recent college graduate seeking a challenging entry-level developer role. <br> 
+        Strong communication and interpersonal skills, steady-paced professional growth, benefits of job  <br>
+        satisfication building report. Eager to learn and contribute to a team's success." </p><br>
+
+        <p>Hard working professional with Programing skills possesses in Master in Computer Application.</p><br>
+        <p>Full stack developer with a strong foundation in both front-end and back-end technologies. <br>
+        Learning in building and deploying web applications from concept to completion, using Back-end as Python <br>
+        and Front-end as HTML. I develop Dynamic and Responsive interfaces that provide an optimal user <br>
+    experience.</p><br>
+    <h3>CO-CURRICULAR ACTIVITIES</h3><br>
+    <p><i class="fa-solid fa-star fa-2xs" style="color:goldenrod;"></i> Presented a paper on "Wireless Sensor Network" in National Conference on Advanced Computational <br>
+    Intelligence & Intelligent Informatics.</p>
+    <p><i class="fa-solid fa-star fa-2xs" style="color: goldenrod;"></i> Participated in Techno Feast/Dramatization in TECHNOVATE'10 held on 14<sup>th</sup> Sep, 2012.</p>
+    <p><i class="fa-solid fa-star fa-2xs" style="color: goldenrod;"></i> Attended State Level Technical Symposium on Cloud Computing held on 30<sup>th</sup> Dec, 2010.</p><br>
+    <h3>ACHIEVEMENT</h3><br>
+    <p><i class="fa-solid fa-trophy fa-2xs" style="color: #00060f;"></i> Won Golden Medal in HandBall at Zonal Level</p>
+    <p><i class="fa-solid fa-trophy fa-2xs" style="color: #00060f;"></i> Won Silver Medal in Long Jump and 200m Athletics at Zonal Level</p>
+
+        </section><br><br>
+        <section id="project">
+            <h2>Projects</h2><br>
+            <h3>Automatic Bell Ringing System</h3>
+            <p>This Application is designed to automate the College/School bell ringing system. <br>
+            It manages all alarm types like Prayer songs, National Anthem, and all announcements, class ending <br>
+        timings made by the authorities by college/school. The system can adopt all types of audio formats. <br>
+    The set audio's will be played at the selected Time. This project eliminates the need of manual ringing and <br>
+ensures accurate timing, leading to more efficient time management.</p><br>
+<h3><b>Functionalities are:</b></h3><br>
+<p><b>Time Keeping:</b> The RTC modules provides the system with the current time.</p>
+<p><b>Schedule Programming: </b> can program bell schedules using push buttons or other input methods.</p>
+<p><b>Time Comparison: </b>The microcontroller compares the current time (from the RTC) with the programmmed <br>
+bell times.</p>
+<p><b>Bell Activation:</b> When the current time matches a scheduled bell time, the microcontroller <br>
+activates the relay to ring the bell. </p>
+<p><b>User Interface:</b> The LCD display and push buttons provide a user interface for setting <br>
+adjusting bell timings.</p><br>
+<h3><b>Benefits:</b></h3><br>
+<ul>
+    <li><i class="fa-solid fa-thumbs-up fa-2xs" style="color: #63033b;"></i> Accuracy</li>
+    <li><i class="fa-solid fa-thumbs-up fa-2xs" style="color: #570433;"></i> Efficiency</li>
+    <li><i class="fa-solid fa-thumbs-up fa-2xs" style="color: #570535;"></i> Customization</li>
+    <li><i class="fa-solid fa-thumbs-up fa-2xs" style="color: #410427;"></i> User-Friendly</li>
+</ul>
+        </section><br>
+<br><br><br><br><br>
+        <div id="loginPopup">
+            <form action="#">
+              <input type="text"  id="name" placeholder="Full Name"><br><br>
+              <input type="email" id="email" placeholder="Email Id"><br><br>
+              <textarea name="message" id="message" cols="50" rows="10" placeholder="If any Suggestions"></textarea><br><br>
+              <button type="submit" id="submit">Submit</button><br><br>
+            </form>
+          </div>
+<footer>
+    <div id="contact">
+    <div class="contact1">
+        <h2>Contact</h2><br>
+        <p>Phone: 8531083086</p><br>
+        <p>Email: banupraveena@gmail.com</p><br>
+        <p>Official Mailid: banupraveenapython@vtscoders.com</p><br>
+        <p>Contact: If any Suggestions, <button id="click">Click Here</button></p><br>
+    </div>
+    </div>
+        <p>&copy; 2025 by banupraveena. Powered and secured</p>
+    </footer>
+    
+
+    <script src="js1.js"></script>
+</body>
+
+</html>
