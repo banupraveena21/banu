@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <style>
+    *{margin: 0%;padding: 0%;box-sizing: border-box;}
+    body{font-family: 'rubik',sans-serif;}
+    .container{background-color: blueviolet;display: flex;gap: 30px;color: white;height:30px;align-items: center;overflow: hidden;}
+    .container p{animation-name: running;animation-duration: 20s;animation-iteration-count: infinite;
+    animation-timing-function: linear;overflow: hidden;}
+    .container1{display: flex;flex-direction: column;background-color: #E61a52;color: white;}
+    .container1 a{text-decoration: none;color: white;}
+    .col{display: flex;justify-content: space-around;align-items: center;height: 40px;}
+    .row12{display: flex;gap: 30px;}
+    .colcol{display: flex;}
+    .row13{width: 15%;text-align: center;}
+    .row14{width: 75%;display: flex;align-items: center;justify-content: space-between;}
+    .rowrow11{width: 60%;}
+    .rowrow12{display: flex;width: 30%;justify-content: space-between;}
+    .search{width: 600px;height: 40px;border: none;border-radius: 20px;}
+    .search::placeholder{color: black;font-size: 20px;padding: 10px;font-weight: bold;}
+    .deal{width: 250px;height: 40px;border: none;border-radius: 20px;}
+    .deal::placeholder{color: #E61a52;text-align: center;font-size: 20px;font-weight: bold;}
+    .colcolcol a{text-decoration: none;color: white;font-size: 22px;
+    font-weight: bold;}
+    .colcolcol{display: flex;justify-content: center;gap: 40px;padding: 20px;}
+    .container2{background-color: #eed76d;text-align: center;color: #E61a52;padding: 30px;}
+    .container3{width: 85%;margin: auto;text-align:center;line-height: 35px;}
+    .container3 h2{color: #E61a52;font-size: 30px;}
+    .container3 p{font-size:30px;font-weight: bold;}
+    .container3 li{font-size:30px;font-weight: bold;margin-left: 50px;}
+.container13{display: flex;background-color: #E61a52;color: white;justify-content: space-evenly;padding:30px;}
+.container13 h2{font-size:25px;}
+.container13 p{font-size: 20px;font-weight: bold;}
+.row131{text-align: center;}
+.row132{display: flex;flex-direction: column;line-height: 40px;}
+.row132 a{text-decoration: none;color: white;font-size: 20px;font-weight: bold;}
+.row133{line-height: 40px;}
+.container14{background-color: #E61a52;text-align: center;color: white;}
+.container14 p{font-size:25px;}
+
+    @keyframes running {
+    0%{ transform:translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+@media (max-width:680px) {
+    .container p{font-size: 10px;}
+    .col{flex-direction: column;font-size: 12px;}
+    .row14{flex-direction: column;gap:30px;}
+    .row13{align-self: center;}
+    .rowrow12{width: 100%;gap:10px;padding: 5px;}
+    .colcol{flex-direction: column;}
+    .search{height: 30px;width: 300px;}
+    .deal::placeholder{font-size: 10px;}
+    .deal{height: 30px;}
+    .colcolcol a{font-size:10px;}
+    .container3{width: 100%;text-align: center;}
+    .container3 h2{font-size: 20px;}
+    .container3 p{font-size: 15px;}
+    .container3 li{font-size: 15px;}
+    .container13{flex-direction: column;text-align: center;}
+}
+
+@media (min-width:681px) and (max-width:1024px) {
+    .container p{font-size: 10px;}
+    .search{width: 300px;}
+    .colcol{flex-direction: column;}
+    .row13{justify-content: center;width:100%;}
+    .deal::placeholder{font-size: 15px;}
+    .container3{width: 100%;text-align: center;}
+    .container3 h2{font-size: 20px;}
+    .container3 p{font-size: 15px;}
+    .container3 li{font-size: 15px;text-align:left}
+    .container13 p{font-size: 15px;}
+    .container13 a{font-size: 15px;}
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <p>Toy Bonanza: Upto 30% Off on Outdoor Toys &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Unlock Joy: Enjoy 20% Off Your First Order!
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Play More, Pay Less: Perfect Time To Grab Your Discount Today...</p>
+    </div>
+    <div class="container1">
+        <div class="col">
+        <div class="row11">
+        <a href="wholesale deals.html"><h3>BUYING IN BULK?...CLICK HERE</h3></a>
+        </div>
+        <div class="row12">
+         <a href="delivery information.html"> <h3>Delivery Information</h3></a>
+        <a href="track your order.html"> <h3>Track My Order</h3></a>
+          <a href="faq.html"><h3>FAQs</h3></a>
+            <img src="images/timing icon.png">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="colcol">
+        <div class="row13">
+           <a href="toysupplywebsite.html"><img src="images/logo.png" class="logo"></a>
+        </div>
+        <div class="row14">
+            <div class="rowrow11">
+         <input type="text" id="search" class="search" placeholder="Search for toys...">
+        </div>
+        <div class="rowrow12">
+         <a href="wholesale deals.html"><input type="text" id="deal" class="deal" placeholder="WHOLESALE DEALS"></a>
+        <a href="dinosaur brick set.html"> <img src="images/cart icon.png" alt="cart" class="cart"></a>
+        <a href="login.html"><img src="images/user icon.png" alt="user" class="user"></a>
+        </div>
+        </div>
+    </div>
+    <div class="colcolcol">
+    <a href="toysupplywebsite.html">HOME</a>
+    <a href="categories.html">CATEGORIES</a>
+    <a href="bestseller.html">BEST SELLER</a>
+    <a href="blog.html">BLOG</a>
+    </div>
+    </div>
+<div class="container2">
+<h1>About Us</h1>
+</div><br><br>
+<div class="container3">
+<h2>KIDS STUFFS</h2>
+<p> 3 Years of Iconic Indoor plants sale, Ethnic & Modern Pots collections <br>
+and Bonsai Trees.</p><br>
+<h2>BIGGER.BETTER.BRANDS.</h2>
+<p> Sonee Sports is an inspirational portfolio of well-diversified iconic sports, lifestyle and <br>
+    fashion brands presented through unrivaled creativity and innovation. <br>
+    At Sonee Sports we deliver branded products, exceptional service, unparalleled <br>
+    customer support and operational excellence to create highest value to our customers, <br>
+    employees and suppliers. Through a thorough integration of our human resource, state <br>
+    of the art ERP system and E-commerce platform.</p><br>
+    <h2>Mission</h2>
+    <p> Our mission is to improve the performance and lives of sports and physical fitness <br>
+        participants in Maldives. We do that by presenting world leading brands, integrated with <br>
+        exceptional service, unparalleled support, and operational excellence to facilitate <br>
+        sports and play.</p><br>
+    <h2>Vision</h2>
+    <p> We envision a future where Maldives embraces healthy living as part of our culture <br>
+        Bigger Better Brands</p><br>
+        <h2>Health</h2>
+    <p>Sonee Sports will invest in promoting healthy lifestyles through play and sport because <br>
+        healthy people contribute to improving the society by channelling the physical and <br>
+        mental energy generated from sports to action, creativity, and innovation.</p><br>
+    <h2>Social Change</h2>
+<p>We will invest in the power of sports to bring social change. Sports provide a powerful <br>
+    platform to advance social change. Our purpose of transforming the Maldivian Society <br>
+    can only be achieved through inclusivity of all members of the society and the <br>
+    sustainability of the environment in which we live.</p><br>
+    <h2>Joy</h2>
+    <p> Sonee Sports will invest in enhancing the lives of a healthy nation by helping people <br>
+        experience the joy of celebrating life. We will redefine social gatherings and healthy <br>
+        eating 2030 Initiatives & Goals</p><br>
+    <h2>Health</h2>
+    <p> Sonee Sports will invest in promoting healthy lifestyles through play and sport because <br>
+        healthy people contribute to improving the society by channelling the physical and <br>
+        mental energy generated from sports to action, creativity, and innovation.</p><br>
+    <h2>Social Change</h2>
+    <p> We will invest in the power of sports to bring social change. Sports provide a powerful <br>
+        platform to advance social change. Our purpose of transforming the Maldivian Society <br>
+        can only be achieved through inclusivity of all members of the society and the <br>
+        sustainability of the environment in which we live.</p><br>
+    <h2>Joy</h2>
+    <p>Sonee Sports will invest in enhancing the lives of a healthy nation by helping people <br>
+        experience the joy of celebrating life. We will redefine social gatherings and healthy <br>
+        eating 2030 Initiatives & Goals</p><br>
+    <h2>Peace</h2>
+    <p>Sonee Sports will invest in enhancing the lives of a healthy nation by helping people <br>
+        experience the joy of celebrating life. We will redefine social gatherings and healthy <br>
+        eating 2030 Initiatives & Goals</p>
+</div><br><br><br><br>
+<footer>
+    <div class="container13">
+        <div class="row131">
+         <a href="toysupplywebsite.html">  <img src="images/logo.png" class="image131"><br><br></a>
+            <p><b>We are a leading toy store <br> brings exciting goods <br>all over the country.</b></p>
+        </div>
+        <div class="row132">
+            <h2>NAVIGATE</h2><br>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="terms&conditions.html">Terms & Conditions</a>
+            <a href="howtoorder.html">How to Order</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="row133">
+            <h2>K-STUFFS</h2><br>
+            <p>Reg: T2154875GST154</p>
+            <p>TIN: 120122457845</p>
+            <p>Phone: +91 90000 91010</p>
+            <p>Email: kstuffs@gmail.com</p>
+        </div>
+    </div>
+<div class="container14">
+       <img src="images/social media links.png"><br><br>
+       <p><b>Copyrights 2022@ Kids Stuff Ltd</b></p><br><br>
+</div>
+</footer>
+</body>
+</html>

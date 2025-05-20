@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrival Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <style>
+    *{margin: 0%;padding: 0%;box-sizing: border-box;}
+    body{font-family: 'rubik',sans-serif;}
+    .container{background-color: blueviolet;display: flex;gap: 30px;color: white;height:30px;align-items: center;overflow: hidden;}
+    .container p{animation-name: running;animation-duration: 20s;animation-iteration-count: infinite;
+    animation-timing-function: linear;overflow: hidden;}
+    .container1{display: flex;flex-direction: column;background-color: #E61a52;color: white;}
+    .container1 a{text-decoration: none;color: white;}
+    .col{display: flex;justify-content: space-around;align-items: center;height: 40px;}
+    .row12{display: flex;gap: 30px;}
+    .colcol{display: flex;}
+    .row13{width: 15%;text-align: center;}
+    .row14{width: 75%;display: flex;align-items: center;justify-content: space-between;}
+    .rowrow11{width: 60%;}
+    .rowrow12{display: flex;width: 30%;justify-content: space-between;}
+    .search{width: 600px;height: 40px;border: none;border-radius: 20px;}
+    .search::placeholder{color: black;font-size: 20px;padding: 10px;font-weight: bold;}
+    .deal{width: 250px;height: 40px;border: none;border-radius: 20px;}
+    .deal::placeholder{color: #E61a52;text-align: center;font-size: 20px;font-weight: bold;}
+    .colcolcol a{text-decoration: none;color: white;font-size: 22px;
+    font-weight: bold;}
+    .colcolcol{display: flex;justify-content: center;gap: 40px;padding: 20px;}
+    .container2{position: relative;}
+    .col21{position: absolute;top: 50px;display: flex;left: 50px;}
+    .col21 p{color: white;font-size: 25px;}
+    .sorting{position: absolute;left:900px;background-color: #E61a52;border: none;width:350px;height: 50px;
+    color: white;font-size: 25px;font-weight: bold;border-radius: 30px;padding: 10px;}
+    .container3{display: flex;width: 90%;margin: auto;margin-top:30px;justify-content: space-between;}
+    .row31{width:73%;text-align: center;}
+    .row33{width: 20%;}
+    .row32{height:2000px;border:3px solid #ee6489;margin-left: 10px;}
+    .col31 h2{color: #E61a52;font-size: 30px;margin-top: 20px;}
+    .col31 p{font-size: 26px;font-weight: bold;}
+    .col32{display: grid;grid-template-columns:25% 25% 25%;justify-content: space-evenly;gap: 30px;line-height:30px;}
+    .col321{border: 1px solid salmon;padding: 20px;border-radius: 10px;}
+    .whole{width: 100%;}
+    .col32 a{text-decoration: none;color:black;}
+    .col32 button{background-color: #E61a52;color: white;border: none;width: 200px;height: 30px;
+    border-radius: 30px;font-weight: bold;font-size: 15px;}
+    .col33{display: flex;justify-content: space-between;}
+    .col33 h3{font-size:30px;}
+    .col34{line-height: 50px;}
+    .col34 h2{font-size: 25px;text-decoration: underline;}
+    .col34 span{font-size: 25px;font-weight: bold;padding: 10px;}
+    .container9{background-color:rgb(250, 229, 232);width: 80%;margin: auto;display:grid;grid-template-columns: auto auto auto auto; 
+text-align: center;line-height: 30px;padding:40px;border-radius: 20px;}
+.container9 h4{color: #E61a52; font-size:25px;font-weight:bolder;}
+.container9 p{font-size: 20px;font-weight: bold;}
+.container13{display: flex;background-color: #E61a52;color: white;justify-content: space-evenly;padding:30px;}
+.container13 h2{font-size:25px;}
+.container13 p{font-size: 20px;font-weight: bold;}
+.row131{text-align: center;}
+.row132{display: flex;flex-direction: column;line-height: 40px;}
+.row132 a{text-decoration: none;color: white;font-size: 20px;font-weight: bold;}
+.row133{line-height: 40px;}
+.container14{background-color: #E61a52;text-align: center;color: white;}
+.container14 p{font-size:25px;}
+
+    @keyframes running {
+    0%{ transform:translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+@media (max-width:680px) {
+    .container p{font-size: 10px;}
+    .col{flex-direction: column;font-size: 12px;}
+    .row14{flex-direction: column;gap:30px;}
+    .row13{align-self: center;}
+    .rowrow12{width: 100%;gap:10px;padding: 5px;}
+    .colcol{flex-direction: column;}
+    .search{height: 30px;width: 300px;}
+    .deal::placeholder{font-size: 10px;}
+    .deal{height: 30px;}
+    .colcolcol a{font-size:10px;}
+    .col21{left: 10px;top: 10px;}
+    .col21 p{font-size: 15px;}
+    .sorting{left: 250px;font-size:10px;width:100px;height:25px;bottom:0px;}
+    .container3{width: 100%;}
+    .row31{text-align:center;}
+    .col31 h2{font-size: 15px;}
+    .col31 p{font-size: 15px;}
+    .col32{grid-template-columns: auto;}
+    .row32{border: 1px solid #ee6489;height: 4500px;}
+    .col33 h3{font-size:15px;}
+    .col34 h2{font-size: 15px;}
+    .col34 span{font-size: 10px;}
+    .col34 input{display: none;}
+    .col34 img{width:11%;}
+    .col34{line-height: 30px;}
+    .col33 img{width:15%;}
+    .container9{grid-template-columns: auto;gap:40px;}
+    .container13{flex-direction: column;text-align: center;}
+    
+}
+
+@media (min-width:681px) and (max-width:1024px) {
+    .container p{font-size: 10px;}
+    .search{width: 300px;}
+    .colcol{flex-direction: column;}
+    .row13{justify-content: center;width:100%;}
+    .deal::placeholder{font-size: 15px;}
+    .col21{top:15px;}
+    .sorting{left: 400px;width: 250px;top:0px;}
+    .col32{grid-template-columns: auto auto;}
+    .col34 span{font-size: 20px;}
+    .row32{height: 2650px;}
+    .container9{grid-template-columns: auto auto;gap: 30px;}
+    .container13 p{font-size: 15px;}
+    .container13 a{font-size: 15px;}
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <p>Toy Bonanza: Upto 30% Off on Outdoor Toys &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Unlock Joy: Enjoy 20% Off Your First Order!
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Play More, Pay Less: Perfect Time To Grab Your Discount Today...</p>
+    </div>
+    <div class="container1">
+        <div class="col">
+        <div class="row11">
+        <a href="wholesale deals.html">  <h3>BUYING IN BULK?...CLICK HERE</h3></a>
+        </div>
+        <div class="row12">
+        <a href="delivery information.html"> <h3>Delivery Information</h3></a>
+         <a href="track your order.html">  <h3>Track My Order</h3></a>
+          <a href="faq.html"> <h3>FAQs</h3></a>
+            <img src="images/timing icon.png">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="colcol">
+        <div class="row13">
+           <a href="toysupplywebsite.html"><img src="images/logo.png" class="logo"></a>
+        </div>
+        <div class="row14">
+            <div class="rowrow11">
+         <input type="text" id="search" class="search" placeholder="Search for toys...">
+        </div>
+        <div class="rowrow12">
+         <a href="wholesale deals.html"><input type="text" id="deal" class="deal" placeholder="WHOLESALE DEALS"></a>
+          <a href="dinosaur brick set.html"> <img src="images/cart icon.png" alt="cart" class="cart"></a>
+        <a href="login.html"><img src="images/user icon.png" alt="user" class="user"></a>
+        </div>
+        </div>
+    </div>
+    <div class="colcolcol">
+    <a href="toysupplywebsite.html">HOME</a>
+    <a href="categories.html">CATEGORIES</a>
+    <a href="bestseller.html">BEST SELLER</a>
+    <a href="blog.html">BLOG</a>
+    </div>
+    </div>
+    <div class="container2">
+        <img src="images/header image in wholesale, best seller, new arrival.png" style="width: 100%;">
+        <div class="col21">
+            <div class="row21">
+            <p><b>NEW ARRIVALS</b></p>
+            </div>
+            <div class="row22">
+            <select name="sortby" id="sort" class="sorting">
+                <option value="sortby"><b>Sort by: Featured </b></option>
+                <option value="sortby">Best Selling </option>
+                <option value="sortby">Alphabetically, A-Z </option>
+                <option value="sortby">Alphabetically, Z-A </option>
+                <option value="sortby">Price, low to high </option>
+                <option value="sortby">Price, high to low </option>
+            </select>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="row31">
+        <div class="col31">
+            <h2>New Arrivals!</h2><br>
+            <p>At <span style="color: #E61a52;">Kids Stuff for Less</span>,we're fearless! When a line starts to sell well, we <br>
+            try to buy as much of the item as we can so our customers get a <br> chance to purchase a winning product. 
+        Sometimes this means we are <br>holding large quantities of a line so this is when we can offer it out at a <br>
+    wholesale price. We're adding bulk products all the time and have <br>many happy customers that buy regularly on this basis. So Whether <br>
+you're a trader, a school, a club or just someone that needs a decent <br>quantity of a line, this section's for you.</p>
+        </div><br><br><br>
+        <div class="col32">
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                     <a href="basket.html"><img src="images/new arrival 1.png" class="whole">
+                    </div>
+                    <h2>Coloring Books</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                     <a href="basket.html"><img src="images/new arrival 2.png" class="whole">
+                    </div>
+                    <h2>Mini Space Slime</h2>
+                    <p><del>MRP:&#8377; 580</del><b>Now &#8377;320</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 3.png" class="whole">
+                    </div>
+                    <h2>Squishy Balls</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                <a href="basket.html"><img src="images/new arrival 4.png" class="whole">
+                    </div>
+                    <h2>Coloring Books</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 5.png" class="whole">
+                    </div>
+                    <h2>Mini Space Slime</h2>
+                    <p><del>MRP:&#8377; 580</del><b>Now &#8377;320</b></p>
+                   <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 6.png" class="whole">
+                    </div>
+                    <h2>Squishy Balls</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 7.png" class="whole">
+                    </div>
+                    <h2>Coloring Books</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 8.png" class="whole">
+                    </div>
+                    <h2>Mini Space Slime</h2>
+                    <p><del>MRP:&#8377; 580</del><b>Now &#8377;320</b></p>
+                   <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 9.png" class="whole">
+                    </div>
+                    <h2>Squishy Balls</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+            <div class="col321">
+                <div class="text321">
+                    <div class="image321">
+                        <a href="basket.html"><img src="images/new arrival 10.png" class="whole">
+                    </div>
+                    <h2>Coloring Books</h2>
+                    <p><del>MRP:&#8377; 1520</del><b>Now &#8377;1200</b></p>
+                    <button type="submit">ADD TO BASKET</button> </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row32">
+
+        </div>
+    <div class="row33">
+        <div class="col33">
+            <h3>Filter</h3>
+            <img src="images/filter icon.png" class="filter">
+        </div><br><br>
+        <div class="col34">
+            <h2>Filter by Price</h2>
+            <input type="range" id="price" name="price" min="100" max="1500" style="accent-color:#e61a52;">
+        </div>
+        <div class="col34">
+            <h2>Filter by Brands</h2>
+            <img src="images/check box.png"><span>LEGO</span><br>
+            <img src="images/check box.png"><span>Barbie</span><br>
+            <img src="images/check box.png"><span>Hasbro</span><br>
+            <img src="images/check box.png"><span>Mattle</span><br>
+            <img src="images/check box.png"><span>Fisher-Price</span><br>
+            <img src="images/check box.png"><span>Playmobil</span><br>
+            <img src="images/check box.png"><span>Nerf</span><br>
+            <img src="images/check box.png"><span>Melissa</span><br>
+            <img src="images/check box.png"><span>VTech</span><br>
+            <img src="images/check box.png"><span>Hot Wheels</span><br>
+        </div>
+        <div class="col34">
+            <h2>Filter by Age</h2>
+            <img src="images/check box.png"><span> 0-5 months</span><br>
+            <img src="images/check box.png"><span> 5-8 months</span><br>
+            <img src="images/check box.png"><span> 8-12 months</span><br>
+            <img src="images/check box.png"><span> 1-2 years</span><br>
+            <img src="images/check box.png"><span> 2-3 years</span><br>
+            <img src="images/check box.png"><span> 3-4 years</span><br>
+            <img src="images/check box.png"><span> 4-6 years</span><br>
+            <img src="images/check box.png"><span> 7-10 years</span><br>
+            <img src="images/check box.png"><span> 10-12 years</span><br>
+            <img src="images/check box.png"><span> 12-14 years</span><br>
+        </div>
+    </div>
+    </div><br><br><br><br><br>
+    <div class="container9">
+        <div class="row9">
+            <div class="text9">
+                <div class="image9">
+                    <img src="images/delivery icon.png" class="image9">
+                </div>
+                <h4>DELIVERY</h4>
+                <p>Delivered within <br>2 to 3 days</p>
+            </div>
+        </div>
+        <div class="row9">
+            <div class="text9">
+                <div class="image9">
+                    <img src="images/payment icon.png" class="image9">
+                </div>
+                <h4>PAYMENT</h4>
+                <p>Secured <br>Payment</p>
+            </div>
+        </div>
+        <div class="row9">
+            <div class="text9">
+                <div class="image9">
+                    <img src="images/contact icon.png" class="image9">
+                </div>
+                <h4>CONTACT</h4>
+                <p>90000 91245<br>91427 84571</p>
+            </div>
+        </div>
+        <div class="row9">
+            <div class="text9">
+                <div class="image9">
+                    <img src="images/location icon.png" class="image9">
+                </div>
+                <h4>LOCATION</h4>
+                <p>Salem,<br>Tamilnadu</p>
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <footer>
+        <div class="container13">
+            <div class="row131">
+            <a href="toysupplywebsite.html">  <img src="images/logo.png" class="image131"></a><br><br>
+                <p><b>We are a leading toy store <br> brings exciting goods <br>all over the country.</b></p>
+            </div>
+            <div class="row132">
+                <h2>NAVIGATE</h2><br>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="terms&conditions.html">Terms & Conditions</a>
+                <a href="howtoorder.html">How to Order</a>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="row133">
+                <h2>K-STUFFS</h2><br>
+                <p>Reg: T2154875GST154</p>
+                <p>TIN: 120122457845</p>
+                <p>Phone: +91 90000 91010</p>
+                <p>Email: kstuffs@gmail.com</p>
+            </div>
+        </div>
+    <div class="container14">
+           <img src="images/social media links.png"><br><br>
+           <p><b>Copyrights 2022@ Kids Stuff Ltd</b></p><br><br>
+    </div>
+    </footer>
+</body>
+</html>
