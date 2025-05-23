@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment Submission & Grading</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    textarea, input[type="text"] {
+      width: 100%; padding: 8px; margin: 8px 0;
+    }
+    .assignment, .graded {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 5px;
+      padding: 6px 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .teacher-section { background: #f9f9f9; padding: 15px; border-radius: 5px; }
+    .feedback { margin-top: 8px; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h2>📥 Student Assignment Submission</h2>
+<textarea id="assignmentText" rows="4" placeholder="Write your answer here..."></textarea>
+<input type="text" id="fileName" placeholder="Optional file name (simulated upload)" />
+<button onclick="submitAssignment()">Submit Assignment</button>
+
+<h2>📋 Submitted Assignments</h2>
+<div id="assignmentsDashboard"></div>
+
+<script src="project6.js"></script>
+</body>
+</html>

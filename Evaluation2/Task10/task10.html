@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Discount Code</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; margin-right: 10px; }
+    button { padding: 8px 14px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    .price { font-size: 20px; margin-top: 10px; }
+    .success { color: green; margin-top: 10px; }
+    .error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>🛍️ Checkout</h2>
+
+<div class="price">Total Price: $<span id="totalPrice">100.00</span></div>
+
+<br>
+<label>Discount Code: </label>
+<input type="text" id="discountCode" placeholder="Enter code like SAVE10">
+<button onclick="applyDiscount()">Apply</button>
+
+<div id="message"></div>
+
+<script src="project10.js"></script>
+</body>
+</html>

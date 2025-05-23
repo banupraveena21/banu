@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Resource Search</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #searchBar, #filterType, #filterCategory {
+      padding: 8px;
+      margin: 10px 5px 20px 0;
+    }
+    .result {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .title { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2>Search Educational Resources</h2>
+
+<input type="text" id="searchBar" placeholder="Search by keyword...">
+<select id="filterType">
+  <option value="">All Types</option>
+  <option value="Article">Article</option>
+  <option value="Video">Video</option>
+  <option value="Quiz">Quiz</option>
+</select>
+<select id="filterCategory">
+  <option value="">All Categories</option>
+  <option value="Math">Math</option>
+  <option value="Science">Science</option>
+  <option value="Programming">Programming</option>
+</select>
+
+<div id="results"></div>
+
+<script src="project4.js"></script>
+</body>
+</html>

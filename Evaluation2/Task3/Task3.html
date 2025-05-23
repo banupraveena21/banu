@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Video Player</title>
+  <style>
+    #videoContainer {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+    video {
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    .controls {
+      margin-top: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+    }
+    .progress-container {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="videoContainer">
+  <video id="eduVideo" controls crossorigin="anonymous">
+    <source src="Educational video.mp4.mp4" type="video/mp4">
+    <track label="English" kind="subtitles" srclang="en" src="captions.vtt" default>
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="controls">
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="rewindVideo()">⏪ Rewind 10s</button>
+    <button onclick="fastForwardVideo()">⏩ Forward 10s</button>
+    <button onclick="toggleSubtitles()">Toggle Subtitles</button>
+  </div>
+
+  <div class="progress-container">
+    <progress id="progressBar" value="0" max="100"></progress><br>
+    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+  </div>
+</div>
+
+<script src="project3.js"></script>
+</body>
+</html>
