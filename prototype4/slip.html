@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip Details</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "quicksand", sans-serif;
+        }
+
+        .maincontainer {
+            display: flex;
+        }
+
+        .links {
+            width: 20%;
+            background-color: #455a64;
+            color: white;
+            padding-top: 40px;
+            padding-left: 10px;
+            line-height: 40px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .payroll {
+            filter: invert();
+        }
+
+        .payslip {
+            filter: invert();
+        }
+        .container1{
+            width: 80%;
+            margin: auto;
+        }
+        .payslipcontainer{
+            background-color:  rgb(250, 232, 211);
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 5%;
+            padding: 20px;
+        }
+        .payslipheader{
+            display: flex;
+            justify-content: space-around;
+            line-height: 2.0;
+        }
+        table{
+            border-collapse:collapse;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th,td{
+            border:solid 1px #455a64;
+            text-align: center;
+            padding: 10px;
+        }
+        thead .top{
+            background-color: #f8cc14;
+            font-weight: bold;
+        }
+        thead .sub{
+            background-color: #f8cc14;
+        }
+        tbody .datarow{
+            background-color: #feeba8;
+        }
+        .totalearnings{
+            text-align: right;
+            margin-top: 3%;
+        }
+        .downloadbtn
+        {
+            text-align: center;
+        }
+        .download{
+            background-color: #455a64;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+    @media (max-width:680px) {
+        .maincontainer{
+            flex-direction: column;
+        }
+        .links{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+        }
+        .payslipcontainer{
+            width: 100%;
+            overflow-x: auto;
+        }
+        .payslipheader{
+            flex-direction: column;
+        }
+    }
+@media (min-width:681px)and (max-width:1024px) {
+    .payslipcontainer{
+        overflow-x: auto;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="links">
+            <a href="home.html">
+                <p><img src="PayslipImages/Overview.png" class="overview"> Overview</p>
+            </a>
+            <a href="payroll.html">
+                <p><img src="PayslipImages/Payroll.png" class="payroll"> Payroll</p>
+            </a>
+            <a href="slip.html">
+                <p style="color: yellow;"><img src="PayslipImages/Payroll.png" class="payslip"> Payslip</p>
+            </a>
+        </div>
+        <div class="container1">
+            <h2 style="text-align: center;margin-top: 5%;">Payslip Details</h2>
+            <div class="payslipcontainer" id="payrollDownload">
+                <div class="payslipheader">
+                    <div>
+                        <p><strong>Employee Name :</strong> <span id="name">Deepika</span></p>
+                        <p><strong>Employee I'D :</strong> <span id="employeeId">103</span></p>
+                        <p><strong>Role :</strong> <span id="role">Team Lead</span></p>
+                    </div>
+                    <div>
+                        <p><strong>Date :</strong> <span id="date">05/04/2025</span></p>
+                        <p><strong>Month :</strong> <span id="month">April</span></p>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr class="top">
+                            <th colspan="3">Employee Details</th>
+                            <th colspan="2">Earnings</th>
+                            <th>Additions</th>
+                            <th>Deductions</th>
+                        </tr>
+                        <tr class="sub">
+                            <th>Employee Id</th>
+                            <th>Employee Name</th>
+                            <th>Role</th>
+                            <th>Basic salary</th>
+                            <th>Total salary</th>
+                            <th>Additions</th>
+                            <th>Deductions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="datarow">
+                            <td id="empIdRow">0101</td>
+                            <td id="nameRow">Deepika</td>
+                            <td id="roleRow">Team Lead</td>
+                            <td id="basicSalaryRow">14,500</td>
+                            <td id="totalSalaryRow">14,500</td>
+                            <td id="additionsRow">1000</td>
+                            <td id="deductionsRow">500</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="totalearnings">
+                    <strong>Total Earnings: ₹ <span id="totalEarnings">15,000</span></strong>
+                </div>
+
+                <div class="downloadbtn">
+                    <button onclick="downloadPDF()" class="download">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<script src="payslip.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+
+</html>

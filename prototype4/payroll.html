@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll</title>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "quicksand",sans-serif;
+}
+.maincontainer{
+    display: flex;
+}
+.links{
+    width: 20%;
+    background-color: #455a64;
+    color: white;
+    padding-top: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+}
+.payroll{
+    filter:invert();
+}
+.payslip{
+    filter: invert();
+}
+.container1{
+    width: 80%;
+}
+.topcontent{
+    padding-top: 5%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.button1{
+    display: flex;
+    gap: 30px;
+}
+.this_month{
+    background-color: #455a64;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.download{
+    background-color: #f8cc14;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+.container2{
+    width: 90%;
+    margin: auto;
+    background-color: #feeba8;
+    border-radius: 10px;
+}
+#payrollform{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    line-height: 40px;
+    margin-top: 50px;
+    padding: 30px;
+}
+#payrollform input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    background:none;
+}
+#payrollform label{
+    font-weight: bold;
+}
+.button2{
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+.submit{
+    background-color: #f8cc14;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+.cancel{
+    background-color: #455a64;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+}
+
+@media (max-width:680px) {
+    .maincontainer{
+        flex-direction: column;
+    }
+    .links{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+    .topcontent{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .container2{
+        width: 100%;
+        margin: auto;
+        margin-left: 50px;
+    }
+    #payrollform{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+@media (min-width:681px) and (max-width:1024px) {
+    .container2{
+        width: 100%;
+    }
+    #payrollform input{
+        width: 180px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="maincontainer">
+    <div class="links">
+     <a href="home.html"><p><img src="PayslipImages/Overview.png" class="overview"> Overview</p></a>
+      <a href="payroll.html"> <p style="color: yellow;"><img src="PayslipImages/Payroll.png" class="payroll"> Payroll</p></a>
+      <a href="slip.html"> <p><img src="PayslipImages/Payroll.png" class="payslip"> Payslip</p></a>
+    </div>
+    <div class="container1">
+        <div class="topcontent">
+            <p style="font-size: 20px;"><b>Payroll Details</b></p>
+            <div class="button1">
+                <button class="this_month">This Month <i class="fa-solid fa-calendar-days fa-sm" style="color: #ffffff;"></i></button>
+                <button class="download">Download</button>
+            </div>
+        </div>
+        <div class="container2">
+            <form id="payrollform">
+                <div class="group">
+                    <label>Employee Name</label><br>
+                        <input type="text" id="name" required /><br>
+
+                        <label>Date</label><br>
+                        <input type="date" id="date" required /><br>
+
+                        <label>No of Working Days</label><br>
+                        <input type="number" id="workingDays" required /><br>
+
+                        <label>Additions</label><br>
+                        <input type="number" id="additions" />
+                </div>
+                <div class="group">
+                     <label>Employee Role</label><br>
+                        <input type="text" id="role" required /><br>
+
+                        <label>Basic Salary</label><br>
+                        <input type="number" id="basicSalary" required /><br>
+
+                        <label>Total Present Days</label><br>
+                        <input type="number" id="presentDays" required /><br>
+
+                        <label>Deductions</label><br>
+                        <input type="number" id="deductions" />
+                </div>
+                <div class="group">
+                    <label>Employee ID</label><br>
+                        <input type="text" id="employeeId" required /><br>
+
+                        <label>Total Salary</label><br>
+                        <input type="number" id="totalSalary" required /><br>
+
+                        <label>Total Leave Days</label><br>
+                        <input type="number" id="leaveDays" />
+                </div>
+                  <div class="button2">
+                        <button type="submit" class="submit">Submit</button>
+                        <button type="reset" class="cancel">Cancel</button>
+                    </div>
+            </form>
+          
+        </div>
+    </div>
+</div>
+
+<script src="payroll.js"></script>
+</body>
+</html>

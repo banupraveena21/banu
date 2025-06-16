@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+<style>
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "quicksand",sans-serif;
+    background-image: url(PayslipImages/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maincontainer{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 100px;
+    justify-content: space-around;
+}
+.image{
+    border-radius: 300px;
+}
+.logo1{
+    line-height: 40px;
+}
+.logo1 h2{
+    font-size: 30px;
+    text-align: center;
+}
+.logo1 input{
+    width:300px;
+    height: 50px;
+    border-radius: 10px;
+    background: none;
+}
+#name::placeholder{
+    background-image: url(PayslipImages/mail.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 40px;
+    font-size:15px;
+}
+#pass::placeholder{
+    background-image: url(PayslipImages/Password.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 40px;
+    font-size:15px;
+}
+.logo1 p{
+    text-align:right;
+}
+.logo1 button{
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: #f8cc14;
+    border-radius: 10px;
+    font-size: 20px;
+}
+form span{
+    color: red;
+}
+
+@media (max-width:680px) {
+    .maincontainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image{width: 95%;}
+}
+
+@media (min-width:681px) and (max-width:1024px) {
+    .maincontainer{
+        width: 100%;
+    }
+    .image{
+        width:99%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="maincontainer">
+<div class="logo">
+    <img src="PayslipImages/loginLogo. Gif.gif" class="image">
+</div>
+<div class="logo1">
+    <form id="loginForm">
+<h2>Login</h2><br>
+<input type="text" id="name" name="name" placeholder="Enter Your Name"><br><br>
+<input type="password" id="pass" name="pass" placeholder="Password"><br>
+<p>Forget Password?</p>
+<a href="#"><button type="submit" id="submit">Login</button><br></a>
+<span id="message"></span>
+</div>
+</form>
+
+</div>
+
+
+<script src="loginpage.js"></script>
+</body>
+</html>

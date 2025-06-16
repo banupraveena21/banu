@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "quicksand",sans-serif;
+}
+.maincontainer{
+    display: flex;
+}
+.links{
+    width: 20%;
+    background-color: #455a64;
+    color: white;
+    padding-top: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+}
+.payroll{
+    filter: invert();
+}
+.payslip{
+    filter: invert();
+}
+.page{
+    width: 80%;
+    padding-top: 50px;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(250, 232, 211);
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+.row1 input{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+#search::placeholder{
+    background-image: url(PayslipImages/search.png);
+    background-repeat: no-repeat;
+    background-position: 170px;
+    background-size: contain;
+    padding-left: 15px;
+}
+.col1{
+    display: flex;
+    gap: 30px;
+}
+.profile{
+    width: 30%;
+}
+.row2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    background-color: rgb(250, 232, 211);
+    padding: 20px;
+    border-radius: 10px;
+}
+.col21{
+    display: flex;
+    background-color: #f8cc14;
+    width: 200px;
+    padding: 20px;
+    gap: 10px;
+}
+.image21{
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #455a64;
+}
+.col3{
+    display: grid;
+}
+.row3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2%;
+    margin-left: 8%;
+}
+.calendar-container {
+      background-color: #fff1a6;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .calendar-header #monthYear {
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .calendar-header .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .calendar-header button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: orange;
+    }
+
+    .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .calendar-dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      gap: 5px;
+    }
+
+    .calendar-dates div {
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .calendar-dates div:hover {
+      background-color: #f0c44b;
+    } 
+    .today {
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+    }
+    .upcomingevents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.events-details{
+    background-color: #feeba8;
+    height: 90%;
+    width: 80%;
+    margin-top: 3%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+.events-details-item{
+    border: 1px solid #455A64;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width:680px) {
+    .maincontainer{
+        flex-direction: column;
+    }
+    .links{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+    .page{
+        width: 100%;
+    }
+    .row1{
+        width: 100%;
+    }
+    .row2{
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+    .col3{
+        display: flex;
+        flex-direction: column;
+    }
+    .calendar-container{
+        width: 340px;
+    }
+    .row4{
+        display: none;
+    }
+}
+
+@media (min-width:681px) and (max-width:1024px) {
+    .row2{
+        grid-template-columns: auto  auto;
+        justify-content: space-around;
+        gap: 10px;
+    }
+      .calendar-container{
+        width: 300px;
+        padding: 5px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="maincontainer">
+    <div class="links">
+     <a href="home.html"><p style="color: yellow;"><img src="PayslipImages/Overview.png" class="overview"> Overview</p></a>
+      <a href="payroll.html"> <p><img src="PayslipImages/Payroll.png" class="payroll"> Payroll</p></a>
+      <a href="payslip.html"> <p><img src="PayslipImages/Payroll.png" class="payslip"> Payslip</p></a>
+    </div>
+    <div class="page">
+        <div class="row1">
+            <p><b>Good Morning!!!</b></p>
+            <input type="search" id="search" placeholder="Search">
+           <div class="col1">
+             <img src="PayslipImages/notification.png" class="notification">
+            <img src="PayslipImages/Profile.png" class="profile">
+           </div>
+        </div><br><br>
+        <div class="row2">
+            <div class="col21">
+                <div class="image21">
+                <i class="fa-solid fa-people-group fa-xl" style="color:white;"></i>
+                </div>
+                <p><b>Total <br>Employees</b></p>
+            </div>
+            <div class="col21">
+                <div class="image21">
+                <i class="fa-solid fa-user-group fa-xl" style="color:white;"></i>
+                </div>
+                <p><b>Number of <br>leave</b></p>
+            </div>
+            <div class="col21">
+                <div class="image21">
+                 <i class="fa-solid fa-user-plus fa-xl" style="color:white;"></i>
+                 </div>
+                <p><b>New <br>Employee's</b></p>
+            </div>
+            <div class="col21">
+                <div class="image21">
+                 <i class="fa-solid fa-plane-up fa-xl" style="color:white;"></i>
+                 </div>
+                <p><b>Holiday of <br>this Year</b></p>
+            </div>
+        </div>
+        <div class="col3">
+        <div class="row3">
+                    <div>
+                        <p style="font-weight: bold;"> Calender</p><br>
+                        <div class="calendar-container" id="calendarContainer">
+                            <div class="calendar-header">
+                                <div id="monthYear"></div>
+                                <div class="nav-buttons">
+                                    <button id="prev" style="border: solid 1px orangered; border-radius:50px;padding:5px;">&#x276E;</button>
+                                    <button id="next" style="border: solid 1px orangered; border-radius:50px;padding:5px;">&#x276F;</button>
+                                </div>
+                            </div>
+                            <div class="calendar-days">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="calendar-dates" id="calendarDates"></div>
+                        </div>
+                    </div>
+                    <div>
+            <div class="row4">
+                <div class="upcomingevents">
+                    <div style="font-weight: bold;">Upcoming Meetings</div>
+                    <div style="font-weight: bold; color: red;">View All</div>
+                </div>
+                <div class="events-details">
+                            <div class="events-details-item">
+                                <div>Client Meeting-10.00 Am</div>
+                                <div class="times-date">
+                                    <div>Wed</div>
+                                    <div>May 17</div>
+                                </div>
+                            </div>
+                            <div class="events-details-item">
+                                <div>Team Meeting-11.00 Am</div>
+                                <div class="times-date">
+                                    <div>Wed</div>
+                                    <div>May 17</div>
+                                </div>
+                            </div>
+                            <div class="events-details-item">
+                                <div>HR Interview-2.00 Pm</div>
+                                <div class="times-date">
+                                    <div>Mon</div>
+                                    <div>May 17</div>
+                                </div>
+                            </div>
+                            <div class="events-details-item">
+                                <div>Client Meeting-4.00Pm</div>
+                                <div class="times-date">
+                                    <div>Mon</div>
+                                    <div>May 17</div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="home.js"></script>
+</body>
+</html>
