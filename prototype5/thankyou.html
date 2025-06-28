@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'outfit', sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            margin-left: 300px;
+            align-items: center;
+            width: 60%;
+            margin-top: 100px;
+            border: 1px solid white;
+            box-shadow: 10px 10px whitesmoke;
+        }
+        .container p{
+            font-size: 40px;
+        }
+        img{
+            width: 50%;
+        }
+        @media (max-width:680px) {
+            .container{
+                margin-left: 1px;
+                width: 100%;
+                box-shadow: none;
+                padding: 0px;
+                margin-top: 50px;
+            }
+            .container p{
+                font-size: 20px;
+            }
+            img{
+                width: 40%;
+            }
+        }
+
+        @media (min-width:681px) and (max-width:1024px) {
+            .container{
+                margin-left: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="SuperMarketimages/thank you.png">
+        <p><strong>Thank You For Shopping!!!</strong></p>
+    </div>
+</body>
+</html>

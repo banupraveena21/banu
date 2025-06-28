@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'outfit', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #cef0d2;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        #icon {
+            filter: grayscale(100%);
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0 10px;
+        }
+
+        th {
+            text-align: center;
+            color: #4e6ef1;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+
+        td {
+            background: #f9f9f9;
+            padding: 12px 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 5px 3px whitesmoke;
+        }
+
+        .add-button,
+        .subtract-button {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .next {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .next_btn {
+            background-color: #4e6ef1;
+            color: white;
+            padding: 10px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width:680px) {
+            .container{
+                flex-direction: column;
+            }
+            .sidebar{
+                width: 100%;
+            }
+            .content{
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Vetri Market</h2>
+            <nav>
+                <ul>
+                    <li><img src="SuperMarketimages/Home.png" alt="icon" id="icon"><span> Home</span></li>
+                    <li><img src="SuperMarketimages/products.png" alt="icon1" id="icon1"><span style="color: #f88e55;">
+                            Products</span> </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <h1>Products</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="item-name">ITEM DETAILS</th>
+                        <th class="item-qty">QUANTITY</th>
+                        <th class="item-rate">RATE</th>
+                        <th class="item-tax">TAX</th>
+                        <th class="item-amt">AMOUNT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="product-row">
+                        <td class="item-name">Dairy Milk</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">100</td>
+                        <td class="item-tax">20</td>
+                        <td class="item-amt">120 </td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                    <tr class="product-row">
+                        <td class="item-name">Millet Noodles</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">30</td>
+                        <td class="item-tax">10</td>
+                        <td class="item-amt">40 </td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                    <tr class="product-row">
+                        <td class="item-name">Wheat Flour</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">100</td>
+                        <td class="item-tax">20</td>
+                        <td class="item-amt">120</td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                    <tr class="product-row">
+                        <td class="item-name">Maida</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">30</td>
+                        <td class="item-tax">10</td>
+                        <td class="item-amt">40</td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                    <tr class="product-row">
+                        <td class="item-name">Chilli powder</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">100</td>
+                        <td class="item-tax">20</td>
+                        <td class="item-amt">120</td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                    <tr class="product-row">
+                        <td class="item-name">Briyani Masala</td>
+                        <td style="display: flex;justify-content: space-around;"><button
+                                class="subtract-button">-</button><span class="item-qty"> 1 </span><button
+                                class="add-button">+</button></td>
+                        <td class="item-rate">30</td>
+                        <td class="item-tax">10</td>
+                        <td class="item-amt">40</td>
+                        <td><button class="add" id="add"
+                                style="background-color: #f88e55; border-radius: 20px;padding: 3px;border: none;"><img
+                                    src="SuperMarketimages/Add to cart.png" id="cart"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="next"><button class="next_btn" id="next_btn">Next</button></div>
+        </main>
+    </div>
+
+    <script src="additem.js"></script>
+</body>
+
+</html>

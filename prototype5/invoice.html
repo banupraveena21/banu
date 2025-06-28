@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Invoice</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'outfit', sans-serif;
+        }
+    .container {
+    
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .container img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .exit{
+        padding-bottom: 20px;
+    }
+    #exiting{
+        border:none;
+        background-color:#f88e55;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .exit a{
+        color: white;
+        text-decoration: none;
+    }
+    .info-box {
+      background-color: #d2f2d5;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .info-item {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .info-item strong {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .download-btn {
+      background-color: #f88e55;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #e6732c;
+    }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <img src="SuperMarketimages/completed.png" alt="Order Success" />
+    <div class="title">Your Order Completed</div>
+    <div class="subtitle">Thank you. Your order has been received</div>
+    <div class="exit"><button type="submit" id="exiting"><a href="thankyou.html">Exit</a></button></div>
+    
+    <div class="info-box">
+      <div class="info-item" id="order-number">
+        <strong>Order ID</strong>
+        145
+      </div>
+      <div class="info-item" id="name">
+        <strong>Name</strong>
+        Priya
+      </div>
+      <div class="info-item" id="phone">
+        <strong>Phone Number</strong>
+        8910866173
+      </div>
+      <div class="info-item" id="email">
+        <strong>Email Id</strong>
+        priya156@gmail.com
+      </div>
+      <div>
+        <button class="download-btn" onclick="downloadPDF()">Download Invoice</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="invoice.js"></script>
+</body>
+
+</html>

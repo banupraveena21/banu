@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'outfit', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #cef0d2;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        nav img {
+            width: 8%;
+        }
+
+        #icon {
+            filter: grayscale(100%);
+        }
+
+        nav span {
+            font-size: 20px;
+        }
+
+        .billing-panel {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .draft-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .amount-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .collected,
+        .balance {
+            padding: 10px;
+            width: 48%;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .collected {
+            background-color: #f88e55;
+            color: white;
+        }
+
+        .balance {
+            background-color: #ec9fff;
+            color: black;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-methods select,
+        .payment-methods input {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .totals {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .totals p {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .totals .total {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+
+        .save-btn {
+            background-color: #f88e55;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .pay-btn {
+            background-color: #007bff;
+            font-size: 18px;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media (max-width:680px) {
+            .container{
+                flex-direction: column;
+            }
+            .sidebar{
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Vetri Market</h2>
+            <nav>
+                <ul>
+                    <li><img src="SuperMarketimages/Home.png" alt="icon" id="icon"><span> Home</span></li>
+                    <li><img src="SuperMarketimages/products.png" alt="icon1" id="icon1"><span style="color: #f88e55;">
+                            Products</span> </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="billing-panel">
+            <div class="header">
+                <div class="bill-details">
+                    <p><strong>DATE:</strong> 12/7/2024</p>
+                    <p><strong>TIME:</strong> 5:30 PM</p>
+                    <p><strong>BILL NO.:</strong> 78123</p>
+                </div>
+                <button class="draft-btn">📄 Draft</button>
+            </div>
+            <div class="amount-section">
+                <div class="collected">Collected Amount: <span id="collected-amount"></span></div>
+                <div class="balance">Balance: <span>0</span></div>
+            </div>
+            <div class="payment-methods">
+                <label>
+                    <img src="SuperMarketimages/cash.png">
+                    <select>
+                        <option>CASH</option>
+                        <option>CARD</option>
+                    </select>
+                </label>
+                <input type="text" placeholder="Received Amount" value="150.0" />
+            </div>
+
+            <div class="totals">
+                <p>Sub Total <span id="subtotal"></span></p>
+                <p>Tax <span id="tax"></span></p>
+                <p>Round Off <span>00</span></p>
+                <hr />
+                <p class="total">Total <span id="total-amount"></span></p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="save-btn">Save</button>
+                <button class="pay-btn" id="pay-btn">Payment</button>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="billing.js"></script>
+</body>
+
+</html>
