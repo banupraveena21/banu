@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exam Dashboard Portal</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      font-family: "quicksand",sans-serif;
+      background-color: #fefefe;
+    }
+
+    .container {
+      display: flex;
+    }
+     .invertimage{
+        filter: invert(100%);
+    }
+
+    
+    .sidebar {
+      width: 220px;
+      background-color: #1c2a2e;
+      height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sidebar a.active,
+    .sidebar a:hover {
+      color: #b5ff3d;
+    }
+
+    /* Main */
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .left-section {
+      flex: 1;
+      padding-right: 30px;
+    }
+
+    .right-section {
+      width: 300px;
+      background-color: #e6fcb5;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    
+    .welcome {
+      font-size: 20px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .date {
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    
+    .exam-box {
+      background-color: #d8f275;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 100px;
+    }
+
+    .exam-box h3 {
+      margin-top: 0;
+    }
+
+    .exam-item {
+      margin: 10px 0;
+      padding: 20px;
+      background-color: #e4fba5;
+      border-radius: 6px;
+    }
+
+    .exam-item strong {
+      display: block;
+    }
+
+    .start-btn {
+      float: right;
+      padding: 10px 12px;
+      background-color: #1c1c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="sidebar">
+    <h2 style="padding: 15px;"><img src="VTS_Exam_Portal_Images/download.jpg" alt="VTS Logo" style="width: 25%;"> VTS Exam <br> Portal</h2>
+     <a href="home.html" class="active" aria-current="page">
+        <span><img src="VTS_Exam_Portal_Images/Overview.png" alt="overview"></span> Overview
+      </a>
+      <a href="designing.html"><span><img src="VTS_Exam_Portal_Images/Design.png" alt="designing" class="invertimage"></span> Designing</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/development.jpg" alt="development"></span> Development</a>
+      <a href="exam.html"><span><img src="VTS_Exam_Portal_Images/Exam.png" alt="exam" class="invertimage"></span> Exam</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/result.png" alt="result" class="invertimage"></span> Result</a>
+    </div>
+
+    
+    <div class="main">
+      
+      <div class="left-section">
+        <div class="welcome">
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="kavya" style="width: 4%;">Welcome Kavyaa
+        </div>
+        <div class="date">It's Monday 10 May 2025</div>
+
+        
+        <div class="exam-box">
+          <h3>
+            Upcoming Exams
+            <button class="start-btn">Start a Exam</button>
+          </h3>
+          <div class="exam-item">
+            <strong>Figma Technical Questions</strong>
+            Duration: 30 Minutes<br>
+            May 15, 2025 - 2:30 PM
+          </div>
+          <div class="exam-item">
+            <strong>Figma Practical Questions</strong>
+            Duration: 1 Day<br>
+            May 16, 2025 - 4:00 PM
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</body>
+</html>

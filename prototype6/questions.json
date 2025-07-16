@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What does CPU stand for?",
+    "options": ["Central Processing Unit", "Computer Processing Unit", "Central Program Unit", "Control Processing Unit"],
+    "answer": "Central Processing Unit"
+  },
+  {
+    "question": "Which of these is an input device?",
+    "options": ["Mouse", "Monitor", "Printer", "Speaker"],
+    "answer": "Mouse"
+  },
+  {
+    "question": "What is the main function of RAM?",
+    "options": ["Temporary storage", "Permanent storage", "Display graphics", "Backup data"],
+    "answer": "Temporary storage"
+  },
+  {
+    "question": "Which one is a programming language?",
+    "options": ["Python", "Google", "Chrome", "Excel"],
+    "answer": "Python"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "options": ["HyperText Markup Language", "HyperText Markdown Language", "HighText Machine Language", "Hyper Transfer Markup Language"],
+    "answer": "HyperText Markup Language"
+  },
+  {
+    "question": "Which key is used to refresh a webpage?",
+    "options": ["F5", "F1", "F12", "F11"],
+    "answer": "F5"
+  },
+  {
+    "question": "Which company developed the Windows operating system?",
+    "options": ["Microsoft", "Apple", "Google", "IBM"],
+    "answer": "Microsoft"
+  },
+  {
+    "question": "What is the shortcut key for 'Copy'?",
+    "options": ["Ctrl + C", "Ctrl + X", "Ctrl + V", "Ctrl + P"],
+    "answer": "Ctrl + C"
+  },
+  {
+    "question": "Which of these is not a storage device?",
+    "options": ["Keyboard", "Hard Disk", "USB Drive", "CD-ROM"],
+    "answer": "Keyboard"
+  },
+  {
+    "question": "What does 'bit' stand for in computing?",
+    "options": ["Binary Digit", "Byte Information Type", "Basic Integer Type", "Binary Information Table"],
+    "answer": "Binary Digit"
+  }
+]

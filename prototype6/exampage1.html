@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri Exam portal</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+    <style>
+        * {
+            font-family: "quicksand",sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .examrow1 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .examcol1 {
+            width: 20%;
+            border: 2px solid;
+            background-color: #201F31;
+            color: white;
+            height: 150vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .card1 {
+            display: flex;
+            font-size: 24px;
+            font-weight: 600;
+            gap: 5px;
+            background-color: white;
+            color: #201F31
+        }
+
+        .card2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            font-size: 15px;
+        }
+
+        .card21 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .img {
+            filter: invert(100%);
+        }
+
+        .c1,
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form1{
+            width: 100%;
+            text-align: center;
+        }
+
+        form1 p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        label {
+            margin: 50px;
+        }
+
+        .nextbtn {
+            width: 10%;
+            height: 40px;
+            background-color: #201F31;
+            border-radius: 12px;
+            margin-left: 50px;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="examcontainer">
+        <div class="examrow1">
+            <div class="examcol1">
+                <div class="card1">
+                    <div class="logo"><img src="VTS_Exam_Portal_Images/download.jpg" alt="logo" style="width: 25px;"></div>
+                    <div class="head">
+                        <p>VTS Exam Portal</p>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card21">
+                        <div class="c1"><img src="VTS_Exam_Portal_Images/Overview.png" class="img" alt=""></div>
+                        <div class="c1"><a href="home.html">
+                                <p>Overview</p>
+                            </a></div>
+                    </div>
+                    <div class="card21">
+                        <div class="c1"><img src="VTS_Exam_Portal_Images/Design.png" class="img" alt=""></div>
+                        <div class="c1">
+                            <p>Designing</p>
+                        </div>
+                    </div>
+                    <div class="card21">
+                        <div class="c1"><img src="VTS_Exam_Portal_Images/development.jpg" class="img" alt=""></div>
+                        <div class="c1"></a>
+                            <p>Development</p>
+                        </div>
+                    </div>
+                    <div class="card21">
+                        <div class="c1"><img src="VTS_Exam_Portal_Images/Exam.png" class="img" alt=""></div>
+                        <div class="c1"><a href="start.html">
+                                <p>Exam</p>
+                            </a></div>
+                    </div>
+                    <div class="card21">
+                        <div class="c1"><img src="VTS_Exam_Portal_Images/result.png" class="img" alt=""></div>
+                        <div class="c1"><a href="result.html">
+                                <p>Result</p>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="examcol2" style="width: 100%;line-height: 30px;">
+                <h3>Figma Technical Questions</h3>
+                <h3>Questions 1 to 5</h3><br>
+                <form id="form1" style="background-color: beige;"></form>
+                <button onclick="saveAndNext()" class="nextbtn">Next</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+            fetch('questions.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load questions.json");
+            }
+            return response.json();
+        })
+        .then(data => {
+            localStorage.setItem("questions", JSON.stringify(data)); 
+            renderQuestions(data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+
+    function renderQuestions(questions) {
+        const form = document.getElementById("form1");
+        for (let i = 0; i < 5; i++) {
+            const q = questions[i];
+            const div = document.createElement("div");
+            div.innerHTML = `<p>${i + 1}. ${q.question}</p>` +
+                q.options.map(opt => `
+                    <label>
+                        <input type="radio" name="q${i + 1}" value="${opt}">${opt}
+                    </label><br>`).join('');
+            form.appendChild(div);
+        }
+    }
+
+    function saveAndNext() {
+        for (let i = 1; i <= 5; i++) {
+            const answer = document.querySelector(`input[name="q${i}"]:checked`);
+            localStorage.setItem("q" + i, answer ? answer.value : "");
+        }
+        window.location.href = "exampage2.html";
+    }
+    </script>
+</body>
+
+</html>

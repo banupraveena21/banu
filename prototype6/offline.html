@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Trainees</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      font-family: "quicksand",sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    
+    .sidebar {
+      width: 220px;
+      background-color: #1c2a2e;
+      height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sidebar a.active,
+    .sidebar a:hover {
+      color: #b5ff3d;
+    }
+
+    
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+    }
+
+    .breadcrumb {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb span {
+      color: #444;
+      margin: 0 8px;
+    }
+
+   
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #e6fcb5;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 12px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      line-height: 30px;
+      position: relative;
+    }
+
+    .card .edit-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 12px;
+    }
+
+    .card h3 {
+      margin: 0;
+      margin-top: 6px;
+    }
+
+    .card p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .card .contact {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .card .contact span {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .card .contact span i {
+      margin-right: 6px;
+    }
+
+    .view-more-btn {
+      margin-top: 10px;
+      background-color: #1c2a2e;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+    }
+
+  .invertimage{
+        filter: invert(100%);
+    }
+   
+    @media (max-width: 600px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="sidebar">
+      <h2 style="padding: 15px;"><img src="VTS_Exam_Portal_Images/download.jpg" alt="VTS Logo" style="width: 25%;"> VTS Exam <br> Portal</h2>
+     <a href="home.html" class="active" aria-current="page">
+        <span><img src="VTS_Exam_Portal_Images/Overview.png" alt="overview"></span> Overview
+      </a>
+      <a href="designing.html"><span><img src="VTS_Exam_Portal_Images/Design.png" alt="designing" class="invertimage"></span> Designing</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/development.jpg" alt="development"></span> Development</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/Exam.png" alt="exam" class="invertimage"></span> Exam</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/result.png" alt="result" class="invertimage"></span> Result</a>
+    </div>
+
+    
+    <div class="main">
+      <div class="breadcrumb">
+        Trainer Name <span>></span> <strong>Online Trainees</strong> <span>></span> Offline Trainees
+      </div>
+
+      <div class="card-grid">
+        
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+        <div class="card">
+          <span class="edit-icon">✏️</span>
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h3>Kavya</h3>
+          <p><strong>Durations:</strong> 90 Days</p>
+          <p><strong>Course Name:</strong> UI/UX Design</p>
+          <p><strong>Class Mode:</strong> Online</p>
+          <div class="contact">
+            <span>📧 kavyauiux@vts.in</span>
+            <span>📞 9156800278</span>
+          </div>
+          <button class="view-more-btn">View More</button>
+        </div>
+
+       
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
