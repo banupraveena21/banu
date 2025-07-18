@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VTS Exam Portal</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      }
+
+    body {
+      font-family: "quicksand",sans-serif;
+      display: flex;
+      height: 100vh;
+      background: #f9f9f9;
+      color: #1a1a1a;
+    }
+
+    .invertimage{
+        filter: invert(100%);
+    }
+    .sidebar {
+      width: 220px;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      gap: 25px;
+      user-select: none;
+    }
+
+    .sidebar .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    .sidebar .logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .sidebar .logo h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar nav a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar nav a.active,
+    .sidebar nav a:hover {
+      color: #ccff33;
+      font-weight: 600;
+    }
+
+    
+    .main {
+      flex: 1;
+      padding: 40px 50px;
+      overflow-y: auto;
+    }
+
+    .greeting {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .date {
+      color: #999;
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    
+    .top-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      width: 300px;
+    }
+
+    .search-container input[type="search"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 3px solid #ddd;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 14px;
+    }
+
+    .search-container button {
+      border: 1px solid #ccff33;
+      background-color: #ccff33;
+      padding: 8px 16px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      transition: background-color 0.2s ease;
+    }
+
+    .search-container button:hover {
+      background-color: #b3d100;
+    }
+
+    .top-right-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .bell {
+      position: relative;
+      cursor: pointer;
+      font-size: 22px;
+      color: #444;
+    }
+
+    .bell::after {
+      content: attr(data-count);
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: #f44336;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 50%;
+      padding: 2px 6px;
+      display: inline-block;
+      min-width: 18px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid #ccff33;
+    }
+
+    
+    .stats {
+      margin-top: 35px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .stat-card {
+      flex: 1;
+      min-width: 160px;
+      border-radius: 10px;
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+    }
+
+    .stat-card .icon {
+      background: rgba(0, 0, 0, 0.08);
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 24px;
+      color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+    }
+
+    .stat-yellow {
+      background: #fff8d5;
+      color: #b18600;
+    }
+    .stat-green {
+      background: #d4edda;
+      color: #257a36;
+    }
+    .stat-pink {
+      background: #f05fa7;
+      color: #7b1a1a;
+    }
+
+    
+    .content-sections {
+      margin-top: 40px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .active-trainers,
+    .upcoming-exams {
+      flex: 1;
+      min-width: 300px;
+      background: #D8f275;
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.05);
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-header a,
+    .section-header button {
+      background: #222;
+      color: white;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .section-header a:hover,
+    .section-header button:hover {
+      background-color: #444;
+    }
+
+    
+    .trainer-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .trainer-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .trainer-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccff33;
+    }
+
+    .trainer-info {
+      flex: 1;
+    }
+
+    .trainer-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: #111;
+    }
+
+    .trainer-role {
+      font-size: 13px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .trainees-count {
+      background: #f5caca;
+      padding: 6px 12px;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 13px;
+      user-select: none;
+      cursor: default;
+      box-shadow: inset 0 0 4px #ccc;
+    }
+
+    
+    .upcoming-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .exam-item {
+      border: 2px solid #251f8f;
+      border-radius: 8px;
+      padding: 14px 20px;
+      box-shadow: 0 0 5px rgb(0 0 0 / 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      cursor: default;
+      user-select: none;
+    }
+
+    .exam-desc {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      color: #444;
+      max-width: 60%;
+    }
+
+    .exam-title {
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .exam-duration {
+      font-weight: 400;
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .exam-date-time {
+      text-align: right;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      white-space: nowrap;
+    }
+
+    
+    .upload-area {
+      margin-top: 40px;
+      border: 2px dashed #3a63d0;
+      border-radius: 10px;
+      padding: 40px 0;
+      text-align: center;
+      color: #333;
+      font-weight: 600;
+      user-select: none;
+      cursor: pointer;
+      background: white;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .upload-area:hover {
+      background-color: #eef5ff;
+    }
+
+    .upload-area .icon {
+      font-size: 36px;
+      color: #3a63d0;
+      margin-bottom: 12px;
+    }
+
+    .upload-area p {
+      font-weight: 500;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .browse-btn {
+      background-color: #222;
+      color: white;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+      margin-bottom: 8px;
+    }
+
+    .browse-btn:hover {
+      background-color: #444;
+    }
+
+    .supported-formats {
+      font-size: 12px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #bbb;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="sidebar" role="navigation" aria-label="Main Navigation">
+    <div class="logo">
+      
+      <img src="VTS_Exam_Portal_Images/download.jpg" alt="VTS Logo" />
+      <h1>VTS Exam Portal</h1>
+    </div>
+    <nav>
+      <a href="#" class="active" aria-current="page">
+        <span><img src="VTS_Exam_Portal_Images/Overview.png" alt="overview"></span> Overview
+      </a>
+      <a href="designing.html"><span><img src="VTS_Exam_Portal_Images/Design.png" alt="designing" class="invertimage"></span> Designing</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/development.jpg" alt="development"></span> Development</a>
+      <a href="exam.html"><span><img src="VTS_Exam_Portal_Images/Exam.png" alt="exam" class="invertimage"></span> Exam</a>
+      <a href="resultpage.html"><span><img src="VTS_Exam_Portal_Images/result.png" alt="result" class="invertimage"></span> Result</a>
+    </nav>
+  </aside>
+
+  <main class="main" role="main">
+    
+
+    <div class="top-bar">
+        <header>
+      <h2 class="greeting">Good Morning!!!</h2>
+      <p class="date">It's Monday 10 May 2025</p>
+    </header>
+
+      <div class="search-container" role="search">
+        <input
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          id="searchInput"
+        />
+        <button aria-label="Search button" id="searchBtn"><img src="VTS_Exam_Portal_Images/search.png" alt="search"></button>
+      </div>
+
+      <div class="top-right-icons" role="region" aria-label="User notifications and profile">
+        <div class="bell" aria-label="Notifications" data-count="10" role="button" tabindex="0" title="Notifications"><img src="VTS_Exam_Portal_Images/Notification.png" alt="notifications"></div>
+        <img
+          src="VTS_Exam_Portal_Images/Img 3.png"
+          alt="User profile picture"
+          class="profile-pic"
+        />
+      </div>
+    </div>
+
+    <section class="stats" aria-label="Statistics overview">
+      <div class="stat-card stat-yellow">
+        <div>Total Trainees <br> <span style="color: black;">500</span></div>
+        <div class="icon" aria-hidden="true"><img src="VTS_Exam_Portal_Images/Total Trainees.png" alt="trainee"></div>
+        
+      </div>
+
+      <div class="stat-card stat-green">
+        <div>Active Courses <br> <span style="color: black;">15</span> </div>
+        <div class="icon" aria-hidden="true"><img src="VTS_Exam_Portal_Images/courses.png" alt="courses"></div>
+     </div>
+
+      <div class="stat-card stat-pink">
+        <div>Upcoming Exams <br><span style="color: black;">12</span> </div>
+        <div class="icon" aria-hidden="true"><img src="VTS_Exam_Portal_Images/Exams.png" alt="exams"></div>
+      </div>
+    </section>
+
+    <section class="content-sections">
+      <section class="active-trainers" aria-label="Active Trainers">
+        <div class="section-header">
+          <div>Active Trainers</div>
+          <button id="addTrainerBtn" aria-label="Add New Trainer">+ Add New</button>
+        </div>
+
+        <article class="trainer-item">
+          <img
+            src="VTS_Exam_Portal_Images/Img 1.png"
+            alt="Priya"
+            class="trainer-pic"
+          />
+          <div class="trainer-info">
+            <div class="trainer-name">Priya</div>
+            <div class="trainer-role">UI/UX Designer</div>
+          </div>
+          <div class="trainees-count">15 Trainees</div>
+        </article>
+
+        <article class="trainer-item">
+          <img
+            src="VTS_Exam_Portal_Images/Img 2.png"
+            alt="Rithika"
+            class="trainer-pic"
+          />
+          <div class="trainer-info">
+            <div class="trainer-name">Rithika</div>
+            <div class="trainer-role">UI/UX Designer</div>
+          </div>
+          <div class="trainees-count">15 Trainees</div>
+        </article>
+
+        <article class="trainer-item">
+          <img
+            src="VTS_Exam_Portal_Images/Img 3.png"
+            alt="Reshma"
+            class="trainer-pic"
+          />
+          <div class="trainer-info">
+            <div class="trainer-name">Reshma</div>
+            <div class="trainer-role">UI/UX Designer</div>
+          </div>
+          <div class="trainees-count">15 Trainees</div>
+        </article>
+      </section>
+
+      <section class="upcoming-exams" aria-label="Upcoming Exams">
+        <div class="section-header">
+          <div>Upcoming Exams</div>
+          <button id="uploadExamBtn" aria-label="Upload New Exam">Upload New Exam</button>
+        </div>
+
+        <div class="upcoming-list">
+          <div class="exam-item" tabindex="0">
+            <div class="exam-desc">
+              <div class="exam-title">Figma Technical Questions</div>
+              <div class="exam-duration">Duration: 30 Minutes</div>
+            </div>
+            <div class="exam-date-time">
+              May 15, 2025<br />
+              2:30 PM
+            </div>
+          </div>
+
+          <div class="exam-item" tabindex="0">
+            <div class="exam-desc">
+              <div class="exam-title">Figma Practical Questions</div>
+              <div class="exam-duration">Duration: 1 Day</div>
+            </div>
+            <div class="exam-date-time">
+              May 16, 2025<br />
+              4:00 PM
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+ </main>
+</body>
+</html>

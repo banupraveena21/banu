@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.invertimage{
+    filter: invert(100%);
+}
+.sidebar {
+  width: 220px;
+  background-color: #1f2a34;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+.sidebar .nav {
+  list-style: none;
+}
+
+.sidebar .nav li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.sidebar .nav .active {
+  color: #baff00;
+  font-weight: bold;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fdfdfd;
+  overflow-y: auto;
+}
+
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background-color: #f1fda4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card span {
+  font-size: 28px;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+thead {
+  background-color: #1f2a34;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+tbody {
+  background-color: #e9fb84;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3fdaa;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-download {
+  background-color: #00002a;
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #e6fb5e;
+  color: #000;
+}

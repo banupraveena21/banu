@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exam Dashboard Portal</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      font-family: "quicksand",sans-serif;
+      background-color: #fefefe;
+    }
+
+    .container {
+      display: flex;
+    }
+     .invertimage{
+        filter: invert(100%);
+    }
+
+    
+    .sidebar {
+      width: 220px;
+      background-color: #1c2a2e;
+      height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sidebar a.active,
+    .sidebar a:hover {
+      color: #b5ff3d;
+    }
+
+    /* Main */
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .left-section {
+      flex: 1;
+      padding-right: 30px;
+    }
+
+    .right-section {
+      width: 300px;
+      background-color: #e6fcb5;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    
+    .welcome {
+      font-size: 20px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .date {
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    
+    .exam-box {
+      background-color: #d8f275;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 100px;
+    }
+
+    .exam-box h3 {
+      margin-top: 0;
+    }
+
+    .exam-item {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #e4fba5;
+      border-radius: 6px;
+    }
+
+    .exam-item strong {
+      display: block;
+    }
+
+    .start-btn {
+      float: right;
+      padding: 10px 12px;
+      background-color: #1c1c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .profile h2 {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    .profile p {
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .progress-section {
+      text-align: left;
+    }
+
+    .progress-label {
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background-color: #cfcfcf;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #1c1c3c;
+    }
+
+    
+    .calendar {
+      margin-top: 20px;
+    }
+
+    .calendar h4 {
+      margin-bottom: 10px;
+    }
+
+    .calendar-table {
+      background-color: #1c2a2e;
+      color: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .calendar-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+      padding: 6px;
+    }
+
+    .calendar-table td.active {
+      background-color: #b5ff3d;
+      color: black;
+      font-weight: bold;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="sidebar">
+    <h2 style="padding: 15px;"><img src="VTS_Exam_Portal_Images/download.jpg" alt="VTS Logo" style="width: 25%;"> VTS Exam <br> Portal</h2>
+     <a href="home.html" class="active" aria-current="page">
+        <span><img src="VTS_Exam_Portal_Images/Overview.png" alt="overview"></span> Overview
+      </a>
+      <a href="designing.html"><span><img src="VTS_Exam_Portal_Images/Design.png" alt="designing" class="invertimage"></span> Designing</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/development.jpg" alt="development"></span> Development</a>
+      <a href="#"><span><img src="VTS_Exam_Portal_Images/Exam.png" alt="exam" class="invertimage"></span> Exam</a>
+      <a href=""><span><img src="VTS_Exam_Portal_Images/result.png" alt="result" class="invertimage"></span> Result</a>
+    </div>
+
+    
+    <div class="main">
+      
+      <div class="left-section">
+        <div class="welcome">
+          Welcome Kavyaa
+        </div>
+        <div class="date">It's Monday 10 May 2025</div>
+
+        
+        <div class="exam-box">
+          <h3>
+            Upcoming Exams
+            <a href="exam.html"><button class="start-btn">Start a Exam</button></a>
+          </h3>
+          <div class="exam-item">
+            <strong>Figma Technical Questions</strong>
+            Duration: 30 Minutes<br>
+            May 15, 2025 - 2:30 PM
+          </div>
+          <div class="exam-item">
+            <strong>Figma Practical Questions</strong>
+            Duration: 1 Day<br>
+            May 16, 2025 - 4:00 PM
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="right-section">
+        <div class="profile">
+          <img src="VTS_Exam_Portal_Images/Img 5.png" alt="Kavya" />
+          <h2>Kavya</h2>
+          <p>UI/UX Designing</p>
+        </div>
+
+        <div class="progress-section">
+          <div class="progress-label">Figma</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 95%;"></div>
+          </div>
+
+          <div class="progress-label">Adobe Photoshop</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        
+        <div class="calendar">
+          <h4>Exam Calendar</h4>
+          <div class="calendar-table">
+            <div><strong>May 2025</strong></div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+                <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                <tr><td>26</td><td>27</td><td class="active">28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
