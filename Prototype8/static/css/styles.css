@@ -1,0 +1,112 @@
+body{
+    background: rgb(255, 239, 242);
+}
+
+.bg-pink {
+    background-color:rgb(255, 227, 230) !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    flex: 2;
+    /* Equal spacing */
+}
+
+.programdrop{
+    background-color:rgb(252, 216, 220) !important;
+}
+
+
+
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.left1 {
+    margin-left: 100px;
+}
+
+.loginbtn {
+    font-size: 28px !important;
+    color: white !important;
+    transition: all 0.3s ease;
+
+}
+
+.loginbtn:hover {
+    border-color: white !important;
+    box-shadow: 0 0 10px rgba(250, 245, 245, 0.5);
+    color: white !important;
+    transform: scale(1.05);
+}
+
+
+/* About page Style */
+
+.text-box {
+  background: linear-gradient(to bottom, #a5d64e, #fff);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-box h2{
+    font-size: 35px;
+    color: black;
+}
+
+.text-box p{
+    font-size: 22px;
+    color: black;
+}
+
+.btn-custom {
+  background-color: #b84e4e;
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 12px 28px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: #9e4141;
+  color: white;
+  text-decoration: none;
+}
+
+.image-box {
+  padding: 15px;
+}
+
+.section-dark-text {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+}
+
+.about-hero-section {
+        background-image: url("/static/images/Rectangle_26.png");
+        background-size: cover;
+        border-radius: 10px;
+        background-position: center;
+        min-height: 100vh;
+        position: relative;
+    }
+
+

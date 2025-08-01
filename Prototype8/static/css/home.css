@@ -1,0 +1,365 @@
+body {
+  background-color: #fef5ec;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cook-img {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+/* Green container — only shows on left and right */
+.green-container {
+  background-color: #a8cf45;
+  border-radius: 20px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  overflow: visible;
+  height: auto;
+}
+
+/* White inner box with slanted sides */
+.white-content-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  clip-path: polygon(5% 1%, 95% 1%, 99% 99%, 1% 99%);
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Heading and Paragraph */
+.title {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.custom-btn {
+  background-color: #c44c4c;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #a63c3c;
+  box-shadow: 0 4px 12px rgba(196, 76, 76, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .white-content-box {
+    clip-path: none;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .custom-btn {
+    font-size: 0.9rem;
+    padding: 8px 24px;
+  }
+}
+
+/* === Featured Courses Section === */
+.featured-courses-container {
+  padding: 4rem 2rem;
+  background-color: #fdf0de; /* matches page bg */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.course-cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-image: url('../images/contact.png'); 
+background-size: cover;       /* Stretches image to fill */
+  background-repeat: no-repeat; 
+  background-position: center;
+  border-radius: 20px;
+  width: 300px;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay {
+  /* background-color: rgba(251, 248, 248, 0.5); dark overlay for contrast */
+  color: #fff;
+  padding: 2rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.discounted-price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #c54444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #a83535;
+}
+
+.ac-section {
+  background-color: #fff8ef;
+  padding: 60px 20px;
+  text-align: center;
+ 
+}
+
+.ac-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.ac-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ac-card {
+  background-image: url('../images/COURSES.png'); /* Update with correct path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ac-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  margin-top: 20px;
+}
+
+.ac-content {
+    width: 80%;
+  color: black;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.ac-content p {
+  font-size: 0.95rem;
+  margin: 10px 0;
+}
+
+.ac-offer {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.ac-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.ac-price del {
+  margin-right: 10px;
+  color: gray;
+}
+
+.ac-btn {
+  background-color: #c24141;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.ac-btn:hover {
+  background-color: #a83232;
+}
+
+.gift-offer-section {
+  background-color: #fff8ef;
+  padding: 60px 20px;
+}
+
+
+.gift-offer-image {
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-height: 100%;
+}
+
+.gift-offer-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* FAQ Toggle Section */
+.faq-toggle-section {
+  background-color: #fff5ec;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq-toggle-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.faq-toggle-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-toggle-item {
+  background: #fff;
+  border: 1px solid #a4907c;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.faq-toggle-item summary {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5f4b3b;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.faq-toggle-item[open] summary::after {
+  content: "▲";
+  position: absolute;
+  right: 0;
+  top: 22px;
+  font-size: 0.8rem;
+}
+
+.faq-toggle-item summary::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 22px;
+  font-size: 0.8rem;
+}
+
+.faq-toggle-item p {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 0 20px;
+  margin: 0;
+  border-top: 1px solid #eee;
+}
+
+.course-for-all-section {
+  background-color: #fff5eb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.course-for-all-text p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #000;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<!-- about.html -->
+<div class="container my-5">
+  <div class="row align-items-center gy-5">
+    
+    <!-- Text Box -->
+    <div class="col-lg-6 col-md-12">
+      <div class="text-box p-4 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h2 class="fw-bold mb-4">MORE POWER TO YOUR COOKING!<br>THROUGH LEARNING</h2>
+        <p class="mb-4">Discover A Better Way Of Cooking Amazing Dishes <br> With Recipes Specially Curated By The Most <br> Celebrated Face In The Indian Cuisine.</p>
+        <a href="{{ url_for('courses') }}"
+           class="btn btn-danger px-5 py-2 fw-bold"
+           style="border-radius: 30px;">
+           VIEW COURSES
+        </a>
+      </div>
+    </div>
+
+    <!-- Image Box -->
+    <div class="col-lg-6 col-md-12 text-center">
+      <img src="{{ url_for('static', filename='images/Group 24.png') }}"
+           alt="Cooking Image"
+           class="img-fluid rounded shadow w-75">
+    </div>
+
+  </div>
+</div>
+
+
+ <div class="text-center">
+    <h2 class="mb-4 fw-bold fs-1">ABOUT US</h2>
+    <p class="lead fw-bold fs-3">
+      Welcome to Flavour theory, your go-to place for delicious recipes, culinary inspiration, and a community of food lovers!
+    </p>
+    <p class="lead fw-bold fs-3">
+      <strong>At Flavour theory</strong>, we believe that cooking is more than just preparing food—it's about <br> creativity, joy, and bringing people together.
+      Whether you're a seasoned chef or just starting <br> your culinary journey, our mission is to make cooking easy, fun, and accessible to everyone.
+    </p>
+    <h3 class="mt-5 fw-bold fs-1 p-4">OUR STORY</h3>
+  </div>
+
+
+  <section class="about-hero-section text-white">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="col-md-10 col-lg-8 text-center px-3 py-5" style="background: rgba(0, 0, 0, 0.7); border-radius: 20px;">
+                <p class="fw-normal mb-4 fs-2 p-4">
+                    Our journey began with a passion for food and the desire to share it with others.
+                    Flavour Theory, a passionate home cook and food enthusiast, started the website
+                    to create a space where anyone, no matter their skill level, could discover new recipes, learn
+                    helpful cooking tips, and explore a world of flavors.
+                </p>
+                <p class="fs-2 fw-normal p-4">
+                    Over the years, our team has grown, but our core values remain the same: to inspire home cooks
+                    everywhere to embrace the magic of the kitchen and make every meal a special occasion.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container my-5">
+  <h2 class="text-center fw-bolder mb-4 fs-1">WHAT WE OFFERS</h2>
+  <ul class="list-unstyled fs-3">
+    <li class="mb-3">
+      <span class="text-danger fw-bold">• Tasty Recipes:</span> From quick weeknight dinners to indulgent desserts, our recipes cover every occasion and dietary preference. Each recipe is tested and designed to be easy to follow, so you can enjoy the process as much as the result!
+    </li>
+    <li class="mb-3">
+      <span class="text-danger fw-bold">• Helpful Cooking Tips:</span> Our step-by-step guides, cooking hacks, and ingredient substitutions will help you master new techniques and cook with confidence.
+    </li>
+    <li>
+      <span class="text-danger fw-bold">• Community of Food Lovers:</span> Join our vibrant community of home cooks, share your own recipes, leave reviews, and inspire others. We believe cooking is even more enjoyable when shared!
+    </li>
+  </ul>
+</div>
+
+
+<div class="">
+      <img src="{{ url_for('static', filename='images/Group 40.png') }}"
+           alt="Cooking Image"
+           class="img-fluid rounded shadow w-100">
+    </div>
+
+
+<h3 class="mt-5 fw-bold fs-1 p-4 text-center">OUR VALUES</h3>
+<section class="position-relative text-white" 
+         style="background-image: url('{{ url_for('static', filename='images/Group 46.png') }}'); 
+                background-size: cover; 
+                background-position: center; 
+                min-height: 60vh; 
+                border-radius: 20px;">
+    <div class="container h-100 d-flex justify-content-center align-items-end pt-5">
+        <div class="text-center">
+            <ul class="fs-5 list-unstyled">
+                <li class="mb-3">
+                    <span class="fw-bold">• Simplicity:</span> We keep our recipes simple and approachable, so even beginners can enjoy cooking.
+                </li>
+                <li>
+                    <span class="fw-bold">• Creativity:</span> We encourage experimenting in the kitchen, mixing ingredients, and discovering new flavors.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<p class="fs-1 fw-bold mt-5 text-center">Homemakers to busy executives, budding chefs to food entrepeneurs, grandparents to moms, 
+  health conscious people or foodies - there's a course for all.
+                </p>
+
+
+{% endblock%}

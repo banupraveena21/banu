@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Enroll{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/enroll.css') }}">
+
+{% block content %}
+
+<section class="enroll-section">
+  <div class="container">
+    <div class="text-center mb-4">
+    <h2 class="enroll-title mb-4 fs-1 fw-bold">ENROLL</h2>
+      <h4 class="program-name fw-bold fs-2">BAKERY BUSINESS ACCELERATOR PROGRAM</h4>
+    </div>
+
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label fw-bold">NAME</label>
+        <input type="text" class="form-control form-rounded" id="name" placeholder="Your Name">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label fw-bold">E MAIL</label>
+        <input type="email" class="form-control form-rounded" id="email" placeholder="example@email.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="mobile" class="form-label fw-bold">MOBILE NUMBER</label>
+        <input type="tel" class="form-control form-rounded" id="mobile" placeholder="Enter mobile number">
+      </div>
+
+      <div class="mb-3 text-end">
+        <span class="or-box">OR</span>
+        <a href="#" class="login-link fw-bold text-decoration-underline">ALREADY HAVE AN ACCOUNT</a>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="gstin">
+        <label class="form-check-label fw-bold" for="gstin">
+          USE GSTIN For Claiming Input Tax (India)
+        </label>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-between">
+        <label class="fw-bold">SUB TOTAL:</label>
+        <span>INR 36000</span>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-between">
+        <label class="fw-bold">DISCOUNT:</label>
+        <span>INR 0.00</span>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-between">
+        <div>
+          <label class="fw-bold">TOTAL PAYABLE:</label><br>
+          <small>(INCL. 10% GST)</small>
+        </div>
+        <span class="fw-bold fs-5">INR 36000.00</span>
+      </div>
+
+      <div class="mb-3 row">
+        <div class="col-md-8">
+          <label class="form-label fw-bold">COUPON CODE</label>
+          <input type="text" class="form-control form-rounded" placeholder="Enter coupon code">
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+          <button type="button" class="btn btn-outline-dark w-100">APPLY COUPON</button>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <label class="fw-bold">UPI USE PAYMENT</label>
+          <input type="text" class="form-control form-rounded mt-2" placeholder="+ UPI ID">
+        </div>
+        <div class="col-md-6">
+          <label class="fw-bold">CREDIT/DEBIT CARD USE PAY</label>
+          <input type="text" class="form-control form-rounded mt-2" placeholder="+ CARD NUMBER">
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="{{ url_for('enroll_success') }}" class="btn btn-danger btn-lg px-5 mb-5 mt-4">SUBMIT & PAY NOW</a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

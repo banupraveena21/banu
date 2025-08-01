@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}courses{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Featured Courses Section -->
+<div class="featured-courses-container">
+  <h2 class="section-title">FEATURED COURSES</h2>
+  <div class="course-cards-row">
+    <!-- Course Card 1 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>THE GOOD GUT PROGRAM</h3>
+        <p>
+          In Just 4 Weeks, Say Goodbye To Bloating, Constipation, Inflammation & Acidity. Plus Gain More Energy & Boost Immunity
+        </p>
+        <p><strong>Get 70% OFF</strong><br>₹ 4999 <span class="discounted-price">₹ 1499</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Course Card 2 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>LOOK GOOD COURSE</h3>
+        <p>
+          In Just 30 Days, Discover Time Tested & Science Backed Insights, Remedies And Recipes
+        </p>
+        <p><strong>New Launch Offer | Get 88% OFF</strong><br>₹ 42,995 <span class="discounted-price">₹ 4,999</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Course Card 3 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>Start Your Food Business From Home</h3>
+        <p>
+          Learn How To Start Your Food Business From Home, And Run A Successful Home
+        </p>
+        <p><strong>New Launch Offer | Get 70% OFF</strong><br>₹ 4999 <span class="discounted-price">₹ 1,499</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ac-section">
+  <h2 class="ac-heading">ALL COURSES</h2>
+  <div class="ac-cards-container">
+
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">IMMUNITY BOOSTER RECIPES</h3>
+      <div class="ac-content">
+        <p>
+          Live Well And Boost Your Immunity With Time-Tested Immunity Booster Recipes From The Expert In Indian Cuisine
+        </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 40% OFF</strong></p>
+        <p class="ac-price"><del>₹ 4000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">GARNISING & PLATING COURSE</h3>
+      <div class="ac-content">
+        <p>
+         Love Plating Your Dishes Like An Expert? Take Professional Cues
+From MasterChef
+Sanjeev Kapoor To
+Excel In The Art Of
+Food Presentation! </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 60% OFF</strong></p>
+        <p class="ac-price"><del>₹ 999</del> ₹ 399</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">COOKING AT HOME
+RESTAURANT STYLE & HOME
+STYLE</h3>
+      <div class="ac-content">
+        <p>
+          Cook Amazing
+Restaurant Style
+Dishes And Change
+Everyday Home
+Cooked Dishes Into
+Exceptional Dishes
+Your Family Will Love  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 90% OFF</strong></p>
+        <p class="ac-price"><del>₹ 6000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">VEGETARIAN'S
+DELIGHT</h3>
+      <div class="ac-content">
+        <p>
+         Cook The Tastiest
+VEGETARIAN Dishes
+Using Everyday
+Ingredients For Your
+Loved Ones At Home.
+A True Delight For A
+Vegetarian!  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 37% OFF</strong></p>
+        <p class="ac-price"><del>₹ 4000</del> ₹ 2,499</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">BASIC COOKING FOR
+SINGLES</h3>
+      <div class="ac-content">
+        <p>
+         Impress Friends And
+Save Money By
+Making Amazing
+Food On Your Own
+Like The MasterChef.
+From How To Use A
+Cooker  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 67% OFF</strong></p>
+        <p class="ac-price"><del>₹ 5999</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">INDIA'S FAVOURITES:
+RESTAURANTS AND HOME
+STYLE DISHES</h3>
+      <div class="ac-content">
+        <p>
+        Impress Friends And
+Save Money By
+Making Amazing
+Food On Your Own
+Like The MasterChef.
+From How To Use A
+Cooker  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 67% OFF</strong></p>
+        <p class="ac-price"><del>₹ 6000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+
+    
+    
+  </div>
+</section>
+<section class="gift-offer-section">
+
+   
+    <div class="gift-offer-image">
+    <img src="{{ url_for('static', filename='images/Group 40.png') }}" alt="Cranberries Offer">
+   </div>
+
+<section class="course-for-all-section">
+  <div class="course-for-all-text">
+    <p>
+      Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, 
+      health conscious people or foodies – there’s a course for all.
+    </p>
+  </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+  .form-control, textarea.form-control {
+      border-radius: 15px;
+      box-shadow: 3px 3px 6px #ccc;
+    }
+    .attach-file {
+      color: #9aa841;
+      cursor: pointer;
+      font-weight: 600;
+    }

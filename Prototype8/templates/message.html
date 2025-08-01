@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Inbox{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="chat-overlay">
+  <div class="chat-popup card shadow">
+    <div class="chat-header d-flex justify-content-between align-items-center px-3 py-2">
+      <span><strong>Inbox</strong></span>
+      <a href="/" class="text-dark">&times;</a>
+    </div>
+
+    <div class="chat-body px-3">
+      <div class="chat-message bg-light rounded p-2 my-2">
+        <strong>S</strong>: Hello there! Thank you for reaching out to us.
+      </div>
+    </div>
+
+    <div class="chat-footer px-3 py-2">
+      <form method="post" action="#">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Reply here" disabled>
+          <button class="btn btn-light" type="button" disabled><i class="bi bi-emoji-smile"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row align-items-center g-5">
+    <!-- Left Side Image -->
+    <div class="col-md-6 text-center">
+      <img src="{{ url_for('static', filename='images/Group 6.png') }}" alt="Chef" class="img-fluid rounded-4 shadow cook-img">
+    </div>
+
+    <!-- Right Green Background -->
+    <div class="col-md-6">
+      <div class="green-container">
+        <div class="white-content-box">
+          <h2 class="title">TAKE YOUR COOKING SKILLS TO<br>THE NEXT LEVEL WITH MASTER CHEFS</h2>
+          <p class="description">
+            CULINARY TIPS AND TRICKS STRAIGHT FROM THE EXPERT, ON HOW TO COOK SCRUMPTIOUS,
+            INSTAGRAM-READY, LIP SMACKING DISHES THAT ARE CLEAN, HEALTHY, AND ENERGIZING.
+          </p>
+          <a href="{{ url_for('courses') }}" class="btn custom-btn">VIEW COURSES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Featured Courses Section -->
+<div class="featured-courses-container">
+  <h2 class="section-title">FEATURED COURSES</h2>
+  <div class="course-cards-row">
+    <!-- Course Card 1 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>THE GOOD GUT PROGRAM</h3>
+        <p>
+          In Just 4 Weeks, Say Goodbye To Bloating, Constipation, Inflammation & Acidity. Plus Gain More Energy & Boost Immunity
+        </p>
+        <p><strong>Get 70% OFF</strong><br>₹ 4999 <span class="discounted-price">₹ 1499</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Course Card 2 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>LOOK GOOD COURSE</h3>
+        <p>
+          In Just 30 Days, Discover Time Tested & Science Backed Insights, Remedies And Recipes
+        </p>
+        <p><strong>New Launch Offer | Get 88% OFF</strong><br>₹ 42,995 <span class="discounted-price">₹ 4,999</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Course Card 3 -->
+    <div class="course-card">
+      <div class="card-overlay">
+        <h3>Start Your Food Business From Home</h3>
+        <p>
+          Learn How To Start Your Food Business From Home, And Run A Successful Home
+        </p>
+        <p><strong>New Launch Offer | Get 70% OFF</strong><br>₹ 4999 <span class="discounted-price">₹ 1,499</span></p>
+        <a href="#" class="btn-learn-more">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ac-section">
+  <h2 class="ac-heading">ALL COURSES</h2>
+  <div class="ac-cards-container">
+
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">IMMUNITY BOOSTER RECIPES</h3>
+      <div class="ac-content">
+        <p>
+          Live Well And Boost Your Immunity With Time-Tested Immunity Booster Recipes From The Expert In Indian Cuisine
+        </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 40% OFF</strong></p>
+        <p class="ac-price"><del>₹ 4000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">GARNISING & PLATING COURSE</h3>
+      <div class="ac-content">
+        <p>
+         Love Plating Your Dishes Like An Expert? Take Professional Cues
+From MasterChef
+Sanjeev Kapoor To
+Excel In The Art Of
+Food Presentation! </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 60% OFF</strong></p>
+        <p class="ac-price"><del>₹ 999</del> ₹ 399</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">COOKING AT HOME
+RESTAURANT STYLE & HOME
+STYLE</h3>
+      <div class="ac-content">
+        <p>
+          Cook Amazing
+Restaurant Style
+Dishes And Change
+Everyday Home
+Cooked Dishes Into
+Exceptional Dishes
+Your Family Will Love  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 90% OFF</strong></p>
+        <p class="ac-price"><del>₹ 6000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">VEGETARIAN'S
+DELIGHT</h3>
+      <div class="ac-content">
+        <p>
+         Cook The Tastiest
+VEGETARIAN Dishes
+Using Everyday
+Ingredients For Your
+Loved Ones At Home.
+A True Delight For A
+Vegetarian!  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 37% OFF</strong></p>
+        <p class="ac-price"><del>₹ 4000</del> ₹ 2,499</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">BASIC COOKING FOR
+SINGLES</h3>
+      <div class="ac-content">
+        <p>
+         Impress Friends And
+Save Money By
+Making Amazing
+Food On Your Own
+Like The MasterChef.
+From How To Use A
+Cooker  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 67% OFF</strong></p>
+        <p class="ac-price"><del>₹ 5999</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+    
+    <!-- Course Card -->
+    <div class="ac-card">
+      <h3 class="ac-title">INDIA'S FAVOURITES:
+RESTAURANTS AND HOME
+STYLE DISHES</h3>
+      <div class="ac-content">
+        <p>
+        Impress Friends And
+Save Money By
+Making Amazing
+Food On Your Own
+Like The MasterChef.
+From How To Use A
+Cooker  </p>
+        <p class="ac-offer"><strong>Limited Period Offer - Get 67% OFF</strong></p>
+        <p class="ac-price"><del>₹ 6000</del> ₹ 1,999</p>
+        <a href="#" class="ac-btn">LEARN MORE</a>
+      </div>
+    </div>
+
+    
+    
+  </div>
+</section>
+<section class="gift-offer-section">
+
+   
+    <div class="gift-offer-image">
+    <img src="{{ url_for('static', filename='images/Group 40.png') }}" alt="Cranberries Offer">
+   </div>
+
+</section>
+<section class="faq-toggle-section">
+  <h2 class="faq-toggle-title">FAQ’S</h2>
+
+  <div class="faq-toggle-container">
+    <details class="faq-toggle-item">
+      <summary>1. How do I find a recipe on your website?</summary>
+      <p>
+        You can easily find a recipe by using the search bar at the top of the page.
+        Simply type in the dish you're looking for, and we’ll provide a list of relevant
+        recipes. Alternatively, you can browse recipes by category (e.g., Quick Meals,
+        Desserts, Vegan, etc.).
+      </p>
+    </details>
+
+    <details class="faq-toggle-item">
+      <summary>2. Can I save my favorite recipes?</summary>
+      <p>
+        Yes, by creating a free account, you can bookmark and save your favorite recipes
+        to easily access them later.
+      </p>
+    </details>
+
+    <details class="faq-toggle-item">
+      <summary>3. How do I submit my own recipes?</summary>
+      <p>
+        Go to the “Submit Recipe” page, fill out the form with ingredients, steps, and
+        photos, then submit for review by our team.
+      </p>
+    </details>
+
+    <details class="faq-toggle-item">
+      <summary>4. Are the recipes suitable for beginners?</summary>
+      <p>
+        Absolutely! Each recipe includes step-by-step instructions, and we tag beginner-friendly
+        dishes to help you start cooking with ease.
+      </p>
+    </details>
+
+    <details class="faq-toggle-item">
+      <summary>5. How do I know if a recipe is vegan, gluten-free, or dairy-free?</summary>
+      <p>
+        Recipes include labels and icons to indicate if they meet dietary restrictions.
+        You can also filter by dietary preference using our search.
+      </p>
+    </details>
+
+    <details class="faq-toggle-item">
+  <summary>6. Can I print recipes from the website?</summary>
+  <p>
+    Yes, each recipe page includes a print option so you can easily create a hard copy
+    for use in your kitchen.
+  </p>
+</details>
+
+<details class="faq-toggle-item">
+  <summary>7. Do you offer video tutorials?</summary>
+  <p>
+    Many of our recipes include step-by-step video tutorials. You’ll find them embedded
+    within the recipe page if available.
+  </p>
+</details>
+
+<details class="faq-toggle-item">
+  <summary>8. Can I share recipes with my friends and family?</summary>
+  <p>
+    Absolutely! Each recipe has built-in share buttons for WhatsApp, Facebook, and more.
+    You can also copy the direct link.
+  </p>
+</details>
+
+<details class="faq-toggle-item">
+  <summary>9. How can I contact you if I have questions or suggestions?</summary>
+  <p>
+    Visit our Contact Us page to send a message or email us directly. We welcome all
+    feedback and love hearing from users!
+  </p>
+</details>
+
+<details class="faq-toggle-item">
+  <summary>10. Is there a mobile app for this website?</summary>
+  <p>
+    Yes! Our app is available for download on both Android and iOS so you can access
+    recipes on the go.
+  </p>
+</details>
+
+  </div>
+</section>
+
+<section class="course-for-all-section">
+  <div class="course-for-all-text">
+    <p>
+      Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, 
+      health conscious people or foodies – there’s a course for all.
+    </p>
+  </div>
+</section>
+
+
+{% endblock %}

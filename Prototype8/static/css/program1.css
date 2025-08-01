@@ -1,0 +1,76 @@
+.bakery-program-section {
+    background-color: #fff6ef;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.program-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.program-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+.bakery-business-image {
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-height: 100%;
+}
+
+.bakery-business-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.program-features-section {
+  background-color: #a4cd39;
+}
+
+.feature-box {
+  background-color: #ffffff10; /* slight transparent white */
+  border-radius: 16px;
+  padding: 30px 20px;
+  color: white;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.feature-box:hover {
+  background-color: #ffffff25;
+  transform: translateY(-5px);
+}
+
+.feature-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.feature-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.course-for-all-section {
+  background-color: #fff5eb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.course-for-all-text p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #000;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}

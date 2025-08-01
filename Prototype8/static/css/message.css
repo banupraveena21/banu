@@ -1,0 +1,32 @@
+.chat-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-popup {
+  width: 400px;
+  border-radius: 10px;
+  background-color: #fff1df;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #fde4d0;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-body {
+  min-height: 400px;
+  background-color: #fff1df;
+}
+
+.chat-footer input {
+  font-size: 0.9rem;
+}

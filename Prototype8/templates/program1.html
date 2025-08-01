@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Bakery Business{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/program1.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="bakery-program-section">
+    <div class="container text-center">
+        <h2 class="program-title">BAKERY BUSINESS ACCELERATOR PROGRAM</h2>
+        <h3 class="program-subtitle">Program Limited to <strong>50 people Only!</strong></h3>
+    </div>
+     <div class="bakery-business-image">
+    <img src="{{ url_for('static', filename='images/Group 50.png') }}" alt="Cranberries Offer">
+   </div>
+</section>
+<!-- Program Features Section -->
+<section class="program-features-section py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/edit.png" alt="Edit Icon" class="feature-image">
+          <p class="feature-text">
+            1 YEAR ACCESS TO EXCLUSIVE RECIPE VIDEOS,<br>NOT AVAILABLE ON YOUTUBE
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/target.png" alt="Target Icon" class="feature-image">
+          <p class="feature-text">
+            140+ DOWNLOADABLE SIGNATURE RECIPES FROM THE MASTERCHEF
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/spatula.png" alt="Cooking Icon" class="feature-image">
+          <p class="feature-text">
+            LEARN TO COOK FROM BASIC TO ADVANCED RECIPES
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/list.png" alt="List Icon" class="feature-image">
+          <p class="feature-text">
+            UNLIMITED VIDEO ACCESS + DOWNLOADABLE RECIPE PDFS
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/macbook.png" alt="Device Icon" class="feature-image">
+          <p class="feature-text">
+            LEARN FROM ANY DEVICE – MOBILE, DESKTOP OR LAPTOP
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <img src="https://img.icons8.com/ios-filled/100/certificate.png" alt="Certificate Icon" class="feature-image">
+          <p class="feature-text">
+            COURSE COMPLETION CERTIFICATE
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="course-for-all-section">
+  <div class="course-for-all-text">
+    <p>
+      Homemakers to busy executives, budding chefs to food entrepreneurs, grandparents to moms, 
+      health conscious people or foodies – there’s a course for all.
+    </p>
+  </div>
+</section>
+
+
+{% endblock %}
